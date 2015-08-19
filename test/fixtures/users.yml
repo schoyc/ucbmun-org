@@ -1,17 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   university: MyString
-#   name: MyString
-#   email: MyString
-#   phone: MyString
-#   address: MyString
-#   city: MyString
-#   state: MyString
-#   zip: MyString
-#   country: MyString
-#   delegates_count: 1
-#   username: MyString
+steven:
+  name: "Steven Chen",
+  university: "Minion Tech.",
+  username: "schoyc",
+  phone: "123-456-789",
+  address: "123 Gru St.",
+  city: "Santa Cruz",
+  state: "CA",
+  zip: "12345",
+  country: "USA",
+  delegates_count: 40,
+  email: "scchen@berkeley.edu",
+  password_digest: <%= User.digest('password') %>
 #
 # two:
 #   university: MyString

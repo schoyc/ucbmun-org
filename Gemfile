@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '4.2.2'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'bcrypt',	    '3.1.10'
 gem 'sass-rails',   '5.0.2'

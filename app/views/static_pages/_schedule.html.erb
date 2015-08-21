@@ -1,0 +1,18 @@
+<div class="schedule-item">
+  <div class="schedule-item-name">
+    <h5> EVENT </h5>
+  </div>
+  <div class="schedule-item-time">
+    <span class="glyphicon glyphicon-time"></span>
+  </div>
+</div>
+<% schedule_items.each do |item| %>
+<div class="schedule-item">
+  <div class="schedule-item-name">
+    <h3> <%= item[:name] %> </h3>
+  </div>
+  <div class="schedule-item-time">
+    <h4> <%= item[:time] %> </h4>
+  </div>
+</div>
+<% end %>

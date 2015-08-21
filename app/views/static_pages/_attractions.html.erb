@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="attraction">
+    <!-- <div class="col-md-1 sec-margin"></div> -->
+    <% attractions.each do |key, attraction| %>
+    <div class="col-md-3">
+      <div class="full-attraction-profile" data-toggle="modal" data-target=<%=".#{key}"%>>
+        <div class="attraction-pic">
+          <%= image_tag "attractions/#{key}", class: "attr-profile" %>
+        </div>
+        <div class="attraction-name">
+          <h6><%= attraction[:name] %></h6>
+        </div>
+        <!-- Large modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button> -->
+        <div class=<%="modal fade #{key}"%> tabindex="-1" role="dialog" aria-labelledby="attractionDescription">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <h2><%= attraction[:name] %></h2>
+              <p><%= attraction[:description] %></p>
+              <p><strong>Hours: </strong><%= " #{attraction[:hours]}" %></p>
+              <p><strong>Price: </strong><%= " #{attraction[:price]}" %></p>
+              <p><strong>Location: </strong><%= " #{attraction[:location]}" %></p>
+              <p><strong>Distance: </strong><%= " #{attraction[:distance]}" %></p>
+              <p><strong>Website: </strong><%= " #{attraction[:website]}" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <!-- <div class="col-md-1 sec-margin"></div> -->
+  </div>
+</div>

@@ -1,2 +1,11 @@
-<h1>StaticPages#committees</h1>
-<p>Find me in app/views/static_pages/committees.html.erb</p>
+<h1>Committees</h1>
+<navbar specialized bodies joint crisis crisis>
+
+<div class="container-fluid">
+  <h2> Specialized Bodies </h2>
+  <%= render partial: "committeelist", locals: {committees: @sb_committees} %>
+  <h2> Crisis Committees </h2>
+  <%= render partial: "committeelist", locals: {committees: @crisis_committees} %>
+  <h2> Joint Crisis Committees </h2>
+  <%= render partial: "committeelist", locals: {committees: @jcc_committees} %>
+</div>

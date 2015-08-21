@@ -1,2 +1,9 @@
-<h1>StaticPages#schedule</h1>
-<p>Find me in app/views/static_pages/schedule.html.erb</p>
+<h1> Schedule </h1>
+<h2> Thursday, February 25 </h2>
+<%= render partial: "schedule", locals: {schedule_items: @thursday_schedule} %>
+<h2> Friday, February 26 </h2>
+<%= render partial: "schedule", locals: {schedule_items: @friday_schedule} %>
+<h2> Saturday, February 27 </h2>
+<%= render partial: "schedule", locals: {schedule_items: @saturday_schedule} %>
+<h2> Sunday, February 28 </h2>
+<%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>

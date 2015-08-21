@@ -1,2 +1,5 @@
-<h1>StaticPages#explore</h1>
-<p>Find me in app/views/static_pages/explore.html.erb</p>
+<h1>Explore San Francisco</h1>
+
+<div class="container-fluid">
+  <%= render partial: "attractions", locals: {attractions: @attractions_names} %>
+</div>

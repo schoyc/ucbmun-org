@@ -1,3 +1,26 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#terms_container {
+	margin-top: 0.5em;
+	cursor: pointer;
+}
+
+ol {list-style-type: upper-roman;}
+
+li {
+	margin-top: 1rem;
+}
+
+#terms_header {
+	font-size: 2em;
+	font-weight: 300;
+	margin: 0 auto;
+	margin-bottom: 0.25em;
+	margin-top: 1rem;
+}
+
+// #terms_content {
+// 	display: none;
+// }

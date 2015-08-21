@@ -1,6 +1,7 @@
 class ChargesController < ApplicationController
   def new
     @curr_user = current_user
+    @curr_user.charges
     @amount = user_balance @curr_user
     @amount *= 100
   end

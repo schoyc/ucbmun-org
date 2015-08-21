@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def balance
     @user = User.find(params[:id])
+    @user.charges 
   end
 
   private

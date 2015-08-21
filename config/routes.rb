@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+  get 'committees/specpol'
+
+  get 'committees/nfl'
+
+  get 'committees/disec'
+
+  get 'committees/wsf'
+
+  get 'committees/legal'
+
+  get 'committees/unsc'
+
+  get 'committees/tang'
+
+  get 'committees/pilate'
+
+  get 'committees/obama'
+
+  get 'committees/penaneto'
+
+  get 'committees/bilderberg'
+
+  get 'committees/marcos'
+
+  get 'committees/darkweb'
+
+  get 'committees/rhodesia'
+
+  get 'committees/zanu'
+
+  get 'committees/zapu'
+
+  get 'committees/adhoc'
+
   root 'static_pages#home'
 
   get 'home' => 'static_pages#home'

@@ -2,6 +2,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.sec-profile {
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.attr-profile {
+  width: 50%;
+
+}
+
+.venue-pic {
+  width: 100%;
+}
+
+.schedule-item-name, .schedule-item-time {
+  display: inline-block
+}
+
+.schedule-item-time {
+  text-align: right;
+}
+
+.schedule-item {
+  margin: 0 auto;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;

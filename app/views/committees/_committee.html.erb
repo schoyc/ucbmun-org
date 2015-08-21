@@ -1,0 +1,31 @@
+<div class="committee-info">
+  <div class="committee-header">
+    <h1><%= committee.name %></h1>
+    <h4><%= committee.type %></h4>
+  </div>
+  <div class="committee-description">
+    <p><%= committee.description %></p>
+  </div>
+  <div class="background-guide">
+  </div>
+</div>
+<div class="committee-chairs">
+  <div class="chair">
+    <div class="chair-pic">
+      <%= image_tag "chairs/#{committee.chair}", class: "chair-profile" %>
+    </div>
+    <div class="chair-info">
+      <h4><%= committee.chair.name %></h4>
+      <h5><%= committee.chair.email %></h4>
+    </div>
+  </div>
+  <div class="chair">
+    <div class="chair-pic">
+      <%= image_tag "chairs/#{committee.chair}", class: "chair-profile" %>
+    </div>
+    <div class="chair-info">
+      <h4><%= committee.chair.name %></h4>
+      <h5><%= committee.chair.email %></h4>
+    </div>
+  </div>
+</div>

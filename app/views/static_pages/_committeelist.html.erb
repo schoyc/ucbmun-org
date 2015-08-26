@@ -1,20 +1,18 @@
 <div class="row">
   <div class="committee">
-    <!-- <div class="col-md-1 sec-margin"></div> -->
     <% committees.each do |key, committee| %>
-    <div class="col-md-4">
-      <a href=<%= "committees/#{key}" %>>
-      <div class="full-committee-profile" data-toggle="modal" data-target=<%=".#{key}"%>>
-        <div class="committee-pic">
-          <%= image_tag "committees/#{key}", class: "committee-profile" %>
-        </div>
-        <div class="committee-name">
-          <h3><%= committee[:name] %></h3>
-        </div>
-      </div>
-      </a>
-    </div>
-    <% end %>
-    <!-- <div class="col-md-1 sec-margin"></div> -->
-  </div>
+     <div class="col-md-4">
+       <a href=<%= "committees/#{key}" %>>
+       <div class="full-committee-profile" data-toggle="modal" data-target=<%=".#{key}"%>>
+         <div class="committee-pic">
+           <%= image_tag "committees/#{key}", class: "committee-profile" %>
+         </div>
+         <div class="committee-name">
+           <h5><%= committee[:name] %></h3>
+         </div>
+       </div>
+       </a>
+     </div>
+     <% end %>
+</div>
 </div>

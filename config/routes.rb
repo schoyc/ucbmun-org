@@ -17,9 +17,9 @@ Rails.application.routes.draw do
 
   get 'committees/obama'
 
-  get 'committees/penaneto'
+  get 'committees/wikileaks'
 
-  get 'committees/bilderberg'
+  get 'committees/colombia'
 
   get 'committees/marcos'
 

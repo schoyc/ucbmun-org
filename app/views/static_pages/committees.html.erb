@@ -4,8 +4,10 @@
 <div class="container-fluid">
   <h2> Specialized Bodies </h2>
   <%= render partial: "committeelist", locals: {committees: @sb_committees} %>
+  <br></br>
   <h2> Crisis Committees </h2>
   <%= render partial: "committeelist", locals: {committees: @crisis_committees} %>
+  <br></br>
   <h2> Joint Crisis Committees </h2>
   <%= render partial: "committeelist", locals: {committees: @jcc_committees} %>
 </div>

@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   end
 
   def committees
+    @sb_committees = load_sbs
+    @crisis_committees = load_crises
+    @jcc_committees = load_jcc
   end
 
   def sponsors

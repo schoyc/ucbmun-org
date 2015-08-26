@@ -1,10 +1,10 @@
 <div class="committee-info">
   <div class="committee-header">
-    <h1><%= committee.name %></h1>
-    <h4><%= committee.type %></h4>
+    <h1><%= committee[:name] %></h1>
+    <h4><%= committee[:type] %></h4>
   </div>
   <div class="committee-description">
-    <p><%= committee.description %></p>
+    <p><%= committee[:description] %></p>
   </div>
   <div class="background-guide">
   </div>
@@ -12,20 +12,22 @@
 <div class="committee-chairs">
   <div class="chair">
     <div class="chair-pic">
-      <%= image_tag "chairs/#{committee.chair}", class: "chair-profile" %>
+      <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %>
     </div>
     <div class="chair-info">
-      <h4><%= committee.chair.name %></h4>
-      <h5><%= committee.chair.email %></h4>
+      <h4><%= committee[:chair][:name] %></h4>
+      <h5><%= committee[:chair][:email] %></h4>
     </div>
   </div>
+  <% if !committee[:cd].nil? %>
   <div class="chair">
     <div class="chair-pic">
-      <%= image_tag "chairs/#{committee.chair}", class: "chair-profile" %>
+      <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %>
     </div>
     <div class="chair-info">
-      <h4><%= committee.chair.name %></h4>
-      <h5><%= committee.chair.email %></h4>
+      <h4><%= committee[:cd][:name] %></h4>
+      <h5><%= committee[:cd][:email] %></h4>
     </div>
   </div>
+  <% end %>
 </div>

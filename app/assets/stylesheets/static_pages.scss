@@ -35,6 +35,19 @@ li {
   padding-left: 3em;
   margin-top: -3em;
   margin-bottom: -2em;
+  display: inline-block;
+}
+
+.home-buttons {
+  display: inline-block;
+  float: right;
+  margin-right: 4em;
+}
+
+.home-button {
+  width: 11em;
+  height: 4em;
+  margin-top: 2.5em;
 }
 
 .jumbotron {

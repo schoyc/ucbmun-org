@@ -4,12 +4,14 @@
 <div class="balance-box">
   <table>
     <th>
+      <td> Date </td>
       <td> Item </td>
       <td> Qty. </td>
-      <cd> Cost </td>
+      <td> Cost </td>
     </th>
-    <% @user.charges.each do |charge| %>
+    <% @user.charge_list.each do |charge| %>
       <tr>
+        <td> <%= charge[:date] %>
         <td> <%= "#{charge[:item]} @ $#{charge[:price]}.00" %></td>
         <td> <%= charge[:quantity] %> </td>
         <td> <%= "#{charge[:price] * charge[:quantity]}.00" %></td>
@@ -18,9 +20,14 @@
     <tr>
       <td></td>
       <td></td>
-      <td><%= "$#{@user.balance}.00" %></td>
+      <td><%= "$#{@user.get_current_balance}.00" %></td>
     </tr>
   </table>
-<h2> Your balance is: <strong> <%= " #{@user.balance}" %> </strong> </h2>
+<h2> Your balance is: <strong> <%= " $#{@user.get_current_balance}.00" %> </strong> </h2>
 
 <a class="btn btn-default" href="/charges/new" role="button">Pay with Stripe!</a>
+
+
+<%= @user.get_current_balance %>
+<%= @user.charge_list %>
+<%= @user.has_paid %>

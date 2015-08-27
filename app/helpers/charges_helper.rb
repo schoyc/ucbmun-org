@@ -5,7 +5,7 @@ module ChargesHelper
   end
 
   def user_balance(user)
-    user.balance
+    user.get_current_balance
   end
 
 end

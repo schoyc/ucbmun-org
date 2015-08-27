@@ -310,7 +310,30 @@ module StaticPagesHelper
   end
 
   def load_jcc
-    @jcc = {}
-  end 
+
+    @jcc = {
+      "rhodesia" => {name: "The Rhodesian Government",
+                     type: "Joint Crisis",
+                     description: "'The wind of change is blowing through this continent. Whether we like it or not, this growth of national consciousness is a political fact.'
+
+                     \n The year is 1964, and Rhodesia is in the crosshairs. It’s voters, a white minority comprising a mere 5% of the country, have overwhelmingly indicated that they’d rather declare independence from Great Britain than allow native Africans into government. The ‘Wind of Change’, or Britain’s decolonization policy, continued to blow against the Rhodesian rock as stubborn as its leaders. Fed up with the the conservative regime, two rival factions, the Maoist Zimbabwe African National Union and Leninist Zimbabwe African People’s Union, have been established to dethrone Rhodesia by diplomacy or dynamite. Committee will start by throwing the Rhodesian cabinet into the drama of declaring a ‘Unilateral Declaration of Independence’ from it’s mother country and surviving the wrath of the international community. The committee must then face off against two rival political forces, each eager to install a new government, whilst managing the policies, politics, and people of a nation steeped in controversy and chaos.",
+                     chair: {name: "", email: ""},
+                     cd: {name: "", email: ""}
+                   },
+      "zanu" => {name: "Zimbabwe African National Union (ZANU)",
+                 type: "Joint Crisis",
+                 description: "Coming soon!",
+                 chair: {name: "", email: ""},
+                 cd: {name: "", email: ""}
+      },
+      "zapu" => {name: "Zimbabwe African People's Union (ZAPU)",
+                 type: "Joint Crisis",
+                 description: "The Soviet-inspired Zimbabwe African People's Union (ZAPU) has recently parted ways with the Maoist Zimbabwe African National Union (ZANU), and Rhodesia has just declared its independence. ZAPU must decide how to respond to this historic injustice, while building its ideology and infrastructure to make its case for a revolution of the proletariat.",
+                 chair: {name: "", email: ""},
+                 cd: {name: "", email: ""}
+                 }
+               }
+
+  end
 
 end

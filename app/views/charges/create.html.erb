@@ -1,5 +1,6 @@
 <h2>Thanks, you paid <strong><%= "$#{@amount / 100}.00" %></strong>!</h2>
 <h6> A receipt will be emailed to you detailing your purchase through Stripe. </h6>
 <h1> <%= link_to "Return to Finances", balance_url(id: current_user.id) %> </h1>
-<%= @curr_user.get_current_balance %>
-<%= @curr_user.charge_list %>
+<%= current_user.get_current_balance %>
+<%= current_user.charge_list %>
+<%= current_user.name %>

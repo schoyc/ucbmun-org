@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Your account has been created!"
+      @user.init_balance
       redirect_to @user
     else
       render 'new'
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
 
   def balance
     @user = User.find(params[:id])
-    @user.charges 
+    @user.charges
   end
 
   private

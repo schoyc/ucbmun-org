@@ -1,14 +1,15 @@
 <div class="row">
   <div class="committee">
     <% committees.each do |key, committee| %>
-     <div class="col-md-4">
+     <div class="col-md-4 committee-single">
        <a href=<%= "committees/#{key}" %>>
        <div class="full-committee-profile" data-toggle="modal" data-target=<%=".#{key}"%>>
          <div class="committee-pic">
            <%= image_tag "committees/#{key}.jpg", class: "committee-picture" %>
          </div>
          <div class="committee-name">
-           <h5><%= committee[:name] %></h5>
+           <h5 style="margin-bottom: 0;"><%= committee[:name] %></h5>
+           <h5 style="margin-top: 0;"><%= committee[:subtitle] %> </h5>
          </div>
        </div>
        </a>

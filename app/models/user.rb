@@ -36,8 +36,9 @@ class User < ActiveRecord::Base
     #current_balance.nil? ? self.current_balance = delegates_count * 85 + 90 : current_balance
     #TODO: If charges, change current_balance should be updated
     balance = 0
+    charges
     if current_balance.nil?
-      @charge_list.each do |charge|
+      charge_list.each do |charge|
         balance += charge[:price] * charge[:quantity]
       end
       self.current_balance = balance
@@ -57,13 +58,14 @@ class User < ActiveRecord::Base
                             date: current_time}
       ]
     else
-      @charge_list
+      charge_list
     end
   end
 
   def get_current_balance
     init_balance
-    current_balance.nil? ? 0 : current_balance
+    #current_balance.nil? ? 0 : current_balance
+    current_balance
   end
 
   def set_current_balance(amount)
@@ -74,5 +76,5 @@ class User < ActiveRecord::Base
   #  self.charge_list.push(charge)
     charges = charge_list.push(charge)
     self.update_attribute(:charge_list, charges)
-  end 
+  end
 end

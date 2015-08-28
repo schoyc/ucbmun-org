@@ -54,9 +54,6 @@ li {
   background: white;
 }
 
-.committee-picture {
-  width: 100%;
-}
 
 td {
   margin: 1em;
@@ -66,6 +63,72 @@ td {
 .schedule-item-name {
   margin-right: 4em;
 }
-// #terms_content {
-// 	display: none;
-// }
+
+.attr-profile {
+  width: 100%;
+	height: 15em;
+
+}
+
+.attraction-name {
+	text-align: center;
+}
+
+.venue-pic {
+  width: 100%;
+}
+
+.schedule-item-name {
+  display: inline-block;
+
+	text-align: center;
+	//padding-left: 2em;
+}
+
+.schedule-item-time {
+	display: inline-block;
+  text-align: right;
+	align: right;
+	margin-left: auto;
+	margin-right: 0;
+	//padding-right: 2em;
+
+}
+
+
+.sec-profile {
+  width: 100%;
+}
+
+.sec-name {
+	text-align: center;
+}
+.committee-single {
+	margin: 0.5em 0;
+}
+
+.committee-name {
+	text-align: center;
+}
+
+.committee-picture {
+	width: 100%;
+	height: 200px;
+}
+
+.venue-pic {
+	width: 100%;
+	height: 500px;
+}
+
+.sec-name:hover {
+	color: #999999;
+}
+
+.sec-modal-profile {
+	height: 100px;
+}
+
+.sec-row-four {
+	margin-bottom: 1em;
+}

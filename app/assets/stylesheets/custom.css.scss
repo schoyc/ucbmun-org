@@ -1,6 +1,10 @@
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
 
 .navbar {
   background-color: #002C4D;
@@ -78,4 +82,14 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+
 }

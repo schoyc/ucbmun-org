@@ -1,24 +1,33 @@
+<%= render partial: "toolbar" %>
 <h1> Finances </h1>
-<br></br>
+<div class="balance-main" style="float: left; width: 70%;">
+<div class="balance-info" style="width: 90%;">
+<h4> Registration fees must be paid within 30 days of registration or reciept of invoice.
+  An invoice will be emailed to you within a two days of your registration.
+  Fee tiers (early or regular)
+  are determined by the date of registration. Payments may be transacted by check, or by credit card online through
+  Stripe. Please note that, since Stripe charges a 2.9% transaction fee, online payment adds an additional 2.9% to
+  your balance. </h4>
 
+</div>
+<h2> Invoice </h2>
 <div class="balance-box">
-  <table>
-    <th>
-      <td> Date </td>
+  <table style="margin-left: 30px;">
+    <tr style="font-size: 22px; font-weight:bold;">
+      <!-- <td style="padding: 10px;"> Date </td> -->
       <td style="padding: 10px;"> Item </td>
       <td style="padding: 10px;"> Qty. </td>
       <td style="padding: 10px;"> Cost </td>
-    </th>
+    </tr>
     <% @user.charge_list.each do |charge| %>
-      <tr>
-        <td style="padding: 10px; margin-right: 200px;"> <%= charge[:date] %>
+      <tr style="font-size: 20px;">
+        <!-- <td style="padding: 10px; margin-right: 200px;"> <%= charge[:date] %> -->
         <td style="padding: 10px;"> <%= "#{charge[:item]} @ $#{charge[:price]}" %></td>
         <td style="padding: 10px;"> <%= charge[:quantity] %> </td>
         <td style="padding: 10px;"> <%= "#{charge[:price] * charge[:quantity]}" %></td>
       </tr>
     <% end %>
-    <tr>
-      <td style="padding: 10px;"></td>
+    <tr style="font-size: 20px;">
       <td style="padding: 10px;"></td>
       <td style="padding: 10px;"></td>
       <td style="padding: 10px;"><%= "$#{@user.get_current_balance}" %></td>
@@ -27,12 +36,16 @@
 <h2> Your balance is: <strong> <%= " $#{@user.get_current_balance}" %> </strong> </h2>
 
 <a class="btn btn-default" href="/charges/new" role="button">Pay with Stripe!</a>
+<a class="btn btn-default" href="#" role="button">Pay with Check!</a>
+</div>
+</div>
+<div class="balance-side" style="margin-left: 70%">
+  <h3> <strong>Checks Payable To: </strong></h3>
+  <h4>ASUC/UCBMUN c/o LEAD Center </h4>
+  <h4> 102 Hearst Gym MC 4500 </h4>
+  <h4> Berkeley, CA 94720-4500 </h4>
+  <h5> *UCBMUN is sponsored by the Associated Students of the University of California, a 501c3 Non-Profit Organization supporting student initiated activities </h5>
 
-
-<%= @user.get_current_balance %>
-<%= @user.charge_list %>
-<%= @user.name %>
-
-<%= current_user.get_current_balance %>
-<%= current_user.charge_list %>
-<%= current_user.name %>
+  <h3> <strong> Proof of Payment </strong> </h3>
+  <p> In order to ease registration and prevent lost checks we ask that you send us Proof of Payment. Proof of Payment can either be a copy or a photo of the completed check or the USPS/UPS/FedEx tracking number, sent electronically to cos-external@ucbmun.org. The Proof of Payment is due within 20 days of Early or Regular registration (and before BayMUN if you wish to attend), and definitely within 7 days of the last registration date. If you fail to send Proof of Payment by that date and have not communicated with our Chief of Staff External, you will not be allowed to participate in UCBMUN XIX. In case of special circumstances, please contact our Chief of Staff - External.</p>
+</div>

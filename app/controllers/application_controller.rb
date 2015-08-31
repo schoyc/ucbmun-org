@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include ChargesHelper
   include StaticPagesHelper
+  include UsersHelper
 end

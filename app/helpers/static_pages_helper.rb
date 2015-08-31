@@ -295,12 +295,18 @@ module StaticPagesHelper
                      chair: {name: "Alice Ma", email: ""},
                      cd: {name: "Allie Gordon", email: ""}
                    },
-        "colombia" => {name: "Civil War:",
-                      subtitle: "FARC in Colombia",
+        "colombia" => {name: "Colombia",
+                      subtitle: "Peace Accords with FARC",
                        type: "Crisis",
-                       description: "Coming soon!",
+                       description: "For the past fifty years, the government and people of Colombia have endured violence, human rights violations, and what many denominate as a civil war with rebel armed groups, most importantly, Fuerzas Armadas Revolucionarias de Colombia, known as FARC.
+
+President Juan Manuel Santos, like many of his predecessors, attempted to negotiate with FARC, and his efforts have been perhaps the most significant peace process that Colombia has seen in decades.
+
+This committee will simulate the current negotiations between the government of Colombia, FARC representatives, humanitarian organizations, and other stakeholders such as displaced populations, conflict victims, and Colombian politicians.
+
+Aligning with the actual process, it will set forth an agenda of issues to be addressed and in which parties should reach consensus. The voices of the Colombian people, tired of being terrorized, and those of the FARC, arguing for equality, rural development, and investment in peripheral Colombia will face issues in which they agree and many in which they disagree.",
                        chair: {name: "Camilo Ossa", email: ""},
-                       cd: {name: "Ryan Avery", email: ""}
+                       cd: {name: "Will Kable", email: ""}
                      },
         "marcos" => {name: "The Rolex 12:",
                      subtitle: "Marcos' Phillipines under Martial Law",
@@ -315,7 +321,7 @@ module StaticPagesHelper
         "unsc" => {name: "UN Security Council:",
                   subtitle: "India and Pakistan in 1947",
                    type: "Crisis",
-                   description: "Coming soon!",
+                   description: "Welcome to the United Nations Security Council (UNSC), a committee that promises be characterized by debauchery, intensity and but of course, the veto. Take a trip back in time with us to 1947 where we encounter a world struggling to recover in the wake of the Second World War. Travel with us first to Greece to help us find an answer to the Greek Question that is the Greek Civil War. Then to India to negotiate a compromise between the fiery people of the subcontinents two largest nations, India and Pakistan, in the midst of the bloodiest migration in recent history. Our journey will end in the murky forests of Indonesia as we try to mitigate the effects of the Indonesian National Revolution. Keep your wit about you, as this committee will require quick thinking, decisive action and, most importantly, cunning diplomacy.",
                    chair: {name: "Divit Sood", email: ""},
                    cd: {name: "Rajit Kinra", email: ""}
                  },
@@ -333,7 +339,7 @@ module StaticPagesHelper
   def load_jcc
 
     @jcc = {
-      "rhodesia" => {name: "The Rhodesian Government",
+      "rhodesia" => {name: "The Government of Rhodesia",
                      type: "Joint Crisis",
                      description: "'The wind of change is blowing through this continent. Whether we like it or not, this growth of national consciousness is a political fact.'
 
@@ -343,7 +349,7 @@ module StaticPagesHelper
                    },
       "zanu" => {name: "Zimbabwe African National Union (ZANU)",
                  type: "Joint Crisis",
-                 description: "Coming soon!",
+                 description: "The era of European imperialism is gradually coming to an end, and with events as they are, it is not certain what the future of Africa will look like. Already there are splits within the ranks of the opposition to the white minority government of Rhodesia, creating the potential for a two-front conflict. Whether the land of Zimbabwe will thrive under the Maoist principles of ZANU, succumb to the Leninism espoused by ZAPU, or remain under the imperialist control of the Government of Rhodesia will be up to you to decide.",
                  chair: {name: "", email: ""},
                  cd: {name: "", email: ""}
       },

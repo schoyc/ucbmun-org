@@ -48,13 +48,17 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
+  get 'loggedinregistration' => 'users#registrationerror'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users
   resources :charges
 
   # get 'users/:id/balance' => 'users#balance'
-  get 'products/:id/balance' => 'users#balance', as: :balance
+  get 'users/:id/balance' => 'users#balance', as: :balance
+  get 'users/:id/delegation' => 'users#delegation', as: :delegation
+  get 'users/:id/forms' => 'users#forms', as: :forms
+  get 'users/:id/settings' => 'users#settings', as: :settings
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

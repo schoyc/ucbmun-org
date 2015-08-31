@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
 
   def create
     # current_user.charges
-    decimal_amount = current_user.get_current_balance * 100
+    @decimal_amount = current_user.get_current_balance
     @amount = current_user.get_current_balance * 100
     @amount = @amount.to_i
     # Amount in cents
@@ -25,7 +25,7 @@ class ChargesController < ApplicationController
 
     if !charge.nil? && charge.status == 'succeeded'
       #@curr_user.set_current_balance(-10000)
-      current_user.set_current_balance(current_user.get_current_balance - decimal_amount)
+      current_user.set_current_balance(current_user.get_current_balance - @decimal_amount)
       #current_user.update_attribute(:current_balance, -10000)
       # current_user.charge_list.push({item: "Delegation Payment",
       #                       price: @amount / 100 * -1 ,

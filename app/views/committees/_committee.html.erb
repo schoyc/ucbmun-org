@@ -1,18 +1,20 @@
-<div class="committee-info">
-  <div class="committee-header">
-    <h1><%= committee[:name] + " " + committee[:subtitle] %></h1>
-    <h4><%= committee[:type] %></h4>
-  </div>
+<div class="committee-header">
+  <h1><%= committee[:subtitle].nil? ? committee[:name] : "#{committee[:name]} #{committee[:subtitle]}" %></h1>
+  <h4><%= committee[:type] %></h4>
+</div>
+<div class="committee-info col-md-9">
   <div class="committee-description">
     <p><%= committee[:description] %></p>
   </div>
   <div class="background-guide">
   </div>
 </div>
-<div class="committee-chairs">
+<div class="col-md-1"></div>
+<div class="committee-chairs col-md-2">
   <div class="chair">
     <div class="chair-pic">
-      <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %>
+      <!-- <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %> -->
+      <%= image_tag "no_photo_person.png", class: "chair-profile" %>
     </div>
     <div class="chair-info">
       <h4><strong>Chair</strong></h4>
@@ -23,7 +25,8 @@
   <% if !committee[:cd].nil? %>
   <div class="chair">
     <div class="chair-pic">
-      <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %>
+      <!-- <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %> -->
+      <%= image_tag "no_photo_person.png", class: "chair-profile" %>
     </div>
     <div class="chair-info">
       <h4><strong>Crisis Director</strong></h4>

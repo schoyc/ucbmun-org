@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if current_user.nil?
+      @user = User.new
+    else
+      redirect_to loggedinregistration_path
+    end
   end
 
   def create
@@ -13,6 +17,7 @@ class UsersController < ApplicationController
       log_in @user
       flash[:success] = "Your account has been created!"
       redirect_to @user
+      send_new_registration_email @user
     else
       render 'new'
     end
@@ -21,6 +26,10 @@ class UsersController < ApplicationController
   def balance
     @user = User.find(params[:id])
   end
+
+  def registrationerror
+  end
+
 
   private
     def user_params

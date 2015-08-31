@@ -1,0 +1,7 @@
+<div class="btn-group user-profile-toolbar" role="group" aria-label="...">
+  <a href=<%=current_user %>><button type="button" class="btn btn-default user-profile-button">Profile</button></a>
+  <a href=<%=delegation_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Delegation</button></a>
+  <a href=<%=balance_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Finances</button></a>
+  <a href=<%=forms_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Apps/Forms</button> </a>
+  <a href=<%=settings_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Settings</button> </a>
+</div>

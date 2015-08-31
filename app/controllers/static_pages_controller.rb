@@ -17,6 +17,7 @@ class StaticPagesController < ApplicationController
   end
 
   def venue
+    @container_type = "venue-page"
   end
 
   def schedule

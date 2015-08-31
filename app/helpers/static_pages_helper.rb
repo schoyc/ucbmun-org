@@ -11,13 +11,19 @@ module StaticPagesHelper
                         "raymond" =>   {title: "Deputy Secretary General",
                                       picture: "secretariat/raymond.jpg",
                                       name: "Raymond King"},
-                        "samed" =>     {title: "Chief of Staff - External",
-                                      picture: "secretariat/samed.jpg",
-                                      name: "Samed Jain"},
                         "beckett" =>   {title: "Chief of Staff - Internal",
                                       picture: "secretariat/beckett.jpg",
                                       bio: "Beckett is a junior here at UC Berkeley looking to major in Political Science and minor in Public policy. When not competing or working on Model UN, he is often watching Netflix. A fun fact about Beckett is that he used to be a police explorer and he worked for the Institute for Government Studies on UC Berkeley’s campus.",
                                       name: "Beckett Kelly"},
+                        "samed" =>     {title: "Co-Chief of Staff - External",
+                                      picture: "secretariat/samed.jpg",
+                                      name: "Samed Jain"},
+
+                        "antoine" =>    {title: "Co-Chief of Staff - External",
+                                                          picture: "secretariat/antoine.jpg",
+                                                          name: "Antoine Bichara",
+                                                          bio: "Antoine is a senior at UC Berkeley majoring in Physics. He has German/U.S. dual citizenship and spent the past semester studying abroad at the Technical University of Berlin. Besides spending time in the lab, he enjoys delving into his wide range of interests including engineering and international relations. A fun fact is that he follows several European soccer leagues very closely and supports FC Bayern München."},
+
                         "tim" =>       {title: "Chief of Staff - Product",
                                       picture: "secretariat/tim.jpg",
                                       name: "Timothy Guan",
@@ -26,11 +32,7 @@ module StaticPagesHelper
   end
 
   def director
-    @directors_names = {"antoine" =>    {title: "Director of Outreach",
-                                      picture: "secretariat/antoine.jpg",
-                                      name: "Antoine Bichara",
-                                      bio: "Antoine is a senior at UC Berkeley majoring in Physics. He has German/U.S. dual citizenship and spent the past semester studying abroad at the Technical University of Berlin. Besides spending time in the lab, he enjoys delving into his wide range of interests including engineering and international relations. A fun fact is that he follows several European soccer leagues very closely and supports FC Bayern München."},
-                        "kevin" =>   {title: "Director of Business Relations",
+    @directors_names = {"kevin" =>   {title: "Director of Business Relations",
                                       picture: "secretariat/kevin.jpg",
                                       name: "Kevin Bai"},
                         "hassan" =>   {title: "Director of Business Relations",
@@ -186,7 +188,7 @@ module StaticPagesHelper
     ]
 
     @friday_schedule = [
-      {name: "San Fracisco Tours", time: "8:30am - 12:00pm"},
+      {name: "San Francisco Tours", time: "8:30am - 12:00pm"},
       {name: "Committee Session II", time: "1:00pm - 5:00pm"},
       {name: "Advisor Feedback Forum", time: "3:00pm - 3:30pm"},
       {name: "Dinner", time: "5:00pm - 6:00pm"},

@@ -161,7 +161,8 @@ li {
 	position: absolute;
 	z-index: 20;
 	color: white;
-	bottom: 52%;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 70%;
 	margin: 0 auto;
 	left: 0;
@@ -206,4 +207,10 @@ li {
 
 .contact-us-profile {
 	float: left;
+}
+
+.home-logo {
+	display: inline;
+	height: 55px;
+	margin-top: -40px;
 }

@@ -65,5 +65,6 @@ class CommitteesController < ApplicationController
 
   def adhoc
     @adhoc = load_crises["adhoc"]
+    @committee_name = @adhoc[:name]
   end
 end

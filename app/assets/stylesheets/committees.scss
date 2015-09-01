@@ -8,4 +8,21 @@
 
 .committee-chairs {
   margin-top: -30px;
+  background-color: white;
+  opacity: 0.4;
+}
+
+.committee-background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.committee-text {
+  background-color: white;
+  opacity: 0.4;
+}
+.adhoc-background-image {
+  background-image: image-url("committees/adhoc.jpg");
 }

@@ -32,7 +32,7 @@ module UsersHelper
 
 
     Mail.deliver do
-           to 'sccchenster@gmail.com'
+           to 'registration@ucbmun.org'
          from 'ucbmun.register@gmail.com'
       subject 'New UCBMUN XX Registration'
          body email_text

@@ -7,9 +7,7 @@
 }
 
 .committee-chairs {
-  margin-top: -30px;
-  background-color: white;
-  opacity: 0.4;
+  //margin-top: -30px;
 }
 
 .committee-background {
@@ -17,12 +15,126 @@
   height: 100%;
   overflow: hidden;
   background-size: cover;
+  background-image: image-url("committees/adhoc.jpg");
+  background-color: purple;
 }
 
 .committee-text {
-  background-color: white;
-  opacity: 0.4;
+
 }
+
+.committee-description {
+  padding: 5px;
+}
+
+.committee-page-full {
+  //background-color: white;
+  //opacity: 0.87;
+  //background-color: rgba(255, 255, 255, 0.87);
+  display: block;
+  margin: 0;
+  padding: 1% 5%;
+  height: 100%;
+  margin-top: -20px;
+
+}
+
+.committee-header {
+  background-color: rgba(255, 255, 255, 0.87);
+  //padding: 10px;
+  text-align: center;
+
+}
+
+.committee-page {
+  margin-top: -20px;
+}
+
+.committee-info, .committee-chairs {
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 10px;
+}
+
 .adhoc-background-image {
   background-image: image-url("committees/adhoc.jpg");
+
+}
+
+.disec-background-image {
+  background-image: image-url("committees/disec.jpg");
+  background-size: cover;
+}
+
+.colombia-background-image {
+  background-image: image-url("committees/colombia.jpg");
+  background-size: cover;
+}
+.darkweb-background-image {
+  background-image: image-url("committees/darkweb.jpg");
+  background-size: cover;
+}
+
+.legal-background-image {
+  background-image: image-url("committees/legal.jpg");
+  background-size: cover;
+}
+
+.marcos-background-image {
+  background-image: image-url("committees/marcos.jpg");
+  background-size: cover;
+}
+
+.nfl-background-image {
+  background-image: image-url("committees/nfl.jpg");
+  background-size: cover;
+}
+
+.obama-background-image {
+  background-image: image-url("committees/obama.jpg");
+  background-size: cover;
+}
+
+.pilate-background-image {
+  background-image: image-url("committees/pilate.jpg");
+  background-size: cover;
+}
+
+.rhodesia-background-image {
+  background-image: image-url("committees/rhodesia.jpg");
+  background-size: cover;
+}
+
+.specpol-background-image {
+  background-image: image-url("committees/specpol.jpg");
+  background-size: cover;
+}
+
+.unsc-background-image {
+  background-image: image-url("committees/unsc.jpg");
+  background-size: cover;
+}
+
+.tang-background-image {
+  background-image: image-url("committees/tang.jpg");
+  background-size: cover;
+}
+
+.wikileaks-background-image {
+  background-image: image-url("committees/wikileaks.jpg");
+  background-size: cover;
+}
+
+.wsf-background-image {
+  background-image: image-url("committees/wsf.jpg");
+  background-size: cover;
+}
+
+.zanu-background-image {
+  background-image: image-url("committees/zanu.jpg");
+  background-size: cover;
+}
+
+.zapu-background-image {
+  background-image: image-url("committees/zapu.jpg");
+  background-size: cover;
 }

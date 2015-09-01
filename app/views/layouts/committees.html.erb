@@ -6,14 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class=<%= "committee-background #{@committee_name}-background-image">
+<body>
   <%= render 'layouts/header' %>
-  <div class=<%=@container_type.nil? ? "container" : @container_type %>>
-    <% flash.each do |message_type, message| %>
-      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-    <% end %>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+  <div class=<%= "committee-background #{@committee_name}-background-image">
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </div>
   <%= render 'layouts/footer' %>
 </body>

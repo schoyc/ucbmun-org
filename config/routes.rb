@@ -53,6 +53,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :users
   resources :charges
+  resources :committees
 
   # get 'users/:id/balance' => 'users#balance'
   get 'users/:id/balance' => 'users#balance', as: :balance

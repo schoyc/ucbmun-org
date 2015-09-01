@@ -1,40 +1,42 @@
-<div class="committee-text">
-<div class="committee-header">
-  <h1><%= committee[:subtitle].nil? ? committee[:name] : "#{committee[:name]} #{committee[:subtitle]}" %></h1>
-  <h4><%= committee[:type] %></h4>
-</div>
-<div class="committee-info col-md-9">
-  <div class="committee-description">
-    <p><%= committee[:description] %></p>
-  </div>
-  <div class="background-guide">
-  </div>
-</div>
-</div>
-<div class="col-md-1"></div>
-<div class="committee-chairs col-md-2">
-  <div class="chair">
-    <div class="chair-pic">
-      <!-- <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %> -->
-      <%= image_tag "no_photo_person.png", class: "chair-profile" %>
+<div class="container committee-page-full" style="height: 700px;">
+  <div class="committee-text">
+    <div class="committee-header">
+      <h1 style="display: block; padding-top: 10px;"><%= committee[:subtitle].nil? ? committee[:name] : "#{committee[:name]} #{committee[:subtitle]}" %></h1>
+      <h4 style="display: block; padding-bottom: 10px;"><%= committee[:type] %></h4>
     </div>
-    <div class="chair-info">
-      <h4><strong>Chair</strong></h4>
-      <h4><%= committee[:chair][:name] %></h4>
-      <h5><%= committee[:chair][:email] %></h4>
+    <div class="committee-info col-md-9" style="margin-left: 30px; margin-right: 15px;">
+      <div class="committee-description">
+        <p style="font-size: 18px;"><%= committee[:description] %></p>
+      </div>
+      <div class="background-guide">
+      </div>
     </div>
   </div>
-  <% if !committee[:cd].nil? %>
-  <div class="chair">
-    <div class="chair-pic">
-      <!-- <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %> -->
-      <%= image_tag "no_photo_person.png", class: "chair-profile" %>
+  <div class="col-md-1"></div>
+  <div class="committee-chairs col-md-2" style="margin-right: -30px;">
+    <div class="chair">
+      <div class="chair-pic">
+        <!-- <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %> -->
+        <%= image_tag "no_photo_person.png", class: "chair-profile" %>
+      </div>
+      <div class="chair-info">
+        <h4 style="margin-bottom: 3px;"><strong>Chair</strong></h4>
+        <h4 style="margin-bottom: 2px;"><%= committee[:chair][:name] %></h4>
+        <%= link_to "#{committee[:chair][:email]}", "mailto:#{committee[:chair][:email]}" %>
+      </div>
     </div>
-    <div class="chair-info">
-      <h4><strong>Crisis Director</strong></h4>
-      <h4><%= committee[:cd][:name] %></h4>
-      <h5><%= committee[:cd][:email] %></h4>
+    <% if !committee[:cd].nil? %>
+    <div class="chair" style="margin-top: 15px;">
+      <div class="chair-pic">
+        <!-- <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %> -->
+        <%= image_tag "no_photo_person.png", class: "chair-profile" %>
+      </div>
+      <div class="chair-info">
+        <h4 style="margin-bottom: 3px;"><strong>Crisis Director</strong></h4>
+        <h4 style="margin-bottom: 2px;"><%= committee[:cd][:name] %></h4>
+        <%= link_to "#{committee[:cd][:email]}", "mailto:#{committee[:cd][:email]}" %>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 </div>

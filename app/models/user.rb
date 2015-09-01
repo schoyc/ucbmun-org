@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
     default_charge_list = []
     if current_time.to_i < early_fee_time.to_i
       default_charge_list = [ {item: "Delegation Fee--Early",
-                            price: 90.00,
+                            price: 85.00,
                             quantity: 1,
                             date: current_time},
                             {item: "Delegate Fee--Early",
@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
                             date: current_time} ]
     else
       default_charge_list = [ {item: "Delegation Fee--Regular",
-                            price: 100.00,
+                            price: 95.00,
                             quantity: 1,
                             date: current_time},
                             {item: "Delegate Fee--Regular",
@@ -71,7 +71,7 @@ class User < ActiveRecord::Base
 
     default_charge_list.push({
       item: "Stripe Transaction Fee (2.9%)",
-      price: calculate_stripe_fee(90 + 85*delegates_count),
+      price: calculate_stripe_fee(85 + 85*delegates_count),
       quantity: 1,
       date: current_time
       })
@@ -107,9 +107,9 @@ class User < ActiveRecord::Base
     early_fee_time = Time.new(2015, 12, 2)
     balance = 0.00
     if current_time.to_i < early_fee_time.to_i
-      balance = 90 + 85*delegates_count
+      balance = 85 + 85*delegates_count
     else
-      balance = 100 + 95*delegates_count
+      balance = 95 + 95*delegates_count
     end
     stripe_fee = calculate_stripe_fee(balance)
     balance += stripe_fee

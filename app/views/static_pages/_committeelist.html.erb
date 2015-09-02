@@ -3,7 +3,7 @@
     <% committees.each do |key, committee| %>
      <div class="col-md-4 committee-single">
        <a href=<%= "committees/#{key}" %>>
-       <div class="full-committee-profile" data-toggle="modal" data-target=<%=".#{key}"%>>
+       <div class="full-committee-profile">
          <div class="committee-pic">
            <%= image_tag "committees/#{key}.jpg", class: "committee-picture #{key}" %>
          </div>

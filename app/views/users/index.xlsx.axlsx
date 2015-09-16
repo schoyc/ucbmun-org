@@ -1,7 +1,7 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Registrations") do |sheet|
-  sheet.add_row ["University", "Delegates", "Name", "Email", "Phone", "Address"] ## Header values of Excel
+  sheet.add_row ["University", "Delegates", "Name", "Email", "Phone", "Address", "City", "State", "Zip", "Country"] ## Header values of Excel
   @registrations.each do |reg|
-    sheet.add_row [reg.university, reg.delegates_count, reg.name, reg.email, reg.phone, reg.address]
+    sheet.add_row [reg.university, reg.delegates_count, reg.name, reg.email, reg.phone, reg.address, reg.city, reg.state, reg.zip, reg.country]
   end
 end

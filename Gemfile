@@ -11,6 +11,8 @@ gem 'jquery-rails', '4.0.3'
 gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
+gem 'acts_as_xlsx'
+gem 'axlsx_rails'
 
 group :development, :test do
   gem 'pg',     '0.17.1'

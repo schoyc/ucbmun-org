@@ -31,6 +31,14 @@ class UsersController < ApplicationController
   end
 
 
+  def index
+    @registrations = User.all
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :university, :password, :password_confirmation,

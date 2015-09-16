@@ -4,7 +4,6 @@ gem 'rails',        '4.2.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'bcrypt',	    '3.1.10'
-gem 'sass-rails',   '5.0.2'
 gem 'uglifier',     '2.5.3'
 gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'
@@ -13,6 +12,10 @@ gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'acts_as_xlsx'
 gem 'axlsx_rails'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'sass-rails'
+gem 'country_select'
 
 group :development, :test do
   gem 'pg',     '0.17.1'

@@ -1,6 +1,10 @@
 class ChargesController < ApplicationController
   def new
     # current_user.charges
+    if current_user.nil?
+      redirect_to login_path, :flash => { :success => "Go back to ucbmun.herokuapp.com/conferencepayment" }
+      return
+    end
     @amount = current_user.get_current_balance * 100
     @amount = @amount.to_i
   end

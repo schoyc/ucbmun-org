@@ -56,7 +56,7 @@ Rails.application.routes.draw do
 
   get 'listofregistrations' => 'users#index'
 
-
+  get 'conferencepayment' => 'charges#new'
   # get 'users/:id/balance' => 'users#balance'
   get 'users/:id/balance' => 'users#balance', as: :balance
   get 'users/:id/delegation' => 'users#delegation', as: :delegation

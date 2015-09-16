@@ -1,6 +1,15 @@
 ActiveAdmin.register User do
-  permit_params :university, :delegates_count, :name, :email, :address, :city, :state, :zip
-  #
+  permit_params :university, :delegates_count, :name, :email, :address, :city, :state, :zip, :current_balance
+
+  index do
+    column :university
+    column :delegates_count
+    column :name
+    column :email
+    column :current_balance
+    
+    actions
+  end
   # form do |f|
   #   f.inputs "Admin Details" do
   #     f.input :university

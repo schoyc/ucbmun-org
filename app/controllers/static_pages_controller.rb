@@ -38,4 +38,7 @@ class StaticPagesController < ApplicationController
   def welcome
   end
 
+  def pdftest
+  end
+
 end

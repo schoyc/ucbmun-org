@@ -70,19 +70,34 @@ class User < ActiveRecord::Base
                             date: current_time} ]
     end
 
-    default_charge_list.push({
-      item: "Stripe Transaction Fee (2.9%)",
-      price: calculate_stripe_fee(85 + 85*delegates_count),
-      quantity: 1,
-      date: current_time
-      })
+    if delegate_discount.nil?
+      default_charge_list.push({
+        item: "Stripe Transaction Fee (2.9%)",
+        price: calculate_stripe_fee(85 + 85*delegates_count),
+        quantity: 1,
+        date: current_time
+        })
+    else
+      default_charge_list.push({
+        item: "Delegate Fee Discount",
+        price: (delegate_discount * -1).round(2),
+        quantity: delegates_count,
+        date: current_time
+        })
+      default_charge_list.push({
+        item: "Stripe Transaction Fee (2.9%)",
+        price: calculate_stripe_fee(85 + (85 - delegate_discount) * delegates_count),
+        quantity: 1,
+        date: current_time
+        })
+    end
 
-    default_charge_list
+      default_charge_list
 
   end
 
   def get_current_balance
-    if current_balance.nil?
+    if current_balance.nil? or !delegate_discount.nil? or !delegation_discount.nil?
       calculate_balance.round(2)
     else
       current_balance.round(2)
@@ -111,6 +126,14 @@ class User < ActiveRecord::Base
       balance = 85 + 85*delegates_count
     else
       balance = 95 + 95*delegates_count
+    end
+
+    if !delegate_discount.nil?
+      balance -= delegate_discount * delegates_count
+    end
+
+    if !delegation_discount.nil?
+      balance -= delegation_discount
     end
     stripe_fee = calculate_stripe_fee(balance)
     balance += stripe_fee

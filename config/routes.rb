@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get 'pdf' => 'static_pages#pdftest'
+
   get 'home' => 'static_pages#home'
   get 'committees' => 'static_pages#committees'
   get 'sponsors' => 'static_pages#sponsors'

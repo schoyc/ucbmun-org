@@ -50,6 +50,8 @@ class UsersController < ApplicationController
 
   def delegation
     @user = User.find(params[:id])
+    response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM http://goo.gl/forms"
+    response.headers["X-FRAME-OPTIONS"] = "ALLOW-FROM https://docs.google.com/forms"
   end
 
 

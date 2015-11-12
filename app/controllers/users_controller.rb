@@ -50,7 +50,7 @@ class UsersController < ApplicationController
 
   def delegation
     @user = User.find(params[:id])
-    response.headers["X-FRAME-OPTIONS"] = "ALLOWALL"
+
   end
 
 

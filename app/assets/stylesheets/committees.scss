@@ -25,6 +25,7 @@
 
 .committee-description {
   padding: 5px;
+
 }
 
 .committee-page-full {
@@ -40,7 +41,7 @@
 }
 
 .committee-header {
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: rgba(255, 255, 255, 0.86);
   //padding: 10px;
   text-align: center;
 
@@ -50,8 +51,8 @@
   margin-top: -20px;
 }
 
-.committee-info, .committee-chairs {
-  background-color: rgba(255, 255, 255, 0.82);
+.committee-info, .committee-chairs, .chair-letters {
+  background-color: rgba(255, 255, 255, 0.86);
   padding: 10px;
 }
 

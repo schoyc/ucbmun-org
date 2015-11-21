@@ -5,14 +5,32 @@
       <h1 style="margin-top: -3px;"> <%="#{committee[:subtitle]}" %> </h1>
       <h4 style="display: block; padding-bottom: 10px;"><%= committee[:type] %></h4>
     </div>
-    <div class="committee-info col-md-9" style="margin-left: 30px; margin-right: 15px;">
+    <div class="committee-info">
       <div class="committee-description">
         <% committee[:description].each do |paragraph| %>
-          <p style="font-size: 17px;"><%= paragraph %></p>
+          <p style="font-size: 15px;"><%= paragraph %></p>
         <%end %>
       </div>
-      <div class="background-guide">
-      </div>
+    </div>
+  </div>
+  <br>
+  <div class="chair-letters col-md-9" style="margin-left: 30px; margin-right: 15px;">
+    <div class="committee-description">
+      <% committee[:chair_letter].each do |paragraph| %>
+        <p style="font-size: 14px;"><%= paragraph %></p>
+      <%end %>
+    </div>
+    <strong><hr size="7" width = "100%"></hr></strong>
+    <% if !committee[:cd_letter].nil? %>
+    <div class="committee-description">
+      <% committee[:cd_letter].each do |paragraph| %>
+        <p style="font-size: 14px;"><%= paragraph %></p>
+      <%end %>
+    </div>
+    <% else %>
+
+    <% end %>
+    <div class="background-guide">
     </div>
   </div>
   <div class="col-md-1"></div>
@@ -42,4 +60,5 @@
     </div>
     <% end %>
   </div>
+
 </div>

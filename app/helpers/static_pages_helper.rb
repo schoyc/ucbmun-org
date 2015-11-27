@@ -385,7 +385,7 @@ In this committee, delegates will assemble to deal with critical issues that wil
 ", "Ever since I joined MUN and discovered what it is we crazy kids do here, I’ve wanted to run a committee revolving around Jerusalem. With its ancient history and position at the center of three major religions, I believe it to be one of the most exciting, dynamic cities in the world to study. This fall, I even studied abroad in Jerusalem with my dear friend and your honorable Chair, the lovely Alice Ma. We are incredibly excited to bring everything we learned from the experience and many long nights of frantic discussions to this committee. ", "I hope this will prove to be an stimulating, surprising weekend for all of us. I look forward to seeing you all very soon; please feel free to contact me with any questions, book suggestions, or even just to say hi! ", "Warmly,", "Allie Gordon"]
 
                    },
-        "colombia" => {name: "Colombia",
+        "colombia" => {name: "Colombia:",
                       subtitle: "Peace Accords with FARC",
                        type: "Crisis",
                        description: ["For the past fifty years, the government and people of Colombia have endured violence, human rights violations, and what many denominate as a civil war with rebel armed groups, most importantly, Fuerzas Armadas Revolucionarias de Colombia, known as FARC.
@@ -402,7 +402,7 @@ Aligning with the actual process, it will set forth an agenda of issues to be ad
 
                      },
         "marcos" => {name: "The Rolex 12:",
-                     subtitle: "Marcos' Phillipines under Martial Law",
+                     subtitle: "Marcos' Philippines under Martial Law",
                      type: "Crisis",
                      description: ["From 1972 to 1981, Philippine President Ferdinand Marcos ruled under a declaration of martial law. He and his cabinet had absolute control over the country. Opposition leaders were jailed or killed, and dissent was crushed. The twelve advisors in Marcos’ inner circle that helped guide this regime were all rumored to have been given Rolex watches as a sign of their inclusion in the elite circle of Filipino politics. They became known as the Rolex 12.",
                      "The 1970s were a tumultuous in the Philippines. Communist and Leftist movements were rising in membership, terrorism and violence began to become an everyday event. Simultaneously, President Ferdinand Marcos was to be term-limited in 1973. A plan was hatched. As early as 1970, Marcos began meeting with top advisors to devise a plan that would allow for Marcos to stay in power, for Leftist dissidents to be crushed, and for the Rolex 12 to build a new Philippines.",

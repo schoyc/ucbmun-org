@@ -7,9 +7,12 @@ body {
 }
 
 .logo-header {
-  height: 300%;
-  margin-top: -15%;
-
+  height: 105%;
+  //margin-top: -15%;
+  position:absolute;
+  left:2;
+  top:0;
+  margin:auto;
 }
 
 .navbar {

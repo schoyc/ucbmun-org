@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'committees/obama'
 
-  get 'committees/wikileaks'
+  get 'committees/thatcher'
 
   get 'committees/colombia'
 

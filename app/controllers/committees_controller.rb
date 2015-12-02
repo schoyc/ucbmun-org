@@ -44,9 +44,9 @@ class CommitteesController < ApplicationController
     @container_type = "obama-background-image"
   end
 
-  def wikileaks
-    @wikileaks = load_crises["wikileaks"]
-    @container_type = "wikileaks-background-image"
+  def thatcher
+    @thatcher = load_crises["thatcher"]
+    @container_type = "thatcher-background-image"
   end
 
   def colombia

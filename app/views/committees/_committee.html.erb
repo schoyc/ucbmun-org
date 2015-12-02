@@ -38,7 +38,7 @@
     <div class="chair">
       <div class="chair-pic">
         <!-- <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %> -->
-        <%= image_tag "chair_photos/#{committee[:chair][:name]}.jpeg", class: "chair-profile" %>
+        <%= image_tag "chair_photos/#{committee[:chair][:name].gsub(/\s+/, "")}.jpeg", class: "chair-profile" %>
       </div>
       <div class="chair-info">
         <h4 style="margin-bottom: 3px;"><strong>Chair</strong></h4>
@@ -50,7 +50,7 @@
     <div class="chair" style="margin-top: 15px;">
       <div class="chair-pic">
         <!-- <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %> -->
-        <%= image_tag "chair_photos/#{committee[:cd][:name]}.jpeg", class: "chair-profile" %>
+        <%= image_tag "chair_photos/#{committee[:cd][:name].gsub(/\s+/, "")}.jpeg", class: "chair-profile" %>
       </div>
       <div class="chair-info">
         <h4 style="margin-bottom: 3px;"><strong>Crisis Director</strong></h4>

@@ -92,7 +92,7 @@
 .marcos-background-image {
   background-image: image-url("committees/marcos.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .nfl-background-image {
@@ -116,7 +116,8 @@
 .rhodesia-background-image {
   background-image: image-url("committees/rhodesia.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+
 }
 
 .specpol-background-image {

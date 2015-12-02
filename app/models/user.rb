@@ -99,11 +99,12 @@ class User < ActiveRecord::Base
   end
 
   def get_current_balance
-    if current_balance.nil? or !delegate_discount.nil? or !delegation_discount.nil?
-      calculate_balance.round(2)
-    else
-      current_balance.round(2)
-    end
+    # if current_balance.nil? or !delegate_discount.nil? or !delegation_discount.nil?
+    #   calculate_balance.round(2)
+    # else
+    #   current_balance.round(2)
+    # end
+    calculate_balance.round(2)
   end
 
   def set_current_balance(amount)
@@ -117,7 +118,7 @@ class User < ActiveRecord::Base
   end
 
   def calculate_stripe_fee(balance)
-    (0.029 / 0.971 * balance).round(2)
+    (0.03 / 0.97 * balance).round(2)
   end
 
   def calculate_balance

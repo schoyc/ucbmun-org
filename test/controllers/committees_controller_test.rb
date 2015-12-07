@@ -31,8 +31,8 @@ class CommitteesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get tang" do
-    get :tang
+  test "should get redcliff" do
+    get :redcliff
     assert_response :success
   end
 

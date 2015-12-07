@@ -29,9 +29,9 @@ class CommitteesController < ApplicationController
     @container_type = "unsc-background-image"
   end
 
-  def tang
-    @tang = load_crises["tang"]
-    @container_type = "tang-background-image"
+  def redcliff
+    @redcliff = load_crises["redcliff"]
+    @container_type = "redcliff-background-image"
   end
 
   def pilate

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'committees/unsc'
 
-  get 'committees/tang'
+  get 'committees/redcliff'
 
   get 'committees/pilate'
 

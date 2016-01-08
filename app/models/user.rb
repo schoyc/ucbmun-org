@@ -99,12 +99,12 @@ class User < ActiveRecord::Base
   end
 
   def get_current_balance
-    # if current_balance.nil? or !delegate_discount.nil? or !delegation_discount.nil?
-    #   calculate_balance.round(2)
-    # else
-    #   current_balance.round(2)
-    # end
-    calculate_balance.round(2)
+    if current_balance.nil? or !delegate_discount.nil? or !delegation_discount.nil?
+      calculate_balance.round(2)
+    else
+      current_balance.round(2)
+    end
+    # calculate_balance.round(2)
   end
 
   def set_current_balance(amount)

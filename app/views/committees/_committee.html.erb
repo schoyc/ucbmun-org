@@ -5,6 +5,11 @@
       <h1 style="margin-top: -3px;"> <%="#{committee[:subtitle]}" %> </h1>
       <h4 style="display: block; padding-bottom: 10px;"><%= committee[:type] %></h4>
     </div>
+    <% if !@adhoc.nil? %>
+    <div class="committee-info">
+      <p><strong> If you are interested in participating in this committee, please complete this <a href="https://docs.google.com/forms/d/1GHNXXH6M53VQFFl1NPxmYxYKE5okldKxvgN2d4xJUAE/viewform"> application. </a></strong></p>
+    </div>
+    <% end %>
     <div class="committee-info">
       <div class="committee-description">
         <% committee[:description].each do |paragraph| %>

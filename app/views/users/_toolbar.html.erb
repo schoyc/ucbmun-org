@@ -2,6 +2,6 @@
   <a href=<%= "/users/#{current_user.id}" %>><button type="button" class="btn btn-default user-profile-button">Profile</button></a>
   <a href=<%=delegation_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Delegation</button></a>
   <a href=<%=balance_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Finances</button></a>
-  <a href=<%=forms_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Apps/Forms</button> </a>
+  <a href=<%=forms_url(id: current_user.id)%>><button type="button" class="btn btn-default user-profile-button">Apps/Resources</button> </a>
   <a href=<%=edit_user_path(current_user) %>><button type="button" class="btn btn-default user-profile-button">Settings</button> </a>
 </div>

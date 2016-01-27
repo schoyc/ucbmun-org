@@ -117,19 +117,14 @@ class User < ActiveRecord::Base
     self.update_attribute(:charge_list, charges)
   end
 
-  def calculate_stripe_fee(balance)
-    (0.03 / 0.97 * balance).round(2)
+  def calculate_balance_with_stripe_fee(balance)
+    (balance / 0.97).round(2)
   end
 
   def calculate_balance
     current_time = Time.now.inspect
     early_fee_time = Time.new(2015, 12, 2)
-    balance = 0.00
-    if current_time.to_i < early_fee_time.to_i
-      balance = 85 + 85*delegates_count
-    else
-      balance = 95 + 95*delegates_count
-    end
+    balance = 95 + 95*delegates_count
 
     if !delegate_discount.nil?
       balance -= delegate_discount * delegates_count
@@ -138,8 +133,7 @@ class User < ActiveRecord::Base
     if !delegation_discount.nil?
       balance -= delegation_discount
     end
-    stripe_fee = calculate_stripe_fee(balance)
-    balance += stripe_fee
+    balance = calculate_balance_with_stripe_fee(balance)
     update_attribute(:current_balance, balance)
     balance
   end

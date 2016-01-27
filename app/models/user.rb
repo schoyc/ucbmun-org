@@ -121,6 +121,10 @@ class User < ActiveRecord::Base
     (balance / 0.97).round(2)
   end
 
+  def calculate_stripe_fee(balance)
+    (0.03 / 0.97 * balance).round(2)
+  end
+
   def calculate_balance
     current_time = Time.now.inspect
     early_fee_time = Time.new(2015, 12, 2)

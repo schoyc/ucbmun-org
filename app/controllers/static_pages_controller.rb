@@ -41,4 +41,7 @@ class StaticPagesController < ApplicationController
   def pdftest
   end
 
+  def registrationclosed
+  end
+
 end

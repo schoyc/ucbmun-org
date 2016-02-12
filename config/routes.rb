@@ -51,7 +51,7 @@ Rails.application.routes.draw do
   get 'explore' => 'static_pages#explore'
   get 'welcome' => 'static_pages#welcome'
 
-  get 'signup' => 'users#new'
+  get 'signup' => 'static_pages#registrationclosed'
   get 'login' => 'sessions#new'
   get 'loggedinregistration' => 'users#registrationerror'
   post 'login' => 'sessions#create'

@@ -44,4 +44,8 @@ class StaticPagesController < ApplicationController
   def registrationclosed
   end
 
+  def resources
+  end
+
+
 end

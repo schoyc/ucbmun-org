@@ -50,8 +50,9 @@ Rails.application.routes.draw do
   get 'secretariat' => 'static_pages#secretariat'
   get 'explore' => 'static_pages#explore'
   get 'welcome' => 'static_pages#welcome'
+  get 'resources' => 'static_pages#resources'
 
-  get 'signup' => 'static_pages#registrationclosed'
+  get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   get 'loggedinregistration' => 'users#registrationerror'
   post 'login' => 'sessions#create'

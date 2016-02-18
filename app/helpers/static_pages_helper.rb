@@ -187,11 +187,10 @@ module StaticPagesHelper
       {name: "Opening Ceremonies", time: "7:00pm - 7:45pm"},
       {name: "Committee Session I", time: "8:00pm - 10:00pm"},
       {name: "Committee Feedback for Head Delegates", time: "10:15pm - 10:45pm"},
-      {name: "Bear Crawl", time: "10:45pm - 1:00am"}
+      {name: "Bear Crawl", time: "11:00pm - 1:00am"}
     ]
 
     @friday_schedule = [
-      {name: "Lunch", time: "12:00pm - 1:00pm"},
       {name: "Committee Session II", time: "1:00pm - 5:00pm"},
       {name: "Advisor Feedback Forum", time: "3:00pm - 3:30pm"},
       {name: "Dinner", time: "5:00pm - 6:15pm"},

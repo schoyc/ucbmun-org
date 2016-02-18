@@ -38,6 +38,27 @@ class ChargesController < ApplicationController
 
     end
 
+    def mobile
+      @amount = params[:amount] * 100
+      @amount = @amount.to_i
+      @token = params[:stripeToken]
+      @email = params[:email]
+
+      # Amount in cents
+      customer = Stripe::Customer.create(
+        :email => @email
+        :card  => @token
+      )
+
+      charge = Stripe::Charge.create(
+        :customer    => customer.id,
+        :amount      => @amount,
+        :description => "Merch payment for #{@email}",
+        :currency    => 'usd'
+      )
+    end
+
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path

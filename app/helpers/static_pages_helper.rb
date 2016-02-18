@@ -182,22 +182,22 @@ module StaticPagesHelper
 
   def load_schedule
     @thursday_schedule = [
-      {name: "Registration", time: "3:30pm - 6:15pm"},
+      {name: "Registration", time: "3:30pm - 6:30pm"},
       {name: "Model UN 101", time: "4:30pm - 6:00pm"},
-      {name: "Opening Ceremonies", time: "6:30pm - 7:30pm"},
-      {name: "Committee Session I", time: "7:45pm - 9:45pm"},
-      {name: "Committee Feedback for Head Delegates", time: "10:00pm - 10:30pm"},
-      {name: "Bear Crawl", time: "10:45pm onwards"}
+      {name: "Opening Ceremonies", time: "7:00pm - 7:45pm"},
+      {name: "Committee Session I", time: "8:00pm - 10:00pm"},
+      {name: "Committee Feedback for Head Delegates", time: "10:15pm - 10:45pm"},
+      {name: "Bear Crawl", time: "10:45pm - 1:00am"}
     ]
 
     @friday_schedule = [
-      {name: "San Francisco Tours", time: "8:30am - 12:00pm"},
+      {name: "Lunch", time: "12:00pm - 1:00pm"},
       {name: "Committee Session II", time: "1:00pm - 5:00pm"},
       {name: "Advisor Feedback Forum", time: "3:00pm - 3:30pm"},
-      {name: "Dinner", time: "5:00pm - 6:00pm"},
-      {name: "Committee Session III", time: "6:30pm - 9:30pm"},
-      {name: "Committee Feedback for Head Delegates", time: "9:45pm - 10:15pm"},
-      {name: "Jazz Night", time: "10:30pm - 1:00am"}
+      {name: "Dinner", time: "5:00pm - 6:15pm"},
+      {name: "Committee Session III", time: "6:15pm - 9:15pm"},
+      {name: "Committee Feedback for Head Delegates", time: "9:30pm - 10:00pm"},
+      {name: "Jazz Night", time: "10:00pm - 1:00am"}
     ]
 
     @saturday_schedule = [
@@ -206,7 +206,7 @@ module StaticPagesHelper
       {name: "Committee Feedback for Head Delegates", time: "1:15pm - 1:45pm"},
       {name: "Lunch", time: "1:00pm - 3:00pm"},
       {name: "Committee Session V", time: "3:00pm - 7:00pm"},
-      {name: "Delegate Soiree", time: "10:00pm - 2:00pm"}
+      {name: "Delegate Soiree", time: "10:00pm - 2:00am"}
     ]
 
     @sunday_schedule = [

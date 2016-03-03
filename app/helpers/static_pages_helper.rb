@@ -211,6 +211,39 @@ module StaticPagesHelper
     @sunday_schedule = [
       {name: "Closing Ceremonies", time: "10:00am - 12:00pm"}
     ]
+
+    @event_rooms = [
+      {name: "Head Delegate Feedback", time: "2nd Floor, Mason 1"},
+      {name: "MUN 101", time: "2nd Floor, Montgomery"}
+    ]
+
+    @sbs_rooms = [
+        {name: "World Social Forum:", time: "4th Floor, Pine"},
+        {name: "NFL Owners' Meeting:", time: "4th Floor, Columbus 3"},
+        {name: "Legal Committee:", time: "4th Floor, Columbus 2"},
+        {name: "DISEC:", time: "4th Floor, Columbus 1"},
+        {name: "General Assembly:", time: "3rd Floor, Grand Ballroom"}
+    ]
+
+    @crisis_rooms = [
+        {name: "The Ad Hoc Committee of the Secretary-General", time: "2nd Floor, Pyramid"},
+        {name: "A Clash of Three Kingdoms:", time: "1st Floor, Valencia"},
+        {name: "Obama Unleashed or Rejected:", time: "1st Floor, Embarcadero"},
+        {name: "Conquering the Web:", time: "2nd Floor, Davis"},
+        {name: "No King but Caesar:", time: "1st Floor, Grant"},
+        {name: "Colombia:", time: "2nd Floor, Sansome"},
+        {name: "The Rolex 12:", time: "1st Floor, PDR"},
+        {name: "UN Security Council:", time: "2nd Floor, Washington"},
+        {name: "Cabinet of the Iron Lady:", time: "2nd Floor, Front"},
+
+    ]
+
+    @jcc_rooms = [
+        {name: "The Government of Rhodesia", time: "2nd Floor, Mason 1"},
+        {name: "Zimbabwe African National Union:", time: "2nd Floor, Mason 2"},
+        {name: "Zimbabwe African People's Union:", time: "2nd Floor, Montgomery"}
+
+    ]
   end
 
   def load_sbs

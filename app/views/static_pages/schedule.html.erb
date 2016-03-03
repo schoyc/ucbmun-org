@@ -10,3 +10,12 @@
 <br></br>
 <h2 class="center-header schedule-header"> Sunday, March 6 </h2>
 <%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>
+<h1> Locations </h1>
+<h2 class="center-header schedule-header"> Conference Events </h2>
+<%= render partial: "schedule", locals: {schedule_items: @event_rooms} %>
+<h2 class="center-header schedule-header"> Specialized Bodies </h2>
+<%= render partial: "schedule", locals: {schedule_items: @sbs_rooms} %>
+<h2 class="center-header schedule-header"> Crisis Committees </h2>
+<%= render partial: "schedule", locals: {schedule_items: @crisis_rooms} %>
+<h2 class="center-header schedule-header"> Joint Crisis Committees </h2>
+<%= render partial: "schedule", locals: {schedule_items: @jcc_rooms} %>

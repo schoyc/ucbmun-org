@@ -141,4 +141,9 @@ class User < ActiveRecord::Base
     update_attribute(:current_balance, balance)
     balance
   end
+
+  def set_balance(balance)
+    update_attribute(:current_balance, balance)
+  end
+
 end

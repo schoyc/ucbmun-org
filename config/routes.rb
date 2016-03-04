@@ -51,6 +51,10 @@ Rails.application.routes.draw do
   get 'explore' => 'static_pages#explore'
   get 'welcome' => 'static_pages#welcome'
   get 'resources' => 'static_pages#resources'
+  get 'munstore' => 'static_pages#munstore'
+  get 'paymentsuccess' => 'static_pages#paymentsuccess'
+
+  get '/muncharge' => 'charges#muncharge'
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'

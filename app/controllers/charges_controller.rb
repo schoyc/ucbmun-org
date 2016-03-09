@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
     @amount = @amount.to_i
   end
 
-  def createold
+  def create
     # current_user.charges
     @decimal_amount = current_user.get_current_balance
     @amount = current_user.get_current_balance * 100
@@ -53,7 +53,7 @@ class ChargesController < ApplicationController
   end
 
 
-  def create
+  def createmunstore
     #subtotal = @shirt.to_i * 15 + @mug.to_i * 15 + @shotglass.to_i * 7 + @folder.to_i * 5 + @candygram.to_i * 3 + @donation.to_i * 1
     #@amount = subtotal * 100
     # Amount in cents
@@ -65,7 +65,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => amount,
+      :amount      => @amount,
       :description => "UCBMUN Merchandise Payment",
       :currency    => 'usd'
     )

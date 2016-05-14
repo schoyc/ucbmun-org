@@ -223,3 +223,29 @@ li {
 .seven-sage-logo {
 	width: 20%;
 }
+
+.sf-map {
+	background-image: url(sfmap.png);
+	background-size: cover;
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	height: 100%;
+}
+
+.map-pin {
+	width: 5em;
+
+}
+
+.map-item-image {
+	height : 50vh;
+	width : 100%;
+}
+
+#hotel-pin {
+	position: absolute;
+	top: 38%;
+	right: 24%;
+
+}

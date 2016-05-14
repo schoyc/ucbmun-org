@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   acts_as_xlsx
   attr_accessor :remember_token
   before_save {self.email = email.downcase }
+  before_update :adjust_balance_if_needed
   validates :name, presence: true, length: { maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: 255},
@@ -10,6 +11,7 @@ class User < ActiveRecord::Base
   validates :university, presence: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -46,6 +48,44 @@ class User < ActiveRecord::Base
       end
       self.current_balance = balance
     end
+  end
+
+  def initialize_balance
+    update_attribute(:amount_paid, 0)
+    adjust_balance()
+  end
+
+  def adjust_balance_if_needed
+    delegates_changed = self.changed.include? "delegates_count"
+    balance_not_adjusted = !(self.changed.include? "current_balance")
+
+    if delegates_changed && balance_not_adjusted
+       adjust_balance
+    end
+  end
+
+  def adjust_balance
+
+    current_time = Time.now.inspect
+    early_fee_time = Time.new(2016, 12, 2)
+
+    if current_time.to_i < early_fee_time.to_i
+      balance = 85 + 85 * delegates_count
+    else
+      balance = 95 + 95 * delegates_count
+    end
+
+    balance -= amount_paid
+
+    if !delegate_discount.nil?
+      balance -= delegate_discount * delegates_count
+    end
+
+    if !delegation_discount.nil?
+      balance -= delegation_discount
+    end
+    balance = calculate_balance_with_stripe_fee(balance)
+    update_attribute(:current_balance, balance)
   end
 
   def charge_list
@@ -96,6 +136,15 @@ class User < ActiveRecord::Base
 
       default_charge_list
 
+  end
+
+  def update_amount_paid(amount)
+    update_attribute(:amount_paid, amount_paid + amount)
+  end
+
+  def update_balance(amount)
+    update_amount_paid(amount)
+    set_current_balance(current_balance - amount)
   end
 
   def get_current_balance

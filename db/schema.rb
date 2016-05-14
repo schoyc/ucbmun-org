@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015051157) do
+ActiveRecord::Schema.define(version: 20160514084454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20151015051157) do
     t.decimal  "current_balance",     precision: 10, scale: 2
     t.decimal  "delegate_discount",   precision: 10, scale: 2
     t.decimal  "delegation_discount", precision: 10, scale: 2
+    t.decimal  "amount_paid",         precision: 10, scale: 2
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

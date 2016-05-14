@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      @user.initialize_balance()
       log_in @user
       flash[:success] = "Your account has been created!"
       redirect_to @user
@@ -34,7 +35,12 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      # if @user.changed == ['delegates_count']
+      #   @user.adjust_balance
+      # end
+      # @user.update_attribute(:current_balance, 1234)
+      flash[:success] = "Profile update #{@user.changed}"
+
       redirect_to @user
     else
       render 'edit'

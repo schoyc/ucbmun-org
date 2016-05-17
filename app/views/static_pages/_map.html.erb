@@ -1,6 +1,7 @@
 <div class="sf-map" style="float: left;">
-  <%= image_tag "location_pin.png", id: "hotel-pin", class: "map-pin" %>
-
+  <% @attractions.each do |attraction| %>
+    <%= image_tag "location_pin.png", class: "map-pin", "data-mapid" => attraction.id, style: "top: #{attraction.y_pos}%; left: #{attraction.x_pos}%;" %>
+  <% end %>
 </div>
 
 <div class="sf-item" style="float: right;">

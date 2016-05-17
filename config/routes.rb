@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  # get 'attractions/show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'committees/specpol'
@@ -63,6 +65,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   resources :users
   resources :charges
+  resources :attractions
 
   get 'listofregistrations' => 'users#index'
 

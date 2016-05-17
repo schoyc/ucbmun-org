@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     @background_image = "hilton1.jpg"
     @container_type = "home-page"
+    @attractions = Attraction.all
   end
 
   def committees

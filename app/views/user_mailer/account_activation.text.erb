@@ -1,0 +1,11 @@
+Welcome <%= @user.university %>,
+
+We are incredibly excited to have your delegation attending UCBMUN XXI.
+To confirm your registration, please visit the link below:
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+You will then recieve an email from our Chief of Staff-External with an invoice and complete registration details for your delegation.
+
+Thanks, and we can't wait to see you in March!
+UCBMUN XXI Secretariat

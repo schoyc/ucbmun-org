@@ -1,0 +1,16 @@
+<h3> UCBMUN XXI Registration Confirmation </h3>
+<p>Welcome <%= @user.university %>,</p>
+
+<p>
+We are incredibly excited to have your delegation attending UCBMUN XXI.
+To confirm your registration, please visit the link below:
+</p>
+
+<%= link_to "Confirm my registraton for UCBMUN XXI", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+<p>
+Afterwards, please exepect to recieve an email in the next few days from our Chief of Staff-External with an invoice and complete registration details for your delegation.
+</p>
+
+Thanks, and we can't wait to see you in March!
+UCBMUN XXI Secretariat

@@ -18,9 +18,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.initialize_balance()
-      log_in @user
-      flash[:success] = "Your account has been created!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to confirm your registration and activate your account."
+      redirect_to root_url
       send_new_registration_email @user
     else
       render 'new'

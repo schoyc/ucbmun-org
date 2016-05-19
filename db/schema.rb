@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515033644) do
+ActiveRecord::Schema.define(version: 20160518225850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,14 +71,17 @@ ActiveRecord::Schema.define(version: 20160515033644) do
     t.string   "country"
     t.integer  "delegates_count"
     t.string   "username"
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
     t.string   "password_digest"
     t.string   "remember_digest"
     t.decimal  "current_balance",     precision: 10, scale: 2
     t.decimal  "delegate_discount",   precision: 10, scale: 2
     t.decimal  "delegation_discount", precision: 10, scale: 2
     t.decimal  "amount_paid",         precision: 10, scale: 2
+    t.string   "activation_digest"
+    t.boolean  "activated",                                    default: false
+    t.datetime "activated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

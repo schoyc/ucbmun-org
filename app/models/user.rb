@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   acts_as_xlsx
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
   before_save {self.email = email.downcase }
+  before_create :create_activation_digest
   before_update :adjust_balance_if_needed
   validates :name, presence: true, length: { maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -194,5 +195,11 @@ class User < ActiveRecord::Base
   def set_balance(balance)
     update_attribute(:current_balance, balance)
   end
+
+  private
+    def create_activation_digest
+      self.activation_token = User.new_token
+      self.activation_digest = User.digest(activation_token)
+    end
 
 end

@@ -66,6 +66,7 @@ Rails.application.routes.draw do
   resources :users
   resources :charges
   resources :attractions
+  resources :account_activations, only: [:edit]
 
   get 'listofregistrations' => 'users#index'
 

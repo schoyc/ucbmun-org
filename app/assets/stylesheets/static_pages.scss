@@ -238,9 +238,13 @@ li {
 }
 
 .map-pin {
-	width: 5em;
+	width: 3em;
 	position: absolute;
 
+}
+
+.pin-selected {
+	color: blue;
 }
 
 .map-item-image {

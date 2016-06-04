@@ -70,8 +70,8 @@ Rails.application.configure do
               :address              => "smtp.gmail.com",
               :port                 => 587,
               :domain               => "gmail.com",
-              :user_name            => 'ucbmun.register@gmail.com',
-              :password             => 'ucbmunXX',
+              :user_name            => ENV['REGISTER_EMAIL'],
+              :password             => ENV['REGISTER_PASSWORD'],
               :authentication       => 'plain',
               :enable_starttls_auto => true  }
 

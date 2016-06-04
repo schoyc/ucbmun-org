@@ -220,6 +220,10 @@ class User < ActiveRecord::Base
     update_attribute(:current_balance, balance)
   end
 
+  def activation_digest=(digest)
+    write_attribute(:activation_digest, digest)
+  end
+
   private
     def create_activation_digest
       self.activation_token = User.new_token

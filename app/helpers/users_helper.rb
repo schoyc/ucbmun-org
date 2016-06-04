@@ -4,8 +4,8 @@ module UsersHelper
 
     options = { :address              => "smtp.gmail.com",
                 :port                 => 587,
-                :user_name            => 'ucbmun.register@gmail.com',
-                :password             => '#ucbmun21',
+                :user_name            => ENV['REGISTER_EMAIL'],
+                :password             => ENV['REGISTER_PASSWORD'],
                 :authentication       => 'plain',
                 :enable_starttls_auto => true  }
 

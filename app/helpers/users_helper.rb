@@ -5,7 +5,7 @@ module UsersHelper
     options = { :address              => "smtp.gmail.com",
                 :port                 => 587,
                 :user_name            => 'ucbmun.register@gmail.com',
-                :password             => 'ucbmunXX',
+                :password             => '#ucbmun21',
                 :authentication       => 'plain',
                 :enable_starttls_auto => true  }
 

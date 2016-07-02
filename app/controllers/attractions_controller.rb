@@ -7,6 +7,14 @@ class AttractionsController < ApplicationController
     @attraction_info = description_list
   end
 
+  def hilton
+    @attraction = Attraction.find_by(name: "The Hilton San Francisco")
+    description_list = parse_description(@attraction.description)
+    @description = description_list["description"]
+    description_list.delete("description")
+    @attraction_info = description_list
+  end
+
   private
     def parse_description(description_string)
       description_list = description_string.split('</p>')

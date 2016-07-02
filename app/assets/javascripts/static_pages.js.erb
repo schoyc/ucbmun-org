@@ -1,0 +1,121 @@
+var ready = function() {
+
+}
+
+attractions = [
+  {title: "Alcatraz", position: {lat: 37.827293, lng: -122.422946}},
+  {title: "Angel Island", position: {lat: 37.864641, lng: -122.432984}},
+  {title: "Golden Gate Park", position: {lat: 37.769446, lng: -122.486396}},
+  {title: "Exploratorium", position: {lat: 37.801017, lng: -122.398614}},
+  {title: "De Young Museum", position: {lat: 37.771698, lng: -122.468386}},
+  {title: "Fisherman's Wharf", position: {lat: 37.808448, lng: -122.417747}},
+  {title: "Golden Gate Bridge", position: {lat: 37.820115, lng: -122.478234}},
+  {title: "California Academy of Sciences", position: {lat: 37.769831, lng: -122.465902}},
+  {title: "Lombard Street", position: {lat: 37.802317, lng: -122.418697}},
+  {title: "Powell Street Cable Cars", position: {lat: 37.784612, lng: -122.405927}},
+  {title: "Ghirardelli Square", position: {lat: 37.806222, lng: -122.422988}},
+  {title: "Coit Tower", position: {lat: 37.802581, lng: -122.405779}},
+  {title: "Twin Peaks", position: {lat: 37.752302, lng: -122.447067}},
+  {title: "The Presidio", position: {lat: 37.797342, lng: -122.464128}},
+  {title: "Aquarium of the Bay", position: {lat: 37.808779, lng: -122.408702}},
+  {title: "The Embarcadero", position: {lat: 37.799422, lng: -122.398103}},
+  {title: "UCBMUN XXI", position: {lat: 37.795225, lng: -122.404320}}
+]
+
+function initMap() {
+  for (i = 0; i < attractions.length; i += 1) {
+    // console.log('attraction-' + i.toString());
+    // console.log($('attraction-' + i.toString()).length();
+    var item = $('#attraction-' + i.toString());
+    console.log(item.data('mapid'));
+  }
+
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 37.785857, lng: -122.448377},
+      zoom: 13
+    });
+
+
+  for (i = 0; i < attractions.length; i += 1) {
+    var attraction = attractions[i];
+    attraction["map"] = map;
+    if (attraction.title === "UCBMUN XXI") {
+      attraction["icon"] = "<%= asset_path('logo_blue_map.png') %>";
+    } else {
+      attraction["icon"] = "<%= asset_path('location_pin.png') %>";
+    }
+
+    var marker = new google.maps.Marker(attraction);
+    var id = $('#attraction-' + i.toString()).data('mapid');
+    var selectedFunction = makeSelectedFunction();
+    marker.addListener('click', selectedFunction(id, marker));
+    //marker.addListener('mouseover', changeIcon(marker, true));
+    //marker.addListener('mouseout', changeIcon(marker, false));
+
+  }
+
+  var map_item = $('.sf-item');
+  $.get("hilton", function(data) {
+    map_item.html(data);
+  }, "html");
+}
+
+function changeIcon(marker, selected) {
+  return function highlightIcon() {
+    if (selected) {
+      marker.setIcon("<%= asset_path('light_location_pin.png') %>");
+    } else {
+      marker.setIcon("<%= asset_path('location_pin.png') %>");
+    }
+
+  }
+}
+
+function makeSelectedFunction() {
+  var selected_marker = new google.maps.Marker({
+    title: "NULL",
+    position: {lat: 37.802581, lng: -122.405779}
+  });
+  //var old_marker;
+  return function makeInfoFunction(id, marker) {
+    return function displayInfo() {
+      // old_marker = selected_marker;
+      // selected_marker = marker;
+      selected_marker.setIcon("<%= asset_path('location_pin.png') %>");
+      console.log(selected_marker.title);
+      marker.setIcon("<%= asset_path('blue_location_pin.png') %>");
+      selected_marker = marker;
+      // console.log(old_marker.title);
+      // if (old_marker.title !== "NULL") {
+      //   alert("CHANGING OLD");
+      //   old_marker.setIcon("<%= asset_path('location_pin.png') %>");
+      // }
+
+      var map_item = $('.sf-item');
+      $.get("attractions/" + id, function(data) {
+
+        map_item.fadeOut("fast", function() {
+          map_item.html(data).fadeIn("fast")
+        });
+      }, "html");
+    };
+  }
+}
+
+function loadScript() {
+	console.log("map loading ...");
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA1TFRlPp5xjI-AOCH3pArRPX250YrpIa4&callback=initMap";
+  script.setAttribute("async", "async");
+  script.setAttribute("defer", "defer");
+  document.body.appendChild(script);
+}
+
+$(document).ready(ready);
+$(window).load(function() {
+  if ($('#map').length !== 0) {
+    loadScript();
+  }
+});

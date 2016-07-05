@@ -7,11 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/header' %>
+  <%= render 'layouts/navbar' %>
   <div class=<%=@container_type.nil? ? "container" : @container_type %>>
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
+    <br></br>
+    <br></br>
     <%= yield %>
     <% if !@container_type.nil? and @container_type != "home-page"%>
     <br></br>

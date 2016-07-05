@@ -1,0 +1,77 @@
+<div class="nav-container">
+  <div id="navigation" class="nav-bar-active">
+    <!-- To prevent overlapping, delete absolute from logo_container, this will mess up some of the
+    nav-bar transitions -->
+    <ul class="logo_container">
+      <div class="logo">
+        <%= image_tag "icons/ucbmun_logo.png" %>
+      </div>
+      <div class="ucbmun">
+        UCBMUN XXI
+      </div>
+    </ul>
+
+    <div class="secretariat-title" id="secretariat-title">
+      Meet the Secretariat
+    </div>
+    <div class="ob-title" id="ob-title">
+      Meet the Officer's Board
+    </div>
+    <div class="sb-title" id="sb-title">
+      Specialized Bodies
+    </div>
+    <div class="cc-title" id="cc-title">
+      Crisis Committees
+    </div>
+    <div class="jcc-title" id="jcc-title">
+      Joint Crisis Committees
+    </div>
+    <div class="welcome-title" id="welcome-title">
+      Welcome Letter
+    </div>
+    <div class="logistics-title" id="logistics-title">
+      Logistics
+    </div>
+    <div class="sponsor-title" id="sponsor-title">
+      Sponsors
+    </div>
+    <div class="instagram-title" id="instagram-title">
+      #UCBMUN <!--<img src="./images/instagram.png" style="height:19px;">-->
+    </div>
+    <div class="explore-title" id="explore-title">
+      Explore SF
+    </div>
+
+    <ul class="links-active" id="links">
+      <li class="home-link link underline" data-menuanchor="home">
+          <a href="#home">
+            Home
+          </a>
+      </li>
+      <li class="about-link link" data-menuanchor="about">
+        <a href="#about/0">
+          About Us
+        </a>
+      </li>
+      <li class="committee-link link" data-menuanchor="committee">
+        <a href="#committee/0">
+          Committees
+        </a>
+      </li>
+
+
+      <li class="info-link link" data-menuanchor="info">
+        <a href="#info/0">
+          Information
+        </a>
+      </li>
+      <li class="attraction-link link" data-menuanchor="attraction">
+        <a href="#attraction/0">
+          Attractions
+        </a>
+      </li>
+      <li class="apply-link link">
+          <%= link_to "Register", signup_path %>
+      </li>
+  </div>
+</div>

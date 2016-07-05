@@ -344,4 +344,28 @@ $(document).ready(function(){
     var class_name = id + "-contents";
     $("." + class_name).css("display", "block");
   });
+
+  $(".committee-js").click(function() {
+    var contact = $(this).find("#contact");
+    if (contact.hasClass("cc-contact")) {
+      contact.removeClass("cc-contact");
+      contact.addClass("cc-contact-active");
+    }
+    else if (contact.hasClass("cc-contact-active")) {
+      contact.removeClass("cc-contact-active");
+      contact.addClass("cc-contact");
+    }
+  });
+
+  $(".secretariat-container").click(function() {
+    var contact = $(this).find("#secretariat-contact");
+    if (contact.hasClass("secretariat-contact")) {
+      contact.removeClass("secretariat-contact");
+      contact.addClass("secretariat-contact-active");
+    }
+    else if (contact.hasClass("secretariat-contact-active")) {
+      contact.removeClass("secretariat-contact-active");
+      contact.addClass("secretariat-contact");
+    }
+  })
 });

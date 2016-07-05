@@ -1,81 +1,3 @@
-<div class="nav-container">
-  <div id="navigation" class="nav-bar-active">
-    <!-- To prevent overlapping, delete absolute from logo_container, this will mess up some of the
-    nav-bar transitions -->
-    <ul class="logo_container">
-      <div class="logo">
-        <%= image_tag "icons/ucbmun_logo.png" %>
-      </div>
-      <div class="ucbmun">
-        UCBMUN XXI
-      </div>
-    </ul>
-
-    <div class="secretariat-title" id="secretariat-title">
-      Meet the Secretariat
-    </div>
-    <div class="ob-title" id="ob-title">
-      Meet the Officer's Board
-    </div>
-    <div class="sb-title" id="sb-title">
-      Specialized Bodies
-    </div>
-    <div class="cc-title" id="cc-title">
-      Crisis Committees
-    </div>
-    <div class="jcc-title" id="jcc-title">
-      Joint Crisis Committees
-    </div>
-    <div class="welcome-title" id="welcome-title">
-      Welcome Letter
-    </div>
-    <div class="logistics-title" id="logistics-title">
-      Logistics
-    </div>
-    <div class="sponsor-title" id="sponsor-title">
-      Sponsors
-    </div>
-    <div class="instagram-title" id="instagram-title">
-      #UCBMUN <!--<img src="./images/instagram.png" style="height:19px;">-->
-    </div>
-    <div class="explore-title" id="explore-title">
-      Explore SF
-    </div>
-
-    <ul class="links-active" id="links">
-      <li class="home-link link underline" data-menuanchor="home">
-          <a href="#home">
-            Home
-          </a>
-      </li>
-      <li class="about-link link" data-menuanchor="about">
-        <a href="#about/0">
-          About Us
-        </a>
-      </li>
-      <li class="committee-link link" data-menuanchor="committee">
-        <a href="#committee/0">
-          Committees
-        </a>
-      </li>
-
-
-      <li class="info-link link" data-menuanchor="info">
-        <a href="#info/0">
-          Information
-        </a>
-      </li>
-      <li class="attraction-link link" data-menuanchor="attraction">
-        <a href="#attraction/0">
-          Attractions
-        </a>
-      </li>
-      <li class="apply-link link">
-          Register
-      </li>
-  </div>
-</div>
-
 <div id="fullpage">
   <div id="home" data-anchor="home" class="home-container section"  style="height:800px;background-image:url(http://www.stevenelleman.com/pw2-images/images/showcase/showcase_palacearts.jpg);">
     <div class="home-title">
@@ -85,7 +7,7 @@
   <div data-anchor="about" class="about-container section">
     <div class="slide">
       <div class="about-contents-container">
-        <div class="about-banner" style="background-image:url(/assets/images/about22.jpg);">
+        <div class="about-banner">
           <div class="about-title">
 
           </div>
@@ -438,7 +360,7 @@ Sincerely, Beckett Kelly
       <div class="secretariat-header"></div>
       <div class="sb-contents-container">
         <div class="sb-contents">
-          <div class="sb-container-1" onClick="contactCommittee($(this));">
+          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="sb-info">
             </div>
             <div class="sb-img unesco-img" style="
@@ -448,7 +370,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="sb-container-1" onClick="contactCommittee($(this));">
+          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="sb-info">
             </div>
             <div class="sb-img" style="background-image:url(../../ucbmun_photos/fao2.jpg);
@@ -458,7 +380,7 @@ Sincerely, Beckett Kelly
             <div class="contact" id="contact">
             </div>
           </div>
-          <div class="sb-container-1" onClick="contactCommittee($(this));">
+          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="sb-info">
             </div>
             <div class="sb-img" style="background-image:url(../../ucbmun_photos/nba1.jpg);
@@ -470,7 +392,7 @@ Sincerely, Beckett Kelly
           </div>
         </div>
         <div class="sb-contents">
-          <div class="sb-container-2" onClick="contactCommittee($(this));">
+          <div class="sb-container-2 committee-js" onClick="contactCommittee($(this));">
             <div class="sb-info">
             </div>
             <div class="sb-img" style="background-image:url(../../ucbmun_photos/disec2.jpg);
@@ -480,7 +402,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="sb-container-2" onClick="contactCommittee($(this));">
+          <div class="sb-container-2 committee-js" onClick="contactCommittee($(this));">
             <div class="sb-info">
             </div>
             <div class="sb-img" style="background-image:url(../../ucbmun_photos/legal2.jpg);
@@ -497,7 +419,7 @@ Sincerely, Beckett Kelly
       <div class="secretariat-header"></div>
       <div class="cc-contents-container">
         <div class="cc-contents">
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 Bangkok Shutdown
@@ -514,7 +436,7 @@ Sincerely, Beckett Kelly
               <br></br>
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 The Church of Jesus Christ of Latter-day Saints
@@ -527,7 +449,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 Bangladesh 1971
@@ -540,7 +462,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 The Asian Financial Crisis 1997
@@ -555,7 +477,7 @@ Sincerely, Beckett Kelly
           </div>
         </div>
         <div class="cc-contents">
-          <div class="cc-container-2" onClick="contactCommittee($(this));">
+          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 Hong Kong 1967
@@ -568,7 +490,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-2" onClick="contactCommittee($(this));">
+          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 Mau Mau Rebellion
@@ -581,7 +503,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-2" onClick="contactCommittee($(this));">
+          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 The Mexican Rebellion
@@ -596,7 +518,7 @@ Sincerely, Beckett Kelly
           </div>
         </div>
         <div class="cc-contents">
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 The Teutonic Order
@@ -609,7 +531,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 The Death of Lenin
@@ -622,7 +544,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 UNSC 2015
@@ -635,7 +557,7 @@ Sincerely, Beckett Kelly
             <div class="cc-contact" id="contact">
             </div>
           </div>
-          <div class="cc-container-1" onClick="contactCommittee($(this));">
+          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
             <div class="cc-info">
               <div class="cc-name">
                 Ad Hoc
@@ -653,20 +575,20 @@ Sincerely, Beckett Kelly
       <div class="secretariat-header"></div>
       <div class="jcc-contents-container">
         <div class="jcc-contents">
-          <div class="jcc-container" onClick="contactCommittee($(this));">
+          <div class="jcc-container committee-js" onClick="contactCommittee($(this));">
             <div class="jcc-info">
             </div>
-            <div class="jcc-img" style="background-image:url(../../ucbmun_photos/egypt1.jpg);
+            <div class="jcc-img egypt-img" style="
             background-position: 50% 50%;
             -webkit-background-size: cover;">
             </div>
             <div class="contact" id="contact">
             </div>
           </div>
-          <div class="jcc-container" onClick="contactCommittee($(this));">
+          <div class="jcc-container committee-js" onClick="contactCommittee($(this));">
             <div class="jcc-info">
             </div>
-            <div class="jcc-img" style="background-image:url(../../ucbmun_photos/egypt6.jpg);
+            <div class="jcc-img egypt-img" style="
             background-position: 50% 50%;
             -webkit-background-size: cover;">
             </div>

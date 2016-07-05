@@ -337,7 +337,7 @@ function closeAll() {
 }
 
 $(document).ready(function(){
-  $(".info-container").onclick(function(){
+  $(".info-container").onClick(function(){
     var id = $(this).id;
     console.log(id);
     closeAll();

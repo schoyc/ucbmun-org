@@ -3,45 +3,45 @@
 /*Good for nav */
 @font-face {
   font-family: "code-bold";
-  src: url("../fonts/CODE Bold.otf");
+  src: url("CODE-Bold.otf");
 
 }
 
 @font-face {
   font-family: "code-light";
-  src: url("../fonts/CODE Light.otf");
+  src: asset-url("CODE-Light.otf");
 
 }
 
 @font-face {
   font-family: "ikaros";
-  src: url("../fonts/Ikaros.otf");
+  src: asset-url("Ikaros.otf");
 }
-
+/*
 @font-face {
   font-family: "intro";
-  src: url("../fonts/Intro Inline.otf");
-}
+  src: asset-url("Intro Inline.otf");
+}*/
 
 /*Good for nav*/
 @font-face {
   font-family: "mensch";
-  src: url("../fonts/mensch.ttf");
+  src: asset-url("mensch.ttf");
 }
 
 @font-face {
   font-family: "ostrich";
-  src: url("../fonts/OstrichSansInline-Regular.otf");
+  src: asset-url("OstrichSansInline-Regular.otf");
 }
 
-@font-face {
+/*@font-face {
   font-family: "zag";
-  src: url("fonts/Zag Regular.otf");
-}
+  src: asset-url("Zag Regular.otf");
+}*/
 
 @font-face {
   font-family: "stellar";
-  src: url("fonts/Stellar-Regular.otf");
+  src: asset-url("Stellar-Regular.otf");
 }
 
 

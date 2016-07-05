@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   get 'committees/adhoc'
 
-  root 'static_pages#home'
+  root 'static_pages#index'
 
   get 'pdf' => 'static_pages#pdftest'
 

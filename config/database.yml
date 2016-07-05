@@ -13,7 +13,7 @@ default: &default
 development:
   <<: *default
   database: ucbmun_site_dev
-  username: stevenelleman
+  username: stevenchen
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -22,7 +22,7 @@ development:
 test:
   <<: *default
   database: ucbmun_site_test
-  username: stevenelleman
+  username: stevenchen
   password:
 
 production:

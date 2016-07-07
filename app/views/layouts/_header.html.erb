@@ -1,46 +1,77 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/"><%= image_tag "logo_no_text.png", class: "logo-header img-responsive"%></a>
+<div class="nav-container">
+  <div id="navigation" class="nav-bar-active">
+    <!-- To prevent overlapping, delete absolute from logo_container, this will mess up some of the
+    nav-bar transitions -->
+    <ul class="logo_container">
+      <div class="logo">
+        <%= image_tag "icons/ucbmun_logo.png" %>
+      </div>
+      <div class="ucbmun">
+        UCBMUN XXI
+      </div>
+    </ul>
+
+    <div class="secretariat-title" id="secretariat-title">
+      Meet the Secretariat
+    </div>
+    <div class="ob-title" id="ob-title">
+      Meet the Officer's Board
+    </div>
+    <div class="sb-title" id="sb-title">
+      Specialized Bodies
+    </div>
+    <div class="cc-title" id="cc-title">
+      Crisis Committees
+    </div>
+    <div class="jcc-title" id="jcc-title">
+      Joint Crisis Committees
+    </div>
+    <div class="welcome-title" id="welcome-title">
+      Welcome Letter
+    </div>
+    <div class="logistics-title" id="logistics-title">
+      Logistics
+    </div>
+    <div class="sponsor-title" id="sponsor-title">
+      Sponsors
+    </div>
+    <div class="instagram-title" id="instagram-title">
+      #UCBMUN <!--<img src="./images/instagram.png" style="height:19px;">-->
+    </div>
+    <div class="explore-title" id="explore-title">
+      Explore SF
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-conference">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Conference<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Welcome Letter", welcome_path %></li>
-            <li><%= link_to "Venue", venue_path(@user) %></</li>
-            <li><%= link_to "Schedule", schedule_path %></li>
-            <li><%= link_to "Fee Information", fees_path %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to "Secretariat", secretariat_path %></li>
-            <li><%= link_to "Explore SF!", explore_path %></li>
-            <li><%= link_to "Resources", resources_path %></li>
+    <ul class="links-active" id="links">
+      <li class="home-link link underline" data-menuanchor="home">
+          <a href="/#home">
+            Home
+          </a>
+      </li>
+      <li class="about-link link" data-menuanchor="about">
+        <a href="/#about/0">
+          About Us
+        </a>
+      </li>
+      <li class="committee-link link" data-menuanchor="committee">
+        <a href="/#committee/0">
+          Committees
+        </a>
+      </li>
 
-          </ul>
-        </li>
-        <li><%= link_to "Committees", committees_path %></li>
-        <li><%= link_to "Sponsors", sponsors_path %></li>
-        <li><%= link_to "Contact Us", contact_path %></li>
-        <% if logged_in? %>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Profile", current_user %></li>
-            <li><%= link_to "Balance", balance_url(id: current_user.id) %></li>
-            <li><%= link_to "Apps/Forms", current_user %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to "Log out", logout_path, method: :delete %></li>
-          </ul>
-        </li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
+      <li class="info-link link" data-menuanchor="info">
+        <a href="/#info/0">
+          Information
+        </a>
+      </li>
+      <li class="attraction-link link" data-menuanchor="attraction">
+        <a href="/#attraction/0">
+          Attractions
+        </a>
+      </li>
+      <li class="apply-link link">
+          <%= link_to "Register", signup_path %>
+      </li>
+  </div>
+</div>

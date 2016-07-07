@@ -358,6 +358,7 @@ $(document).ready(function(){
   });
 
   $(".secretariat-container").click(function() {
+    alert("CLICKED");
     var contact = $(this).find("#secretariat-contact");
     if (contact.hasClass("secretariat-contact")) {
       contact.removeClass("secretariat-contact");

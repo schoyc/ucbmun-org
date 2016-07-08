@@ -1,14 +1,14 @@
 class CommitteesController < ApplicationController
-  def specpol
-    @specpol = load_sbs["specpol"]
-    @committee_name = "specpol"
-    @container_type = "specpol-background-image"
+  def unesco
+    @unesco = load_sbs["unesco"]
+    @committee_name = "unesco"
+    @container_type = "unesco-background-image"
   end
 
-  def nfl
-    @nfl = load_sbs["nfl"]
-    @committee_name = "nfl"
-    @container_type = "nfl-background-image"
+  def nba
+    @nba = load_sbs["nba"]
+    @committee_name = "nba"
+    @container_type = "nba-background-image"
   end
 
   def disec
@@ -17,10 +17,10 @@ class CommitteesController < ApplicationController
     @container_type = "disec-background-image"
   end
 
-  def wsf
-    @wsf = load_sbs["wsf"]
-    @committee_name = "wsf"
-    @container_type = "wsf-background-image"
+  def fao
+    @fao = load_sbs["fao"]
+    @committee_name = "fao"
+    @container_type = "fao-background-image"
   end
 
   def legal
@@ -35,69 +35,75 @@ class CommitteesController < ApplicationController
     @container_type = "unsc-background-image"
   end
 
-  def redcliff
-    @redcliff = load_crises["redcliff"]
-    @committee_name = "redcliff"
-    @container_type = "redcliff-background-image"
+  def asiafin
+    @asiafin = load_crises["asiafin"]
+    @committee_name = "asiafin"
+    @container_type = "asiafin-background-image"
   end
 
-  def pilate
-    @pilate = load_crises["pilate"]
-    @committee_name = "pilate"
-    @container_type = "pilate-background-image"
+  def mormons
+    @mormons = load_crises["mormons"]
+    @committee_name = "mormons"
+    @container_type = "mormons-background-image"
   end
 
-  def obama
-    @obama = load_crises["obama"]
-    @committee_name = "obama"
-    @container_type = "obama-background-image"
+  def mexico
+    @mexico = load_crises["mexico"]
+    @committee_name = "mexico"
+    @container_type = "mexico-background-image"
   end
 
-  def thatcher
-    @thatcher = load_crises["thatcher"]
-    @committee_name = "thatcher"
-    @container_type = "thatcher-background-image"
+  def teutonic
+    @teutonic = load_crises["teutonic"]
+    @committee_name = "teutonic"
+    @container_type = "teutonic-background-image"
   end
 
-  def colombia
-    @colombia = load_crises["colombia"]
-    @committee_name = "colombia"
-    @container_type = "colombia-background-image"
+  def lenin
+    @lenin = load_crises["lenin"]
+    @committee_name = "lenin"
+    @container_type = "lenin-background-image"
   end
 
-  def marcos
-    @marcos = load_crises["marcos"]
-    @committee_name = "marcos"
-    @container_type = "marcos-background-image"
+  def thailand
+    @thailand = load_crises["thailand"]
+    @committee_name = "thailand"
+    @container_type = "thailand-background-image"
   end
 
-  def darkweb
-    @darkweb = load_crises["darkweb"]
-    @committee_name = "darkweb"
-    @container_type = "darkweb-background-image"
+  def maumau
+    @maumau = load_crises["maumau"]
+    @committee_name = "maumau"
+    @container_type = "maumau-background-image"
   end
 
-  def rhodesia
-    @rhodesia = load_jcc["rhodesia"]
-    @committee_name = "rhodesia"
-    @container_type = "rhodesia-background-image"
+  def government
+    @government = load_jcc["government"]
+    @committee_name = "government"
+    @container_type = "government-background-image"
   end
 
-  def zanu
-    @zanu = load_jcc["zanu"]
-    @committee_name = "zanu"
-    @container_type = "zanu-background-image"
+  def rebels
+    @rebels = load_jcc["rebels"]
+    @committee_name = "rebels"
+    @container_type = "rebels-background-image"
   end
 
-  def zapu
-    @zapu = load_jcc["zapu"]
-    @committee_name = "zapu"
-    @container_type = "zapu-background-image"
+  def bangladesh
+    @bangladesh = load_jcc["bangladesh"]
+    @committee_name = "bangladesh"
+    @container_type = "bangladesh-background-image"
   end
 
   def adhoc
     @adhoc = load_crises["adhoc"]
     @committee_name = "adhoc"
     @container_type = "adhoc-background-image"
+  end
+
+  def hongkong
+    @adhoc = load_crises["hongkong"]
+    @committee_name = "hongkong"
+    @container_type = "hongkong-background-image"
   end
 end

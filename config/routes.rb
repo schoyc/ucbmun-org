@@ -8,37 +8,39 @@ Rails.application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'committees/specpol'
+  get 'committees/unesco'
 
-  get 'committees/nfl'
+  get 'committees/nba'
 
   get 'committees/disec'
 
-  get 'committees/wsf'
+  get 'committees/fao'
 
   get 'committees/legal'
 
   get 'committees/unsc'
 
-  get 'committees/redcliff'
+  get 'committees/maumau'
 
-  get 'committees/pilate'
+  get 'committees/mormons'
 
-  get 'committees/obama'
+  get 'committees/mexico'
 
-  get 'committees/thatcher'
+  get 'committees/lenin'
 
-  get 'committees/colombia'
+  get 'committees/bangladesh'
 
-  get 'committees/marcos'
+  get 'committees/asiafin'
 
-  get 'committees/darkweb'
+  get 'committees/thailand'
 
-  get 'committees/rhodesia'
+  get 'committees/teutonic'
 
-  get 'committees/zanu'
+  get 'committees/hongkong'
 
-  get 'committees/zapu'
+  get 'committees/government'
+
+  get 'committees/rebels'
 
   get 'committees/adhoc'
 

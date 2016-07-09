@@ -329,17 +329,20 @@ $(document).ready(function(){
 
 /* Open/Close Information sections */
 function closeAll() {
+  console.log("Closing all others");
   $(".schedule-contents").css("display", "none");
   $(".fee-contents").css("display", "none");
   $(".registration-contents").css("display", "none");
   $(".location-contents").css("display", "none");
-  $(".resource-contents").css("display", "none");
+  $(".resources-contents").css("display", "none");
 }
 
 $(document).ready(function(){
   $(".info-container").click(function(){
-    var id = $(this).id;
+    var id = $(this).attr('id');
+    console.log("Info container clicked.");
     console.log(id);
+    //console.log($(this));
     closeAll();
     var class_name = id + "-contents";
     $("." + class_name).css("display", "block");

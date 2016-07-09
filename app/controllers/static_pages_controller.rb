@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
+      @attractions = Attraction.all
   end
 
   def home

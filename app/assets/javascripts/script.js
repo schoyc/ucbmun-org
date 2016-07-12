@@ -238,13 +238,13 @@ $(document).ready(
       $(".info-link").addClass("underline");
       break;
     case "attraction":
-      insta.addClass("instagram-title-active");
-      insta.removeClass("instagram-title");
+      explore.addClass("explore-title-active");
+      explore.removeClass("explore-title");
       $(".attraction-link").addClass("underline");
       break;
     case "attraction/1":
-      explore.addClass("explore-title-active");
-      explore.removeClass("explore-title");
+      insta.addClass("instagram-title-active");
+      insta.removeClass("instagram-title");
       $(".attraction-link").addClass("underline");
       break;
     };
@@ -330,22 +330,29 @@ $(document).ready(function(){
 /* Open/Close Information sections */
 function closeAll() {
   console.log("Closing all others");
-  $(".schedule-contents").css("display", "none");
-  $(".fee-contents").css("display", "none");
-  $(".registration-contents").css("display", "none");
-  $(".location-contents").css("display", "none");
-  $(".resources-contents").css("display", "none");
+  $(".schedule-contents").slideUp();//.css("display", "none");
+  $(".fee-contents").slideUp();//.css("display", "none");
+  $(".registration-contents").slideUp();//.css("display", "none");
+  $(".location-contents").slideUp();//.css("display", "none");
+  $(".resources-contents").slideUp();//.css("display", "none");
 }
 
 $(document).ready(function(){
   $(".info-container").click(function(){
     var id = $(this).attr('id');
-    console.log("Info container clicked.");
-    console.log(id);
+    // console.log("Info container clicked.");
+    // console.log(id);
     //console.log($(this));
-    closeAll();
     var class_name = id + "-contents";
-    $("." + class_name).css("display", "block");
+    if (!($(this).hasClass("active-info-container"))) {
+      closeAll();
+      $("." + class_name).slideDown();//.css("display", "block");
+      $(this).addClass("active-info-container");
+    } else {
+      $(this).removeClass("active-info-container");
+      console.log("COLLAPSE");
+      $("." + class_name).slideUp();
+    }
   });
 
   $(".committee-js").click(function() {

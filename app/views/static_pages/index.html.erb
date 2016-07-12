@@ -358,259 +358,40 @@ Sincerely, Beckett Kelly
   <div data-anchor="committee" class="committee-container section">
     <div class="slide">
       <div class="secretariat-header"></div>
-      <div class="sb-contents-container">
-        <div class="sb-contents">
-          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="sb-info">
-              <div class="sb-name">
-                UNESCO
-              </div>
+      <div class="secretariat-contents-container">
+        <% @sb_styles.each_with_index do |(key, sb), index| %>
+          <!-- <% if index % 3 == 0 %>
+            <div class="sb-contents">
+          <% end %> -->
+          <%= render partial: "sb", locals: {committee: sb} %>
+          <!-- <% if index % 3 == 2 || index == @sb_styles.length - 1 %>
             </div>
-            <div class="sb-img unesco-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="sb-info">
-              <div class="sb-name">
-                FAO
-              </div>
-            </div>
-            <div class="sb-img fao-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="contact" id="contact">
-            </div>
-          </div>
-          <div class="sb-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="sb-info">
-              <div class="sb-name">
-                NBA
-              </div>
-            </div>
-            <div class="sb-img nba-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-        </div>
-        <div class="sb-contents">
-          <div class="sb-container-2 committee-js" onClick="contactCommittee($(this));">
-            <div class="sb-info">
-              <div class="sb-name">
-                DISEC
-              </div>
-            </div>
-            <div class="sb-img disec-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="sb-container-2 committee-js" onClick="contactCommittee($(this));">
-            <div class="sb-info">
-              <div class="sb-name">
-                LEGAL
-              </div>
-            </div>
-            <div class="sb-img legal-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-        </div>
+          <% end %> -->
+        <% end %>
       </div>
     </div>
     <div class="slide">
       <div class="secretariat-header"></div>
       <div class="cc-contents-container">
-        <div class="cc-contents">
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                Bangkok Shutdown
-              </div>
+        <% @cc_styles.each_with_index do |(key, cc), index| %>
+          <!-- <% if [0, 4, 7].include?(index) %>
+            <div class="cc-contents">
+          <% end %> -->
+          <%= render partial: "cc", locals: {committee: cc} %>
+          <!-- <% if [3, 6, 10].include?(index) %>
             </div>
-            <div class="cc-img bangkok-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-              Info Page
-              <br></br>
-              Download Background Guide
-              <br></br>
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                The Church of Jesus Christ of Latter-day Saints
-              </div>
-            </div>
-            <div class="cc-img mormon-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                Bangladesh 1971
-              </div>
-            </div>
-            <div class="cc-img bangladesh-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                The Asian Financial Crisis 1997
-              </div>
-            </div>
-            <div class="cc-img fincri-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-        </div>
-        <div class="cc-contents">
-          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                Hong Kong 1967
-              </div>
-            </div>
-            <div class="cc-img hongkong-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                Mau Mau Rebellion
-              </div>
-            </div>
-            <div class="cc-img maumau-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-2 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                The Mexican Rebellion
-              </div>
-            </div>
-            <div class="cc-img mexico-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-        </div>
-        <div class="cc-contents">
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                The Teutonic Order
-              </div>
-            </div>
-            <div class="cc-img teutonic-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                The Death of Lenin
-              </div>
-            </div>
-            <div class="cc-img lenin-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                UNSC 2015
-              </div>
-            </div>
-            <div class="cc-img unsc-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-          <div class="cc-container-1 committee-js" onClick="contactCommittee($(this));">
-            <div class="cc-info">
-              <div class="cc-name">
-                Ad Hoc
-              </div>
-            </div>
-            <div class="cc-img">
-            </div>
-            <div class="cc-contact" id="contact">
-            </div>
-          </div>
-        </div>
+          <% end %> -->
+        <% end %>
       </div>
     </div>
     <div class="slide">
       <div class="secretariat-header"></div>
       <div class="jcc-contents-container">
-        <div class="jcc-contents">
-          <div class="jcc-container committee-js" onClick="contactCommittee($(this));">
-            <div class="jcc-info">
-            </div>
-            <div class="jcc-img egypt-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="contact" id="contact">
-            </div>
-          </div>
-          <div class="jcc-container committee-js" onClick="contactCommittee($(this));">
-            <div class="jcc-info">
-            </div>
-            <div class="jcc-img egypt-img" style="
-            background-position: 50% 50%;
-            -webkit-background-size: cover;">
-            </div>
-            <div class="contact" id="contact">
-            </div>
-          </div>
-        </div>
+        <!-- <div class="jcc-contents"> -->
+          <% @jcc_styles.each do |key, jcc| %>
+            <%= render partial: "jcc", locals: {committee: jcc} %>
+          <% end %>
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -625,7 +406,29 @@ Sincerely, Beckett Kelly
                   Schedule
                 </div>
                 <div class="schedule-contents">
-                  This is the schedule.
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Thursday, March 3 </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @thursday_schedule} %>
+                      <br></br>
+                    </div>
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Friday, March 4 </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @friday_schedule} %>
+                      <br></br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Saturday, March 5 </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @saturday_schedule} %>
+                      <br></br>
+                    </div>
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Sunday, March 6 </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>
+                    </div>
+                  </div>
                 </div>
             </div>
             <div class="info-container" id="fee">
@@ -633,7 +436,7 @@ Sincerely, Beckett Kelly
                   Fees
                 </div>
                 <div class="fee-contents">
-                  This is the fee information.
+                  <%= render "fees" %>
                 </div>
             </div>
             <div class="info-container" id="registration">
@@ -641,7 +444,7 @@ Sincerely, Beckett Kelly
                   Registration
                 </div>
                 <div class="registration-contents">
-                  This is the registration information.
+                  <%= render "registration" %>
                 </div>
             </div>
             <div class="info-container" id="location">
@@ -665,8 +468,12 @@ Sincerely, Beckett Kelly
     </div>
   </div>
 
-<div id="attraction" class="attraction-container section">
   <div data-anchor="attraction" class="attraction-container section">
+    <div class="slide">
+      <div class="map-contents-container" style="margin-top:110px;">
+          <%= render "map" %>
+      </div>
+    </div>
     <div class="slide">
       <div class="instagram-contents-container">
         <div class="instagram-contents" id="insta-content">
@@ -674,7 +481,6 @@ Sincerely, Beckett Kelly
         </div>
       </div>
     </div>
-
   </div>
-</div>
+
 </div>

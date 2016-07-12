@@ -1,0 +1,18 @@
+<a class="committee-link" href=<%= "committees/#{committee[:tag]}" %>>
+  <div class=<%= "#{committee[:container]} committee-js" %> onClick="contactCommittee($(this));">
+    <div class="cc-info">
+      <div class="cc-name">
+        <%= committee[:name] %>
+        <br>
+        <%= committee[:subtitle] %>
+      </div>
+    </div>
+    <%= content_tag :div, "", class: "cc-img #{committee[:tag]}-img", style: "#{committee[:style]}" %>
+    <div class="cc-contact" id="contact">
+      Info Page
+      <br></br>
+      Download Background Guide
+      <br></br>
+    </div>
+  </div>
+</a>

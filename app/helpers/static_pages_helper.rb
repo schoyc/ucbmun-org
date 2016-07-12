@@ -259,22 +259,24 @@ module StaticPagesHelper
                     subtitle: "Media Pluralism & Sexual Literacy in the 21st Century",
                     type: "Specialized Body",
                     description: ["UNESCO makes its way to UCBMUN XXI as delegates from the international community come together in the 2017 United Nations Educational, Scientific and Cultural Organization committee. The Executive Board of UNESCO is calling the commencement of the 39th session for the general conference with the gathering of member states and associate members, observers for non-member states, intergovernmental organizations, and non-governmental organizations (NGOs) in order to establish equal representation and quality discussions on the pressing topics of censorship and sexual education.",
-
-                    "UNESCO is both striving to protect the freedom of expression, an essential characteristic of democracy, development, and human dignity, and leading the mobilization of quality sexual education in order to lead the change for female empowerment, for upholding human rights, and for improving health equity. Delegates in this committee will be prompted to address and discuss these controversial topics in hopes of sparking a deeper and meaningful insight that can extend to even outside this committee. The incorporation of guest appearances by non-governmental organizations (NGOs) will serve as opportunities for delegates that will also add to this unique MUN experience, stimulating the flow of debate and constantly changing the focus of the topics."],
+                      "UNESCO is both striving to protect the freedom of expression, an essential characteristic of democracy, development, and human dignity, and leading the mobilization of quality sexual education in order to lead the change for female empowerment, for upholding human rights, and for improving health equity. Delegates in this committee will be prompted to address and discuss these controversial topics in hopes of sparking a deeper and meaningful insight that can extend to even outside this committee. The incorporation of guest appearances by non-governmental organizations (NGOs) will serve as opportunities for delegates that will also add to this unique MUN experience, stimulating the flow of debate and constantly changing the focus of the topics."],
                     chair: {name: "Dianne Chung", email: "unesco@ucbmun.org"},
                     chair_letter: [""]
                   },
       "fao" => {name: "FAO 2020:",
                 subtitle: "Balancing Aid, Energy, and Security",
                 type: "Specialized Body",
-                description: [" "],
+                description: ["Welcome to the FAO: the Food and Agricultural Organization committee! The head of the FAO, José Graziano da Silva, has called delegates from member countries across the world to debate two pertinent and pressing topics: food and energy security and food aid to developing countries. Delegates can expect to hear viewpoints from across the world, as all five geopolitical groups will be represented. With 800 million people hungry in the status quo and the human population expected to reach 8.7 billion by 2030, it is imperative to discuss sustainable and realistic ways to feed and fuel the planet. Not only this, it is crucial to take a look at one of the main tools utilized by organizations to help developing countries, food aid, and see its positive or negative effects.",
+                  "Unlike prior editions, this meeting of the FAO will be exhilarating and unique not only because of the in depth nature of the committee, but also because the committee will simulate 10 years of international food-related events (from 2020 to 2030)."],
                 chair: {name: "Austin Smith", email: "fao@ucbmun.org"},
-                chair_letter: ["p1", "p2"]
+                chair_letter: ["My name is Austin Smith and it is my pleasure to be your chair for UCBMUN XXI. I am excited to head one of the most important agencies in the United Nations: the Food and Agricultural Organization (FAO). This year’s committee is one that finds itself on the crossroads of prosperity and poverty. It will push delegates to internalize the issues at hand and come up with innovative, unique, and pragmatic solutions. I come into this committee with high expectations, given the magnitude of these issues, and I encourage delegates to think critically, openly, and rationally about the problems at hand.",
+                  "As for me, I am a second year majoring in Political Science with a concentration in Comparative Politics and a double minor in History and Public Policy. Born and raised in Southern California, I hail from the warm and sunny city of Huntington Beach. This is my sixth year in MUN and my second year serving as a dias member. Additionally, I am serving my first term as IRC representative of UCBMUN. Outside of MUN, I assist my high school in Speech and Debate activities and coach a boys & girls basketball team in the summer. In my spare time, I religiously follow basketball, baseball, and football (I am a passionate Lakers, Angels, and Chargers fan who yes, knows it is a terrible time to be a fan of these teams), read political and historical books, and watch political documentaries. I enjoy traveling, working out, meeting new people, debating, and learning new things.",
+                  "I am excited to meet all of you in committee and I look forward to a fun and enjoyable conference. If you have any questions or concerns, feel free to contact me."],
               },
       "legal" => {name: "Trial of the Juntas:",
                   subtitle: "Defining Justice after the Direty War",
                   type: "Specialized Body",
-                  description: [],
+                  description: ["This year’s legal committee will take on the Trial of the Juntas in Argentina’s Cámara Court, in which 68 former military junta members will be tried for crimes committed during the Dirty War. The Dirty War, also known as La Guerra Sucia, was a period of state terrorism in which the junta sought to eliminate all left-wing political dissidents via kidnappings, torture, and detention camps and resulted in over 30,000 civilian disappearances. The court will hear witness and exert testimonies, review evidence, consider historical precedence and regional context, and ultimately decide not just on the culpability of these junta members but also the extent and allocation of that culpability. The Cámara Court will be placed in the interesting position of having to define superior-subordinate criminal responsibility. What is the extent to which responsibility flows from superiors from subordinates, and what is the extent to which superior responsibility excuses the actions of subordinates? How will the court allocate guilt among a hierarchical military body in a way that deters future human rights violations while also promoting stability? These probing legal questions are just a few of many issues the court will wrangle with in one of Latin America’s most famous trials."],
                   chair: {name: "Wendie Yeung", email: "legal@ucbmun.org"},
                   cd: {name: "Anthony Miller", email: "legal@ucbmun.org"},
                   cd_letter: [""],
@@ -283,7 +285,8 @@ module StaticPagesHelper
       "nba" => {name: "NBA Owners Meeting 1989:",
                 subtitle: "Building a Global Game",
                 type: "Specialized Body",
-                description: [""],
+                description: ["Amidst the booming success of the Golden State Warriors, UCBMUN XXI will come together to hold the 1989 NBA Owners Meeting. As the NBA is slowly growing into its role as the third most popular sport in the country, the NBA owners and stakeholders want more. With an expiring TV deal and numerous new teams, the NBA is poised for an explosion of popularity, but the owners must work to create a product that is appealing to people in the United States and abroad. The committee will be revolving around 3 major topics: expansion of the game, player conduct, and racial tensions. The goal of this committee is not to deal with gameplay rules, but rather to focus on the underlying business that drives the NBA forward.",
+                  "This committee will consist of all 27 owners, television executives, and a variety of other NBA representatives who will work together to come up with a sustainable plan to expand the NBA for the upcoming decade and beyond. This committee will have all the elements of traditional specialized body along with some faster paced updates to accelerate the pace of committee. It is the goal of this committee to stay true to the age old adage, \"Ball is life.\""],
                 chair: {name: "Vaibhav Srikaran", email: "nba@ucbmun.org"},
                 chair_letter: [""]
               }
@@ -428,4 +431,147 @@ module StaticPagesHelper
                }
 
   end
+
+  def load_all_sbs_styles
+    @sb_all_styles = {
+      "disec" => {
+        tag: "disec",
+        name: "DISEC:",
+        subtitle: "The First Committee of the United Nations General Assembly",
+        container: "sb-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;",
+      },
+      "unesco" => {
+        tag: "unesco",
+        name: "UNESCO:",
+        subtitle: "Media Pluralism & Sexual Literacy in the 21st Century",
+        container: "sb-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;",
+      },
+      "fao" => {
+        tag: "fao",
+        name: "FAO 2020:",
+        subtitle: "Balancing Aid, Energy, and Security",
+        container: "sb-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;",
+      },
+      "legal" => {
+        tag: "legal",
+        name: "Trial of the Juntas:",
+        subtitle: "Defining Justice after the Dirty War",
+        container: "sb-container-2",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "nba" => {
+        tag: "nba",
+        name: "NBA Owners Meeting 1989:",
+        subtitle: "Building a Global Game",
+        container: "sb-container-2",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+    }
+  end
+
+  def load_all_cc_styles
+    @cc_all_styles = {
+      "thailand" => {
+        tag: "thailand",
+        name: "Thailand 2014:",
+        subtitle: "The Bangkok Shutdown",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "mormons" => {
+        tag: "mormons",
+        name: "Building Zion:",
+        subtitle: "Mormon Pioneers and the Founding of Utah",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "bangladesh" => {
+        tag: "bangladesh",
+        name: "Bangladesh",
+        subtitle: "Independence",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "asiafin" => {
+        tag: "asiafin",
+        name: "Paper Tigers:",
+        subtitle: "The Asian Financial Crisis of 1997",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "hongkong" => {
+        tag: "hongkong",
+        name: "Containing the Pearl of the Orient:",
+        subtitle: "Hong Kong 1967",
+        container: "cc-container-2",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "maumau" => {
+        tag: "maumau",
+        name: "The Mau Mau Uprising:",
+        subtitle: "The Beginning of the End of British Kenya",
+        container: "cc-container-2",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "mexico" => {
+        tag: "mexico",
+        name: "Los cientificos!",
+        subtitle: "The Mexican Rebellion",
+        container: "cc-container-2",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "teutonic" => {
+        tag: "teutonic",
+        name: "The Knighthood",
+        subtitle: "of the Teutonic Order",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "lenin" => {
+        tag: "lenin",
+        name: "The Death of Lenin:",
+        subtitle: "Sustaining the Revolution",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "unsc" => {
+        tag: "unsc",
+        name: "The Security Council:",
+        subtitle: "2015",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "adhoc" => {
+        tag: "adhoc",
+        name: "The Ad Hoc Committee",
+        subtitle: "of the Secretary-General",
+        container: "cc-container-1",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      }
+    }
+  end
+
+  def load_all_jcc_styles
+    @jcc_all_styles = {
+      "government" => {
+        tag: "government",
+        name: "The Egyptian Revolution:",
+        subtitle: "Government",
+        container: "jcc-container",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+      "rebels" => {
+        tag: "rebels",
+        name: "The Egyptian Revolution",
+        subtitle: "Rebels",
+        container: "jcc-container",
+        style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      },
+    }
+  end
+
+
 end

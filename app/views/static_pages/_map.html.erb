@@ -1,12 +1,15 @@
-<div id="map" class="sf-map" style="float: left;">
+<div class="col-md-8" style="height: 100%; padding-left: 0;">
+  <div id="map" class="sf-map">
 
+  </div>
 </div>
+<div class="col-md-4" style="height:100%;">
+  <div class="sf-item">
 
-<div class="sf-item" style="float: right;">
-
+  </div>
 </div>
+<!-- <br style="clear:both;"/> -->
 
-<br style="clear:both;"/>
 <% @attractions.each_with_index do |attraction, index| %>
-  <div id=<%= "attraction-#{index}"%> data-mapid= <%= "#{attraction.id}"%>></div>
+<div id=<%= "attraction-#{index}"%> data-mapid= <%= "#{attraction.id}"%>></div>
 <% end %>

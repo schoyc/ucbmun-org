@@ -102,7 +102,7 @@ class CommitteesController < ApplicationController
   end
 
   def hongkong
-    @adhoc = load_crises["hongkong"]
+    @hongkong = load_crises["hongkong"]
     @committee_name = "hongkong"
     @container_type = "hongkong-background-image"
   end

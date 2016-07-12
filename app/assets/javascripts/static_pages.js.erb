@@ -36,20 +36,19 @@ function initMap() {
       zoom: 13
     });
 
-
+  var active_markers = [];
   for (i = 0; i < attractions.length; i += 1) {
     var attraction = attractions[i];
     attraction["map"] = map;
+    console.log(attraction["title"]);
     if (attraction.title === "UCBMUN XXI") {
       attraction["icon"] = "<%= asset_path('logo_blue_map.png') %>";
     } else {
       attraction["icon"] = "<%= asset_path('location_pin.png') %>";
     }
-
     var marker = new google.maps.Marker(attraction);
     var id = $('#attraction-' + i.toString()).data('mapid');
-    var selectedFunction = makeSelectedFunction();
-    marker.addListener('click', selectedFunction(id, marker));
+    marker.addListener('click', makeInfoFunction(id, marker, active_markers));
     //marker.addListener('mouseover', changeIcon(marker, true));
     //marker.addListener('mouseout', changeIcon(marker, false));
 
@@ -72,25 +71,15 @@ function changeIcon(marker, selected) {
   }
 }
 
-function makeSelectedFunction() {
-  var selected_marker = new google.maps.Marker({
-    title: "NULL",
-    position: {lat: 37.802581, lng: -122.405779}
-  });
-  //var old_marker;
-  return function makeInfoFunction(id, marker) {
+function makeInfoFunction(id, marker, active_markers) {
     return function displayInfo() {
-      // old_marker = selected_marker;
-      // selected_marker = marker;
-      selected_marker.setIcon("<%= asset_path('location_pin.png') %>");
-      console.log(selected_marker.title);
+      if (active_markers.length > 0) {
+        var active_marker = active_markers.pop();
+        active_marker.setIcon("<%= asset_path('location_pin.png') %>");
+        //console.log("CHANGE ICON");
+      }
       marker.setIcon("<%= asset_path('blue_location_pin.png') %>");
-      selected_marker = marker;
-      // console.log(old_marker.title);
-      // if (old_marker.title !== "NULL") {
-      //   alert("CHANGING OLD");
-      //   old_marker.setIcon("<%= asset_path('location_pin.png') %>");
-      // }
+      active_markers.push(marker);
 
       var map_item = $('.sf-item');
       $.get("attractions/" + id, function(data) {
@@ -101,7 +90,7 @@ function makeSelectedFunction() {
       }, "html");
     };
   }
-}
+
 
 function loadScript() {
 	console.log("map loading ...");

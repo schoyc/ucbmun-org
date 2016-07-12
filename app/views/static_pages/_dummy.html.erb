@@ -1,0 +1,14 @@
+<div class="secretariat-container" onClick="contactSecretariat($(this));">
+  <div class="secretariat-info">
+    <div class="secretariat-name">
+      <%= committee[:name] %>
+    </div>
+    <div class="secretariat-rank">
+      <%= committee[:name] %>
+    </div>
+  </div>
+  <%= content_tag :div, "", class: "cc-img #{committee[:tag]}-img", style: "#{committee[:style]}" %>
+  <div class="secretariat-contact" id="secretariat-contact">
+    sg@ucbmun.org
+  </div>
+</div>

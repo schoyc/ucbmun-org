@@ -16,7 +16,7 @@
             <div style="height:30%;"></div>
             <div class="about-letter-gradient">
               <div style="width:100%;height: 150px;"></div>
-              <div class="about-letter-text">
+              <div class="about-letter-text" style="margin-top: -30px; padding-bottom: 30px;">
               Dear Head Delegates and Advisors,
 <br></br>
 My name is Beckett Kelly and I am the Secretary-General for the UC Berkeley Model United Nations Conference in March 2017. UCBMUN is in our 21st year and we are proud to be one of the oldest Model UN programs in the country. Each year our conference brings hundreds of delegates from top universities across the nation and the world to San Francisco, California to debate sociopolitical issues that resonate across the globe.
@@ -44,24 +44,10 @@ Sincerely, Beckett Kelly
     <div class="slide">
       <div class="secretariat-header"></div>
       <div class="secretariat-contents-container">
-        <div class="secretariat-container" onClick="contactSecretariat($(this));">
-          <div class="secretariat-info">
-            <div class="secretariat-name">
-              Beckett Kelly
-            </div>
-            <div class="secretariat-rank">
-              Secretary General
-            </div>
-          </div>
-          <div class="secretariat-img beckett-img" style="
-          background-position: 50% 35%;
-          -webkit-background-size: cover;">
-          </div>
-          <div class="secretariat-contact" id="secretariat-contact">
-            sg@ucbmun.org
-          </div>
-        </div>
-        <div class="secretariat-container" onClick="contactSecretariat($(this));">
+        <% @secretariat.each do |key, officer| %>
+          <%= render partial: "secretariat", locals: {officer: officer, key: key} %>
+        <% end %>
+        <!-- <div class="secretariat-container" onClick="contactSecretariat($(this));">
           <div class="secretariat-info">
             <div class="secretariat-name">
               Allie Gordon
@@ -73,9 +59,9 @@ Sincerely, Beckett Kelly
           <div class="secretariat-img allie-img" style="
           background-position: 50% 50%;
           -webkit-background-size: cover;">
-          </div>
-          <div class="secretariat-contact" id="secretariat-contact">
-            dsg@ucbmun.org
+            <div class="secretariat-contact" id="secretariat-contact">
+              dsg@ucbmun.org
+            </div>
           </div>
         </div>
         <div class="secretariat-container" onClick="contactSecretariat($(this));">
@@ -91,7 +77,10 @@ Sincerely, Beckett Kelly
           background-position: 50% 35%;
           -webkit-background-size: cover;">
           </div>
-          <div class="secretariat-contact" id="secretariat-contact">
+          <div class="secretariat-contact secretariat-img chen-img" id="secretariat-contact" style="
+          background-position: 50% 35%;
+          -webkit-background-size: cover;
+          color: white;">
             cos-internal@ucbmun.org
           </div>
         </div>
@@ -230,8 +219,9 @@ Sincerely, Beckett Kelly
           <div class="secretariat-contact" id="secretariat-contact">
               dbr@ucbmun.org
           </div>
-        </div>
-        <div class="secretariat-container" onClick="contactSecretariat($(this));">
+        </div> -->
+
+        <!-- <div class="secretariat-container" onClick="contactSecretariat($(this));">
           <div class="secretariat-info">
             <div class="secretariat-name">
               Steven Elleman
@@ -249,7 +239,7 @@ Sincerely, Beckett Kelly
             <br>
             www.stevenelleman.com
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <!--<div class="slide">
@@ -405,27 +395,27 @@ Sincerely, Beckett Kelly
                 <div class="info-title">
                   Schedule
                 </div>
-                <div class="schedule-contents">
+                <div class="schedule-contents" style="font-family: 'Raleway', sans-serif; padding-top: 10px;">
                   <div class="row">
                     <div class="col-md-6">
-                      <h4 class="center-header schedule-header"> Thursday, March 3 </h4>
+                      <h4 class="center-header schedule-header"> Thursday, March 2 </h4>
                       <%= render partial: "schedule", locals: {schedule_items: @thursday_schedule} %>
                       <br></br>
                     </div>
                     <div class="col-md-6">
-                      <h4 class="center-header schedule-header"> Friday, March 4 </h4>
+                      <h4 class="center-header schedule-header"> Friday, March 3 </h4>
                       <%= render partial: "schedule", locals: {schedule_items: @friday_schedule} %>
                       <br></br>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                      <h4 class="center-header schedule-header"> Saturday, March 5 </h4>
+                      <h4 class="center-header schedule-header"> Saturday, March 4 </h4>
                       <%= render partial: "schedule", locals: {schedule_items: @saturday_schedule} %>
                       <br></br>
                     </div>
                     <div class="col-md-6">
-                      <h4 class="center-header schedule-header"> Sunday, March 6 </h4>
+                      <h4 class="center-header schedule-header"> Sunday, March 5 </h4>
                       <%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>
                     </div>
                   </div>
@@ -435,8 +425,14 @@ Sincerely, Beckett Kelly
                 <div class="info-title">
                   Fees
                 </div>
-                <div class="fee-contents">
-                  <%= render "fees" %>
+                <div class="fee-contents" style="font-family: 'Raleway', sans-serif; text-align: center;">
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-9" style="padding: 10px 0;">
+                      <%= render "fees" %>
+                    </div>
+                    <div class="col-md-2"></div>
+                  </div>
                 </div>
             </div>
             <div class="info-container" id="registration">
@@ -447,7 +443,7 @@ Sincerely, Beckett Kelly
                   <%= render "registration" %>
                 </div>
             </div>
-            <div class="info-container" id="location">
+            <!-- <div class="info-container" id="location">
                 <div class="info-title">
                   Location Assignments
                 </div>
@@ -462,7 +458,7 @@ Sincerely, Beckett Kelly
                 <div class="resources-contents">
                   These are resources.
                 </div>
-            </div>
+            </div> -->
           </div>
       </div>
     </div>

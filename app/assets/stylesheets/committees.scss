@@ -1,6 +1,37 @@
 // Place all the styles related to the Committees controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family: "nixie";
+    src: asset-url("NixieOne-Regular.otf");
+}
+
+.committee-header {
+  background-color: rgba(255, 255, 255, 0.86);
+  text-align: center;
+}
+.committee-info, .committee-chairs, .chair-letters {
+  background-color: rgba(255, 255, 255, 0.86);
+  padding: 10px;
+}
+.committee-description {
+padding: 5px;
+}
+
+.nav-committee {
+letter-spacing: 1px;
+  font-family: "nixie";
+  width: 100%;
+  float: right;
+  display: inline-block;
+  position: fixed;
+  color: orange;
+  background-color: #152c6d;
+  z-index: 100;
+  /* opacity: 0.9; */
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+}
 
 .chair-profile {
   width: 100%;
@@ -23,10 +54,10 @@
 
 }
 
-.committee-description {
-  padding: 5px;
-
-}
+// .committee-description {
+//   padding: 5px;
+//
+// }
 
 .committee-page-full {
   //background-color: white;
@@ -68,13 +99,17 @@ a:hover {
 }
 
 .committee-page {
-  margin-top: -20px;
+  //margin-top: -20px;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  text-align: center;
 }
 
-.committee-info, .committee-chairs, .chair-letters {
-  background-color: rgba(255, 255, 255, 0.86);
-  padding: 10px;
-}
+// .committee-info, .committee-chairs, .chair-letters {
+//   background-color: rgba(255, 255, 255, 0.86);
+//   padding: 10px;
+// }
 
 .background-positioning {
   background-position: center;

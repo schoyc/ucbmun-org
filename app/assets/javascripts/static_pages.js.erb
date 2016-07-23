@@ -49,6 +49,8 @@ function initMap() {
     var marker = new google.maps.Marker(attraction);
     var id = $('#attraction-' + i.toString()).data('mapid');
     marker.addListener('click', makeInfoFunction(id, marker, active_markers));
+    marker.addListener('mouseover', makeSelectedFunction(marker));
+    marker.addListener('mouseout', makeUnselectedFunction(marker));
     //marker.addListener('mouseover', changeIcon(marker, true));
     //marker.addListener('mouseout', changeIcon(marker, false));
 
@@ -58,6 +60,23 @@ function initMap() {
   $.get("hilton", function(data) {
     map_item.html(data);
   }, "html");
+}
+
+function makeSelectedFunction(marker) {
+  return function selectFunction() {
+    if (marker.getIcon() !== "<%= asset_path('logo_blue_map.png') %>") {
+      marker.setIcon("<%= asset_path('hover_location_pin.png') %>");
+    }
+  }
+}
+
+function makeUnselectedFunction(marker) {
+  return function unselectFunction() {
+
+    if (marker.getIcon() === "<%= asset_path('hover_location_pin.png') %>" && marker.getIcon() !== "<%= asset_path('logo_blue_map.png') %>") {
+      marker.setIcon("<%= asset_path('location_pin.png') %>");
+    }
+  }
 }
 
 function changeIcon(marker, selected) {
@@ -78,12 +97,13 @@ function makeInfoFunction(id, marker, active_markers) {
         active_marker.setIcon("<%= asset_path('location_pin.png') %>");
         //console.log("CHANGE ICON");
       }
-      marker.setIcon("<%= asset_path('blue_location_pin.png') %>");
-      active_markers.push(marker);
+      if (marker.getIcon() !== "<%= asset_path('logo_blue_map.png') %>") {
+        marker.setIcon("<%= asset_path('blue_location_pin.png') %>");
+        active_markers.push(marker);
+      }
 
       var map_item = $('.sf-item');
       $.get("attractions/" + id, function(data) {
-
         map_item.fadeOut("fast", function() {
           map_item.html(data).fadeIn("fast")
         });

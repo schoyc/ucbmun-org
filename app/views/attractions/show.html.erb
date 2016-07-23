@@ -1,10 +1,10 @@
 <div class="sf-item-container">
   <%= image_tag @attraction.image, class: "map-item-image" %>
   <div class="map-item-description">
-    <h3 style="display:block;"> <%= @attraction.name %> </h3>
-    <p> <%= @description %> </p>
+    <h3 style="display:block; font-family: nixie; font-weight: 900;"> <%= @attraction.name %> </h3>
+    <p style="font-family: nixie;"> <%= @description %> </p>
     <% @attraction_info.each do |item_name, item_info| %>
-      <p> <b> <%= "#{item_name}" %> </b> <%= item_info %> </p>
+      <p style="font-family: nixie;"> <b style="font-weight: 800;"> <%= "#{item_name}" %> </b> <%= item_info %> </p>
     <% end %>
   </div>
 </div>

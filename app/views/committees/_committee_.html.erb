@@ -1,0 +1,121 @@
+<div class="container committee-page-full" style="height: 700px;">
+  <div class="committee-text">
+    <div class="committee-header">
+      <h1 style="display: block; padding-top: 10px;"><%="#{committee[:name]}" %></h1>
+      <h1 style="margin-top: -3px;"> <%="#{committee[:subtitle]}" %> </h1>
+      <h4 style="display: block; padding-bottom: 10px;"><%= committee[:type] %></h4>
+    </div>
+    <% if !@adhoc.nil? %>
+    <div class="committee-info">
+      <p><strong> If you are interested in participating in this committee, please complete this <a href="https://docs.google.com/forms/d/1GHNXXH6M53VQFFl1NPxmYxYKE5okldKxvgN2d4xJUAE/viewform"> application. </a></strong></p>
+    </div>
+    <% end %>
+    <div class="committee-info">
+      <div class="committee-description">
+        <% committee[:description].each do |paragraph| %>
+          <p style="font-size: 15px;"><%= paragraph %></p>
+        <%end %>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="chair-letters col-md-9" style="margin-left: 30px; margin-right: 15px;">
+    <div class="committee-description">
+      <% committee[:chair_letter].each do |paragraph| %>
+        <p style="font-size: 14px;"><%= paragraph %></p>
+      <%end %>
+    </div>
+    <strong><hr size="7" width = "100%" style="border-color: black;"></hr></strong>
+    <% if !committee[:cd_letter].nil? %>
+    <div class="committee-description">
+      <% committee[:cd_letter].each do |paragraph| %>
+        <p style="font-size: 14px;"><%= paragraph %></p>
+      <%end %>
+    </div>
+    <% else %>
+
+    <% end %>
+    <div class="background-guide">
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="committee-chairs col-md-2" style="margin-right: -30px;">
+    <div class="chair">
+      <div class="chair-pic">
+        <!-- <%= image_tag "chairs/#{committee[:chair][:name]}", class: "chair-profile" %> -->
+        <%= image_tag "chair_photos/#{committee[:chair][:name].gsub(/\s+/, "")}.jpeg", class: "chair-profile" %>
+      </div>
+      <div class="chair-info">
+        <h4 style="margin-bottom: 3px;"><strong>Chair</strong></h4>
+        <h4 style="margin-bottom: 2px;"><%= committee[:chair][:name] %></h4>
+        <%= link_to "#{committee[:chair][:email]}", "mailto:#{committee[:chair][:email]}" %>
+      </div>
+    </div>
+    <% if !committee[:cd].nil? %>
+    <div class="chair" style="margin-top: 15px;">
+      <div class="chair-pic">
+        <!-- <%= image_tag "chairs/#{committee[:cd][:name]}", class: "chair-profile" %> -->
+        <%= image_tag "chair_photos/#{committee[:cd][:name].gsub(/\s+/, "")}.jpeg", class: "chair-profile" %>
+      </div>
+      <div class="chair-info">
+        <h4 style="margin-bottom: 3px;"><strong>Crisis Director</strong></h4>
+        <h4 style="margin-bottom: 2px;"><%= committee[:cd][:name] %></h4>
+        <%= link_to "#{committee[:cd][:email]}", "mailto:#{committee[:cd][:email]}" %>
+      </div>
+    </div>
+    <% end %>
+    <strong><hr size="10" width = "100%" style="border-color: black; border-width: 2px; margin-bottom: -1px;"></hr></strong>
+    <div class="background-guide">
+      <div style="float: left;">
+        <%= image_tag "logo_no_text_black.png", class: "bg-logo" %>
+      </div>
+      <div class="chair-info">
+        <a class="bg-link" href=<%= "/#{@committee_name}.pdf" %>>
+          <h4 style="margin-bottom: 3px; padding-left: 10px;"><strong>Background Guide</strong></h4>
+        </a>
+      </div>
+    </div>
+    <strong><hr size="10" width = "100%" style="border-color: black; border-width: 2px; margin-top: 10px;"></hr></strong>
+    <% if !@darkweb.nil? || !@pilate.nil? || !@redcliff.nil? || !@thatcher.nil? || !@wsf.nil?%>
+    <div class="background-guide">
+      <div style="float: left;">
+        <%= image_tag "logo_no_text_black.png", class: "bg-logo" %>
+      </div>
+      <div class="chair-info">
+        <a class="bg-link" href=<%= "/#{@committee_name}_update.pdf" %>>
+          <h4 style="margin-bottom: 3px; padding-left: 10px;"><strong>Update Paper</strong></h4>
+        </a>
+      </div>
+    </div>
+    <strong><hr size="10" width = "100%" style="border-color: black; border-width: 2px; margin-top: 10px;"></hr></strong>
+    <% end %>
+    <% if !@rhodesia.nil? || !@zapu.nil? || !@zanu.nil? %>
+    <div class="background-guide">
+      <div style="float: left;">
+        <%= image_tag "logo_no_text_black.png", class: "bg-logo" %>
+      </div>
+      <div class="chair-info">
+        <a class="bg-link" href=<%= "/#{@committee_name}_update.pdf" %>>
+          <h4 style="margin-bottom: 3px; padding-left: 10px;"><strong>Update Paper</strong></h4>
+        </a>
+      </div>
+    </div>
+    <strong><hr size="10" width = "100%" style="border-color: black; border-width: 2px; margin-top: 10px;"></hr></strong>
+    <div class="background-guide">
+      <div style="float: left;">
+        <%= image_tag "logo_no_text_black.png", class: "bg-logo" %>
+      </div>
+      <div class="chair-info">
+        <a class="bg-link" href=<%= "/jcc_rules.pdf" %>>
+          <h4 style="margin-bottom: 3px; padding-left: 10px;"><strong>JCC Rules</strong></h4>
+        </a>
+      </div>
+    </div>
+    <strong><hr size="10" width = "100%" style="border-color: black; border-width: 2px; margin-top: 10px;"></hr></strong>
+    <% end %>
+    <!-- <div class="chair committee-resource" style="margin-top: 15px;">
+      <h4><strong><a href=<%="/#{@committee_name}_bg.pdf"%>> Background Guide </a></strong></h4>
+    </div> -->
+  </div>
+
+</div>

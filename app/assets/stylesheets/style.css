@@ -168,7 +168,22 @@ body {
   height: 60px;
   opacity: 1 !important;
 }
+
+.logo-header img{
+  height: 40px;
+  opacity: 1 !important;
+}
+
 .ucbmun {
+  display: inline-block;
+    font-family: "Ailerons";
+    font-size: 40px;
+    vertical-align: top;
+    margin-top: 7px;
+    margin-left: 0px;
+}
+
+.ucbmun-header {
   display: inline-block;
     font-family: "Ailerons";
     font-size: 40px;
@@ -251,7 +266,7 @@ background: linear-gradient(rgba(216, 177, 177, 0), #5563c7 25%);
 .about-letter-text {
   width: 80%;
 margin: 0 auto;
-font-size: 0.7em;
+font-size: 0.9em;
 color: white;
 font-family: "mensch";
 }
@@ -275,7 +290,7 @@ font-family: "mensch";
 }
 
 .info-title {
-  font-size: 3em;
+  font-size: 2.5em;
     font-family: "code-bold";
     letter-spacing: 3px;
     border: solid;

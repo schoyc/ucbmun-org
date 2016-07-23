@@ -1,68 +1,65 @@
 module StaticPagesHelper
-  def secretariat_officers
-    @secretariat_offs = exec_cos.merge(usg).merge(director)
-  end
-
-  def exec_cos
-    @executive_chief_of_staff_names = {"varsha" =>    {title: "Secretary General",
-                                      picture: "secretariat/varsha.jpg",
-                                      name: "Varsha Venkatasubramanian",
-                                      bio: "Varsha is a senior at Cal majoring in History and Economics. Originally from Jamshedpur, India, Varsha has spent the last 17 years in the United States. During that time she has attended 9 different schools in 5 different states. She recently completed her history thesis on Margaret Thatcher’s education policies in the late 80s. Varsha hopes to attend a PhD program in history, and eventually write a book. As for her hobbies, Varsha enjoys collecting more books than she has time to read, folding tiny tiny little paper cranes, and camping. She has staffed 3 previous UCBMUN conferences, and last year she was the Chief of Staff-External. As Secretary General, Varsha is extremely excited about bringing together MUN programs from across the country, building high quality committees, and ending her final year with UCBMUN with a bang!"},
-                        "raymond" =>   {title: "Deputy Secretary General",
-                                      picture: "secretariat/raymond.jpg",
-                                      name: "Raymond King",
-                                      bio: "Raymond is a third year at Cal, studying City and Regional Planning and Political Economy. Having grown up in Thailand running and attending MUN conferences, he thought it would be a great idea to dedicate even more time in college to the pursuit! He's attended 6 away conferences to date, including at Harvard, UChicago, Columbia, and UCLA, so holla if you ever see him on the circuit! In addition, Raymond works at UC Berkeley's Blum Center for Developing Economies, tying into his interests in economic policy and development. As Deputy Secretary General, Raymond is ecstatic to witness groundbreaking debate and cutthroat crisis strategies at UCBMUN XX!"},
-                        "beckett" =>   {title: "Chief of Staff - Internal",
-                                      picture: "secretariat/beckett.jpg",
-                                      bio: "Beckett is a junior here at UC Berkeley looking to major in Political Science and minor in Public policy. When not competing or working on Model UN, he is often watching Netflix. A fun fact about Beckett is that he used to be a police explorer and he worked for the Institute for Government Studies on UC Berkeley’s campus.",
-                                      name: "Beckett Kelly"},
-                        "samed" =>     {title: "Co-Chief of Staff - External",
-                                      picture: "secretariat/samed.jpg",
-                                      name: "Samed Jain",
-                                      bio: "Samed Jain is a Junior at UC Berkeley, majoring in Economics and Political Science. He has been involved with MUN for 5 years now. In addition to handling external matters of the conference, he is also part of the traveling team at Berkeley. He is extremely passionate about Economics, South Asian politics and food. Don't hesitate to reach out to him if you have any questions regarding registration or about the conference in general. He looks forward to an exciting conference, with enjoyable committees, stimulating debate and most of all, a great time for everyone coming to UCBMUN XX."},
-
-                        "antoine" =>    {title: "Co-Chief of Staff - External",
-                                                          picture: "secretariat/antoine.jpg",
-                                                          name: "Antoine Bichara",
-                                                          bio: "Antoine is a senior at UC Berkeley majoring in Physics. He has German/U.S. dual citizenship and spent the past semester studying abroad at the Technical University of Berlin. Besides spending time in the lab, he enjoys delving into his wide range of interests including engineering and international relations. A fun fact is that he follows several European soccer leagues very closely and supports FC Bayern München."},
-
-                        "tim" =>       {title: "Chief of Staff - Product",
-                                      picture: "secretariat/tim.jpg",
-                                      name: "Timothy Guan",
-                                      bio: "Tim is a junior at UC Berkeley majoring in Cognitive Science and Biochemistry and minoring in Computer Science. This is his ninth year doing MUN. Tim went to high school in Shanghai, China, but has spent most of his life in New Jersey. As Chief of Staff - Product, he is excited to deliver an unforgettable conference experience for delegates. Through his experiences staffing the JCC, chairing a crisis committee, and acting as Director of Media and Communications, Tim has been delighted to see UCBMUN grow. When he’s not participating in MUN, you can find him cloning, coding, obsessing over gastronomy, or bemoaning the neoliberal regime."}
-                        }
-  end
-
-  def director
-    @directors_names = {"kevin" =>   {title: "Director of Business Relations",
-                                      picture: "secretariat/kevin.jpg",
-                                      name: "Kevin Bai",
-                                      bio: "Kevin is a sophomore majoring in Environmental Economics and Policy, this is his fourth year doing Model United Nations but he has been engaged with the international community for much longer.  Kevin has worked in 4 countries across 3 continents in 5 different industries. They are the environmental, automotive, entertainment, healthcare and technology, in chronological order.  He has an insatiable love of languages and currently speaks Mandarin, English, Spanish and French and is learning Arabic, Kevin plans to speak all 6 official languages of the United Nations before he graduates.  In his free time, Kevin likes to read and run, he ran 3 half marathons the summer of 2015 and plans on running a full marathon before the year is up.  In the future, Kevin would like to found and run his own Non Governmental Organization.  Additionally, he can and will talk about any subject for any length at any volume, you’ve been warned."},
-                        "hassan" =>   {title: "Director of Business Relations",
-                                      picture: "secretariat/hassan.jpg",
-                                      name: "Muhammad Hassan Ayub"},
-                        "mariam" =>   {title: "Director of Programming",
-                                      picture: "secretariat/mariam.jpg",
-                                      name: "Mariam El-Magrissy"},
-                        "steven" =>   {title: "Director of Technology",
-                                      picture: "secretariat/steven.jpg",
-                                      name: "Steven Chen"}
-                        }
-  end
-
-  def usg
-    @usgs_names = {"roya" =>    {title: "USG of Crisis",
-                                      picture: "secretariat/roya.jpg",
-                                      name: "Roya Azarkeyvan",
-                                      bio: "Roya is a junior at UC Berkeley majoring in Political Economy with a minor in Public Policy. Growing up as a first generation Iranian-American, Roya recently found herself feeling liberated of her once-complicated hyphenated identity thanks to a nuclear deal between the U.S. and Iran. That being said, she is by no means endorsing it as a “good” deal. As for trivialities, she maintains a pretty bad habit of apologizing too much and often finds herself soliciting members of UCBMUN for hugs and cuddles - amongst all other forms of affection. Roya previously staffed UCBMUNC’s first ever Ad-Hoc committee and has also served as a Crisis Director for the Reign of Terror committee. As the USG of Crisis, she looks forward to the high powered committees and mind-blowing socials that are both bound to make this year’s UCBMUN unforgettable!"},
-                        "patrick" =>   {title: "USG of Joint Crisis",
-                                      picture: "secretariat/patrick.jpg",
-                                      name: "Patrick Babajanian",
-                                      bio: "Patrick is a junior at UC Berkeley majoring in Peace and Conflict Studies and intending on minoring in History and Russian. Besides MUN, he is involved with other groups on campus such as Amnesty International, Habitat for Humanity, the Troika Journal, the Cal Fencing Club, and the UC Berkeley Armenian Student Association. Some fun facts about Patrick are that he he loves to act, plans world conquest (true to his passion for Crisis Committees), and was once mistaken as the defendant in a criminal trial until the prosecutor realized he was actually just an intern."},
-                        "miriam" =>   {title: "USG of Specialized Bodies",
-                                      picture: "secretariat/miriam.jpg",
-                                      name: "Miriam Arghavani"}
-                      }
+  def load_secretariat_officers
+    @secretariat = {"beckett" => {name: "Beckett Kelly",
+                  title: "Secretary General",
+                  img_pos: "50% 35%",
+                  email: "sg@ucbmun.org"
+                },
+    "allie" => {name: "Allie Gordon",
+                title: "Deputy Secretary General",
+                img_pos: "50% 50%",
+                email: "dsg@ucbmun.org"
+              },
+    "chen" => {name: "Steven Chen",
+                title: "Chief of Staff - Internal",
+                img_pos: "50% 35%",
+                email: "cos-internal@ucbmun.org"
+              },
+    "nickii" => {name: "Nickii Arcado",
+                  title: "Chief of Staff - External",
+                  img_pos: "50% 45%",
+                  email: "cos-external@ucbmun.org",
+                },
+    "anisha" => {name: "Anisha Dangoria",
+                  title: "USG JCC",
+                  img_pos: "50% 60%",
+                  email: "usg-jcc@ucbmun.org"
+                },
+    "patrick" => {name: "Patrick Babajanian",
+                  title: "USG Crisis",
+                  img_pos: "50% 40%",
+                  email: "usg-crisis@ucbmun.org"
+                },
+    "alison" => {name: "Alison Spencer",
+                  title: "USG Crisis",
+                  img_pos: "50% 45%",
+                  email: "usg-crisis@ucbmun.org"
+                },
+    "keenu" => {name: "Keenu Malik",
+                title: "USG Specialized Bodies",
+                img_pos: "50% 45%",
+                email: "usg-sbga@ucbmun.org",
+              },
+    "nik" => {name: "Nik Mathur",
+              title: "Director of Programming",
+              img_pos: "50% 40%",
+              email: "programming@ucbmun.org"
+            },
+    "ryan" => {name: "Ryan Dana",
+                title: "Director of Outreach",
+                img_pos: "50% 30%",
+                email: "outreach@ucbmun.org"
+              },
+    "yash" => {name: "Yash Sanghrajka",
+                title: "Director of Business Relations",
+                img_pos: "50% 50%",
+                email: "dbr@ucbmun.org"
+              },
+    "elleman" => {name: "Steven Elleman",
+                  title: "Director of Technology",
+                  img_pos: "50% 50%",
+                  email: "technology@ucbmun.org"}
+                }
   end
 
   def attractions_list
@@ -252,11 +249,12 @@ module StaticPagesHelper
               subtitle: "The First Committee of the United Nations General Assembly",
               type: "Specialized Body",
               description: [""],
-              chair: {name: "Hassan Ayub", email: "disec@ucbmun.org"},
+              chair: {name: "Mounika Yepuri", email: "disec@ucbmun.org"},
+              cd: {name: "Hassan Ayub", email: "disec@ucbmun.org"},
               chair_letter: [""]
             },
       "unesco" => {name: "UNESCO:",
-                    subtitle: "Media Pluralism & Sexual Literacy in the 21st Century",
+                    subtitle: "Media Pluralism and Sexual Literacy in the 21st Century",
                     type: "Specialized Body",
                     description: ["UNESCO makes its way to UCBMUN XXI as delegates from the international community come together in the 2017 United Nations Educational, Scientific and Cultural Organization committee. The Executive Board of UNESCO is calling the commencement of the 39th session for the general conference with the gathering of member states and associate members, observers for non-member states, intergovernmental organizations, and non-governmental organizations (NGOs) in order to establish equal representation and quality discussions on the pressing topics of censorship and sexual education.",
                       "UNESCO is both striving to protect the freedom of expression, an essential characteristic of democracy, development, and human dignity, and leading the mobilization of quality sexual education in order to lead the change for female empowerment, for upholding human rights, and for improving health equity. Delegates in this committee will be prompted to address and discuss these controversial topics in hopes of sparking a deeper and meaningful insight that can extend to even outside this committee. The incorporation of guest appearances by non-governmental organizations (NGOs) will serve as opportunities for delegates that will also add to this unique MUN experience, stimulating the flow of debate and constantly changing the focus of the topics."],
@@ -278,7 +276,7 @@ module StaticPagesHelper
                   type: "Specialized Body",
                   description: ["This year’s legal committee will take on the Trial of the Juntas in Argentina’s Cámara Court, in which 68 former military junta members will be tried for crimes committed during the Dirty War. The Dirty War, also known as La Guerra Sucia, was a period of state terrorism in which the junta sought to eliminate all left-wing political dissidents via kidnappings, torture, and detention camps and resulted in over 30,000 civilian disappearances. The court will hear witness and exert testimonies, review evidence, consider historical precedence and regional context, and ultimately decide not just on the culpability of these junta members but also the extent and allocation of that culpability. The Cámara Court will be placed in the interesting position of having to define superior-subordinate criminal responsibility. What is the extent to which responsibility flows from superiors from subordinates, and what is the extent to which superior responsibility excuses the actions of subordinates? How will the court allocate guilt among a hierarchical military body in a way that deters future human rights violations while also promoting stability? These probing legal questions are just a few of many issues the court will wrangle with in one of Latin America’s most famous trials."],
                   chair: {name: "Wendie Yeung", email: "legal@ucbmun.org"},
-                  cd: {name: "Anthony Miller", email: "legal@ucbmun.org"},
+                  cd: {name: "Shriram Apte", email: "legal@ucbmun.org"},
                   cd_letter: [""],
                   chair_letter: [""]
                 },
@@ -304,7 +302,7 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-        "unsc" => {name: "The United Nations Security Council: ",
+        "unsc" => {name: "The United Nations Security Council",
                     subtitle: "of the Secretary-General",
                     type: "Crisis",
                     description: ["Probably one of the most significant diplomatic accomplishments in recent years, the Iran Nuclear Deal is now coming to UCBMUN. The United Nations Security Council has been tasked with reaching a deal regarding the Iranian Nuclear Program, while also addressing related regional issues. Hence, all delegates must seek to achieve a resolution, while also understanding how the deal will impact their respective nations.",
@@ -314,13 +312,13 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-        "teutonic" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+        "teutonic" => {name: "The Teutonic Knights of 1226:",
+                    subtitle: "The Fate of Europe",
                     type: "Crisis",
                     description: ["The Knighthood of the Teutonic Order gathers at UCBMUN as delegates from around the nation come together in this 13th century European committee. The Hochmeister has been killed, and you, as the most influential knights, priests, and sergeants of the Order form the capitulum to elect his successor. Using your best diplomatic and combative skills, you, the Knights of the Teutonic Order, will fight to establish your own theocratic state in the lands of the pagan Old Prussians, deal with the treacherous enemies of different faiths and ethnicities pushing in from all sides, and spread the one true Faith to all in Europe.",
                     "Delegates in this committee can expect a unique MUN experience of royal and grand proportions. This one-of-a-kind crisis committee based on historical events will be one part combat, one part nation building, one part foreign diplomacy and one part internal politicking the knights of the Teutonic Order work to bring Christianity to the pagans across Northern Europe. This committee’s fast-paced nature and unique 13th century historical aspect will ensure that delegates have a memorable experience."],
                     chair: {name: "Ananya Sreekanth", email: "teutonic@ucbmun.org"},
-                    cd: {name: "Sachin Holdheim", email: "teutonic@ucbmun.org"},
+                    cd: {name: "Jarry Xiao", email: "teutonic@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
                   },
@@ -333,8 +331,8 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "mexico" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+          "mexico" => {name: "The Porfirrato:",
+                    subtitle: "Mexico's Anti-Revolution",
                     type: "Crisis",
                     description: ["It is 1910, Porfirio Diaz and his regime have been in power for 34 years and with that regime, his loyal and powerful cientificos. These men are the future of a glorious Mexico and ensure progress and prosperity for a nation that has too long been under the heel of another country. However, not everyone agrees and revolution is in the air. Northerners, distressed over labor discrepancies, are beginning to mass around Francisco Villa. Southern indigenous peasants have begun to turn to Emiliano Zapata to save them from the brutal life of the haciendas. It is up to the cientificos to ensure that Mexico survives and continues to progress, no matter the cost. Alliances must be struck with anyone, including the United States, and even Mexico’s former conquerors. Betrayal, greed, power! Any and all must be utilized if the cientificos are to remain supreme!"],
                     chair: {name: "Noah Gerber", email: "mexico@ucbmun.org"},
@@ -342,8 +340,8 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-        "lenin" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+        "lenin" => {name: "Death of Lenin:",
+                    subtitle: "Authoritarian Transition & the Communist Experiment",
                     type: "Crisis",
                     description: ["The death of Lenin was perhaps one of the most intriguing transfers of power in history. As the first leader of the USSR, Lenin utilized his charisma and intellect to radically transform a vast nation that was on the brink of turmoil. Yet, after his untimely death, his line of succession was unclear. When Lenin’s health was declining in early 1923, he dictated 'Lenin's Testament', which contains his opinions on others in powerful position. He denounced Stalin, asking for his removal as General Secretary of the Communist Party, deeming him ill-suited for the position. He praised Trotsky,  whom he called \"the most capable man in the present Central Committee.\" However, as we know, Stalin succeeded Lenin. Why? This tale is one of power, backstabbing, death, and Machiavellian politicking. In our committee, we begin with Lenin’s demise. Who will succeed Lenin and how will the future of Russia unfold? That’s up to the Central Committee of the Communist Party to decide.",
                       "Delegates in this revolutionary committee will come face-to-face with leftist opposition, post-WWI international pressures, the drafting of the 1924 Soviet Constitution, internal Party power tradeoffs, and the inner workings of history’s first large-scale communist experiment.",
@@ -356,15 +354,15 @@ module StaticPagesHelper
             "maumau" => {name: "The Ad Hoc Committee",
                     subtitle: "of the Secretary-General",
                     type: "Crisis",
-                    description: ["The Mau Mau Uprising constitutes a historic conflict between predominantly Kikuyu rebel groups that challenged the authority of British rule in Kenya. Beginning in 1952, it is today considered one of the bloodiest and most aggressive conflicts in modern history. Sparked by inequality, unemployment, and African nationalism, the efforts of Dedan Kimathi and his rebels served as a model for independence movements across the continent. However, in the face of battle, will the rebels cope with increasing food insecurity among their men,  how will the British forces fare in the unfamiliar and mountainous territory that is Kenya, and will the rebels’ innovative fighting techniques prove successful to set forth: \"The Beginning of the End of British Kenya.\"",
+                    description: ["The Mau Mau Uprising constitutes a historic conflict between predominantly Kikuyu rebel groups that challenged the authority of British rule in Kenya. Beginning in 1952, it is today considered one of the bloodiest and most aggressive conflicts in modern history. Sparked by inequality, unemployment, and African nationalism, the efforts of Dedan Kimathi and his rebels served as a model for independence movements across the continent. However, in the face of battle, will the rebels cope with increasing food insecurity among their men,  how will the British forces fare in the unfamiliar and mountainous territory that is Kenya, and will the rebels' innovative fighting techniques prove successful to set forth: \"The Beginning of the End of British Kenya.\"",
                       "Delegates, this bespoke committee will offer you the ability to play a crucial part in the creation of our modern-day Africa. Indeed, with the help of the crisis committee your respective portfolio powers you will immerse yourself in the world of the Kikuyu and their struggle to liberate their homeland. This committee is expected to be fast paced and action packed- we have many crisis updates in store! Will the British lose their grip on their Kenyan colony or will they outsmart the rebels and remain in power? Bahati nzuri!"],
                     chair: {name: "Rahim Daya", email: "maumau@ucbmun.org"},
                     cd: {name: "Nuh Bahemia", email: "maumau@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-        "hongkong" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+        "hongkong" => {name: "May Days",
+                    subtitle: "The Hong Kong Riots of 1967",
                     type: "Crisis",
                     description: ["The year is 1967. For over a hundred years, Hong Kong has been a prosperous colony of the British Empire, the Pearl of the Orient. Yet times are changing. In the aftermath of the Second World War, decolonization has become the prevailing norm. With each passing day it becomes more and more difficult to justify the retention of Hong Kong as a Crown Colony. Across the border in China, Mao Zedong’s Cultural Revolution has plunged the nation into turmoil. As the effects of leftist unrest spills into Hong Kong, the British Governor, Sir David Trench, has called to order a meeting of the Hong Kong Executive Committee to address the upheavals which now threaten the very survival of colony. It is now up to you, delegates, to decide the future of Hong Kong, and ensure that the sun will never set on the British Empire!"],
                     chair: {name: "Ishaan Madan", email: "hongkong@ucbmun.org"},
@@ -372,8 +370,8 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "bangladesh" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+          "bangladesh" => {name: "East Pakistan 1971:",
+                    subtitle: "The Struggle for Bangladesh",
                     type: "Crisis",
                     description: ["\"Those who don’t study history are doomed to repeat it. Those who do study history are doomed to stand by helplessly while others repeat it.\" If there exists a single truth in all of human history, it is the truth that history will repeat itself over and over again. It comes to no surprise that in 1971, only 24 years after the threat of marginalization in a larger India caused its Muslim minority to create an independent nation of Pakistan, the Bengali minority in Pakistan, belonging to the nation’s Eastern wing are longing for a nation of their own. As members of the 1971 East Pakistan Bengali Liberation Committee, you will be starting proceedings on March 26, 1971, the day after “Operation Searchlight,” a genocidal military operation undertaken by the Pakistani Military in Dhaka, East Pakistan, had killed thousands of Bengali civilians. The state of affairs in Pakistan’s Eastern Wing, the home of ethnic Bengalis, is the culmination of more than 20 years of political and social history. From the denial of Bangla as the state language, to the severe underfunding of government programs in East Pakistan, and the lack of state support in the wake of the calamitous 1970 Bhola Cyclone, the economic, cultural, and political marginalization of the Bengali majority East Pakistan by the more powerful West Pakistan had left of unity of Pakistan as a whole in a precarious position.",
                       "Following 13 years of military dictatorship in Pakistan, Sheikh Mujibur Rahman, a Bengali from East Pakistan lead his Awami League party to capturing 167 out of the 169 parliament seats awarded to East Pakistan in the Pakistani general election. As a result of his landslide win, Mujib was constitutionally expected to become Prime Minister of Pakistan and form a new government. However, elites in West Pakistan would not allow a Bengali to lead the country and instead favored that a Prime Minister be present in both “Wings.” After a deadlock in discussion with Yahya Khan, the head of the military, and Zulfikar Ali Bhutto, head of West Pakistan’s majority party, Mujib called for Bengali independence on March 7, 1971. In the aftermath of his famous speech, East Pakistan descended into chaos, as a mass movement to form a new country took hold. Following Mujib’s arrest by the military, and “Operation Searchlight,” the delegates now find themselves in a country on the verge of collapse. Before his arrest, Mujib declared East Pakistan as an independent and new country called “Bangladesh.” The committee will be functioning in an emergency government format, with non-governmental figures also present to represent various peoples and interests. As influential social, political, and military figures in East and West Pakistan, it is imperative that the delegates in the committee take decisive actions to shape the fate of East and West Pakistan and bring a resolution to the current critical situation."],
@@ -382,8 +380,8 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "asiafin" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+          "asiafin" => {name: "Paper Tigers:",
+                    subtitle: "The Asian Financial Crisis of 1997",
                     type: "Crisis",
                     description: ["It is May 14, 1997, and East Asia’s once prosperous region faces its most formidable challenge in decades. After years of unhindered economic growth, cracks are being seen as Thailand spends billions of dollars of its foreign reserves to protect its currency against speculative attacks. It is expected that the other “Asian Tiger” states are to follow down this rocky path. Even the leading economies of Japan and South Korea, alongside the international community, are alarmed of their own economic futures. Perhaps above all else, the people of East Asia are becoming more anxious and fearful of their futures by the day. Are state revolutions on the horizon? It remains up to the delegates of this committee to guide the path of the world’s most rapidly developing region in its most tumultuous time."],
                     chair: {name: "Victoria Lu", email: "asiafin@ucbmun.org"},
@@ -391,12 +389,12 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "thailand" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+          "thailand" => {name: "Thailand 2014:",
+                    subtitle: "The Bangkok Shutdown",
                     type: "Crisis",
                     description: ["The Kingdom of Thailand in 2013-14 went through a period of political turmoil never before seen in its history. The two years saw a proposed amnesty bill for a Prime Minister ousted in the 2006 Coup, the resignation of 153 opposition party Members of Parliament, and the dissolving of the House of Representatives. While all of this political turmoil was happening, protesters instigated a “shutdown” of Bangkok with demonstrators occupying government offices, the government declared a State of Emergency, and finally the Royal Thai Army declared Martial Law throughout Thailand and ultimately staged a coup d’état on the 22nd of May, 2014. The Pheu Thai party have had their last four elected governments removed from power before completing their terms and it will be up to the members of this committee to ensure that it will not be a fifth. Meanwhile, the Royal Thai Army have had to instigate a coup d’état in 2006 against the brother of the current Prime Minister and it will be in its interest to come to an end result where it does not need to seize power again for the security of Thailand.",
                       "The committee will open in the winter of 2013-14, when the protests were at their peak in Thailand. The committee will have to come up with an adequate response to the demands of the protesters while also satisfying the various legal battles they have against impeachment. The military will also have to decide whether protests have gotten to a point where it feels it needs to step in and take power, and can be either a divisive or unifying force in committee. The Bangkok Shutdown will be a spectacular and complex ride, joining in questions of state legitimacy, government corruption, and economic turmoil all tied up in the ribbon that could be Thailand’s next and twelfth coup d’état. "],
-                    chair: {name: "Disha Subramanian", email: "thailand@ucbmun.org"},
+                    chair: {name: "Disha Subramaniam", email: "thailand@ucbmun.org"},
                     cd: {name: "Raymond King", email: "thailand@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
@@ -409,21 +407,22 @@ module StaticPagesHelper
   def load_jcc
 
     @jcc = {
-        "government" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+        "government" => {name: "The Egyptian Revolution:",
+                    subtitle: "The Egyptian Government",
                     type: "Crisis",
-                    description: [""],
-                    chair: {name: "Alice Ma", email: "adhoc@ucbmun.org"},
-                    cd: {name: "Roya Azarkeyvan", email: "adhoc@ucbmun.org"},
+                    description: ["It’s 2010. There’s revolution in the air -- and that’s the last thing you want. Welcome to the JCC Egyptian Government. Tensions are high as your population protests skyrocketing food prices, government corruption, and police brutality. A spirit of uprising has been spreading through the Arab world. Egypt could be next. It is up to you to maintain control of the country in this turbulent and transformative time.",
+                      "Technology and social media played an unprecedented role in the wave of demonstrations, riots, and civil wars known as the Arab Spring. This year, UCBMUN is putting technology front and center in a fast paced, high energy joint crisis. Delegates in this committee will be immersed in current and relevant geopolitical conflicts and possible solutions for peace in our world today. "],
+                    chair: {name: "Rose Meinrath", email: "government@ucbmun.org"},
+                    cd: {name: "Tim Guan", email: "government@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-        "rebels" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+        "rebels" => {name: "The Egyptian Revolution:",
+                    subtitle: "The Egyptian Rebels",
                     type: "Crisis",
                     description: [""],
-                    chair: {name: "Alice Ma", email: "adhoc@ucbmun.org"},
-                    cd: {name: "Roya Azarkeyvan", email: "adhoc@ucbmun.org"},
+                    chair: {name: "Alka Murthy", email: "rebels@ucbmun.org"},
+                    cd: {name: "Shasun Salur", email: "rebels@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
                   },
@@ -490,8 +489,8 @@ module StaticPagesHelper
       },
       "bangladesh" => {
         tag: "bangladesh",
-        name: "Bangladesh",
-        subtitle: "Independence",
+        name: "East Pakistan 1971:",
+        subtitle: "The Struggle for Bangladesh",
         container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
@@ -504,8 +503,8 @@ module StaticPagesHelper
       },
       "hongkong" => {
         tag: "hongkong",
-        name: "Containing the Pearl of the Orient:",
-        subtitle: "Hong Kong 1967",
+        name: "May Days:",
+        subtitle: "The Hong Kong Riots of 1967",
         container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
@@ -518,29 +517,29 @@ module StaticPagesHelper
       },
       "mexico" => {
         tag: "mexico",
-        name: "Los cientificos!",
-        subtitle: "The Mexican Rebellion",
+        name: "The Porfirrato:",
+        subtitle: "Mexico's Anti-Revolution",
         container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "teutonic" => {
         tag: "teutonic",
-        name: "The Knighthood",
-        subtitle: "of the Teutonic Order",
+        name: "The Teutonic Knights of 1226:",
+        subtitle: "The Fate of Europe",
         container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "lenin" => {
         tag: "lenin",
-        name: "The Death of Lenin:",
-        subtitle: "Sustaining the Revolution",
+        name: "Death of Lenin:",
+        subtitle: "Authoritarian Transition & the Communist Experiment",
         container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "unsc" => {
         tag: "unsc",
-        name: "The Security Council:",
-        subtitle: "2015",
+        name: "The United Nations Security Council",
+        subtitle: "of the Secretary-General",
         container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },

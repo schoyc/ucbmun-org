@@ -1,7 +1,7 @@
 <a class="committee-link" href=<%= "committees/#{committee[:tag]}" %>>
   <div class=<%= "#{committee[:container]} committee-js" %> onClick="contactCommittee($(this));">
     <div class="cc-info">
-      <div class="cc-name">
+      <div class="cc-name" style="padding-top: 0.5em;">
         <%= committee[:name] %>
         <br>
         <%= committee[:subtitle] %>

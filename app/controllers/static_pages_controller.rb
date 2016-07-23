@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
       @cc_styles = load_all_cc_styles
       @jcc_styles = load_all_jcc_styles
       load_schedule
+      load_secretariat_officers
   end
 
   def home

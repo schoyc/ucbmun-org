@@ -368,15 +368,22 @@ $(document).ready(function(){
   });
 
   $(".secretariat-container").click(function() {
-    alert("CLICKED");
+    // alert("CLICKED");
     var contact = $(this).find("#secretariat-contact");
-    if (contact.hasClass("secretariat-contact")) {
-      contact.removeClass("secretariat-contact");
-      contact.addClass("secretariat-contact-active");
-    }
-    else if (contact.hasClass("secretariat-contact-active")) {
-      contact.removeClass("secretariat-contact-active");
-      contact.addClass("secretariat-contact");
-    }
+    // contact.toggleClass("secretariat-contact");
+    // contact.toggleClass("secretariat-contact-active");
+    //alert(contact.hasClass("secretariat-contact"));
+
+    // if (contact.hasClass("secretariat-contact")) {
+    //   alert("turning active");
+    //   contact.removeClass("secretariat-contact");
+    //   contact.addClass("secretariat-contact-active");
+    //   return;
+    // }
+    // else if (contact.hasClass("secretariat-contact-active")) {
+    //   alert("turning inactive");
+    //   contact.removeClass("secretariat-contact-active");
+    //   contact.addClass("secretariat-contact");
+    // }
   })
 });

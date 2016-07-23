@@ -90,7 +90,7 @@ class CommitteesController < ApplicationController
   end
 
   def bangladesh
-    @bangladesh = load_jcc["bangladesh"]
+    @bangladesh = load_crises["bangladesh"]
     @committee_name = "bangladesh"
     @container_type = "bangladesh-background-image"
   end

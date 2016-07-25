@@ -250,7 +250,6 @@ module StaticPagesHelper
               type: "Specialized Body",
               description: [""],
               chair: {name: "Mounika Yepuri", email: "disec@ucbmun.org"},
-              cd: {name: "Hassan Ayub", email: "disec@ucbmun.org"},
               chair_letter: [""]
             },
       "unesco" => {name: "UNESCO:",
@@ -351,8 +350,8 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-            "maumau" => {name: "The Ad Hoc Committee",
-                    subtitle: "of the Secretary-General",
+            "maumau" => {name: "The Mau Mau Uprising:",
+                    subtitle: "The Beginning of the End of British Kenya",
                     type: "Crisis",
                     description: ["The Mau Mau Uprising constitutes a historic conflict between predominantly Kikuyu rebel groups that challenged the authority of British rule in Kenya. Beginning in 1952, it is today considered one of the bloodiest and most aggressive conflicts in modern history. Sparked by inequality, unemployment, and African nationalism, the efforts of Dedan Kimathi and his rebels served as a model for independence movements across the continent. However, in the face of battle, will the rebels cope with increasing food insecurity among their men,  how will the British forces fare in the unfamiliar and mountainous territory that is Kenya, and will the rebels' innovative fighting techniques prove successful to set forth: \"The Beginning of the End of British Kenya.\"",
                       "Delegates, this bespoke committee will offer you the ability to play a crucial part in the creation of our modern-day Africa. Indeed, with the help of the crisis committee your respective portfolio powers you will immerse yourself in the world of the Kikuyu and their struggle to liberate their homeland. This committee is expected to be fast paced and action packed- we have many crisis updates in store! Will the British lose their grip on their Kenyan colony or will they outsmart the rebels and remain in power? Bahati nzuri!"],
@@ -394,8 +393,7 @@ module StaticPagesHelper
                     type: "Crisis",
                     description: ["The Kingdom of Thailand in 2013-14 went through a period of political turmoil never before seen in its history. The two years saw a proposed amnesty bill for a Prime Minister ousted in the 2006 Coup, the resignation of 153 opposition party Members of Parliament, and the dissolving of the House of Representatives. While all of this political turmoil was happening, protesters instigated a “shutdown” of Bangkok with demonstrators occupying government offices, the government declared a State of Emergency, and finally the Royal Thai Army declared Martial Law throughout Thailand and ultimately staged a coup d’état on the 22nd of May, 2014. The Pheu Thai party have had their last four elected governments removed from power before completing their terms and it will be up to the members of this committee to ensure that it will not be a fifth. Meanwhile, the Royal Thai Army have had to instigate a coup d’état in 2006 against the brother of the current Prime Minister and it will be in its interest to come to an end result where it does not need to seize power again for the security of Thailand.",
                       "The committee will open in the winter of 2013-14, when the protests were at their peak in Thailand. The committee will have to come up with an adequate response to the demands of the protesters while also satisfying the various legal battles they have against impeachment. The military will also have to decide whether protests have gotten to a point where it feels it needs to step in and take power, and can be either a divisive or unifying force in committee. The Bangkok Shutdown will be a spectacular and complex ride, joining in questions of state legitimacy, government corruption, and economic turmoil all tied up in the ribbon that could be Thailand’s next and twelfth coup d’état. "],
-                    chair: {name: "Disha Subramaniam", email: "thailand@ucbmun.org"},
-                    cd: {name: "Raymond King", email: "thailand@ucbmun.org"},
+                    chair: {email: "thailand@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
                   },

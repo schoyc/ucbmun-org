@@ -57,9 +57,11 @@ function initMap() {
   }
 
   var map_item = $('.sf-item');
+  console.log('in hilton')
   $.get("hilton", function(data) {
     map_item.html(data);
   }, "html");
+  console.log('in hilton')
 }
 
 function makeSelectedFunction(marker) {

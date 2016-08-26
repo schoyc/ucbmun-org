@@ -248,7 +248,8 @@ module StaticPagesHelper
       "disec" => {name: "DISEC:",
               subtitle: "The First Committee of the United Nations General Assembly",
               type: "Specialized Body",
-              description: [""],
+              description: ["Welcome to the first committee of the General Assembly, the Disarmament and International Security (DISEC) committee, where talks about international security can actually take place among all 193 member nations of the United Nations. This unique quality of the General Assembly allows UCBMUN XXI’s DISEC committee to discuss two prominent and very real topics: international intervention in civil war and curbing cyber-terrorism.",
+                "International intervention has been one of the world’s most debated and persisting concerns. Whether it is intervening to stop atrocious human rights violations or saving a country from unscrupulous tyranny, the question of sovereignty and logistics have been key to the complex nature of these discussions. This makes it imperative for delegates to take into account the various features of the General Assembly such as the advisory nature of the committee and foreign policies. Similarly, the topic of cyber-terrorism also prompts the same level of complex debate owing to its more recent entrance into the international sphere of discussion. Delegates will be challenged to think of innovative solutions for combatting the obstacles of cyber warfare."]
               chair: {name: "Mounika Yepuri", email: "disec@ucbmun.org"},
               chair_letter: [""]
             },

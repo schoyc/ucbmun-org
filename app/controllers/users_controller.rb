@@ -23,6 +23,7 @@ class UsersController < ApplicationController
           @user.send_activation_email
           flash[:info] = "Please check your email to confirm your registration and activate your account."
         rescue Net::SMTPAuthenticationError => e
+          puts("ACTIVATION EMAIL ERROR")
           puts(e.backtrace)
           flash[:info] = "Your registration was successful. However, there was an error with sending the email to activate your account. Please email technology@ucbmun.org to activate your account."
         end
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
         begin
           @user.send_new_registration_email
         rescue Net::SMTPAuthenticationError => error
+          puts("REGISTRATION EMAIL ERROR")
           puts(error.backtrace)
         end
         redirect_to root_url

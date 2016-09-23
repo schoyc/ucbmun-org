@@ -23,6 +23,6 @@ class UserMailer < ApplicationMailer
 
   def new_registration(user)
     @user = user
-    mail to: user.email, subject: "New UCBMUN XXI Registration"
+    mail to: "registration@ucbmun.org", subject: "New UCBMUN XXI Registration"
   end
 end

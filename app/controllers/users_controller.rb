@@ -18,10 +18,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.initialize_balance()
-      @user.send_activation_email
-      flash[:info] = "Please check your email to confirm your registration and activate your account."
+      begin
+        @user.send_activation_email
+        flash[:info] = "Please check your email to confirm your registration and activate your account."
+        send_new_registration_email @user
+      rescue Net::SMTPAuthenticationError
+        flash[:info] = "Your registration was successful. However, there was an error with sending the email to activate your account. Please email technology@ucbmun.org to activate your account."
+      end
       redirect_to root_url
-      send_new_registration_email @user
     else
       render 'new'
     end

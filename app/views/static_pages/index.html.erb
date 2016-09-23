@@ -1,6 +1,9 @@
 <div id="fullpage">
   <div id="home" data-anchor="home" class="home-container section"  style="height:800px;background-image:url(http://www.stevenelleman.com/pw2-images/images/showcase/showcase_palacearts.jpg);">
     <div class="home-title">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}", style: "text-align: center;") %>
+      <% end %>
     </div>
   </div>
 

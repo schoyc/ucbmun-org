@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
     UserMailer.account_activation(self).deliver_now
   end
 
+  def send_new_registration_email
+    UserMailer.new_registration(self).deliver_now
+  end
+
   def create_reset_digest
     self.reset_token = User.new_token
     update_attribute(:reset_digest, User.digest(reset_token))

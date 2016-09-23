@@ -16,17 +16,28 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      @user.initialize_balance()
-      begin
-        @user.send_activation_email
-        flash[:info] = "Please check your email to confirm your registration and activate your account."
-        send_new_registration_email @user
-      rescue Net::SMTPAuthenticationError
-        flash[:info] = "Your registration was successful. However, there was an error with sending the email to activate your account. Please email technology@ucbmun.org to activate your account."
+    begin
+      if @user.save
+        @user.initialize_balance()
+        begin
+          @user.send_activation_email
+          flash[:info] = "Please check your email to confirm your registration and activate your account."
+        rescue Net::SMTPAuthenticationError => e
+          puts(e.backtrace)
+          flash[:info] = "Your registration was successful. However, there was an error with sending the email to activate your account. Please email technology@ucbmun.org to activate your account."
+        end
+
+        begin
+          @user.send_new_registration_email
+        rescue Net::SMTPAuthenticationError => error
+          puts(error.backtrace)
+        end
+        redirect_to root_url
+      else
+        render 'new'
       end
-      redirect_to root_url
-    else
+    rescue ActiveRecord::RecordNotUnique
+      @user.errors[:email] = "Address is already associated with a registration."
       render 'new'
     end
   end

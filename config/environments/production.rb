@@ -72,7 +72,7 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
               :address              => "smtp.gmail.com",
               :port                 => 587,
-              :domain               => "ucbmun.herokuapp.com",
+              :domain               => "gmail.com",
               :user_name            => ENV['REGISTER_EMAIL'],
               :password             => ENV['REGISTER_PASSWORD'],
               :authentication       => 'plain',

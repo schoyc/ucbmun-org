@@ -1,13 +1,15 @@
 ActiveAdmin.register User do
-  permit_params :university, :delegates_count, :name, :email, :address, :city, :state, :zip, :current_balance
+  permit_params :university, :delegates_count, :name, :email, :address, :city, :state, :zip, :current_balance, :created_at
 
   index do
+    selectable_column
     column :university
     column :delegates_count
+    column :created_at
     column :name
     column :email
     column :current_balance
-    
+
     actions
   end
   # form do |f|

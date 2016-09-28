@@ -370,16 +370,16 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "bangladesh" => {name: "East Pakistan 1971:",
-                    subtitle: "The Struggle for Bangladesh",
-                    type: "Crisis",
-                    description: ["Delegates, welcome to South Asia, but not as you know it! As a region heavily covered throughout the MUN circuit, much of South Asia’s coverage in Model UN has focused on the nations of India and Pakistan, especially the conflict between the two. However at UCBMUN this year, the East Pakistan 1971 committee promises to be an exciting and unique foray into a relatively unexplored part of South Asian history on the MUN circuit. Since the creation of Pakistan from the partition of British India in 1947, the marginalization of ethnic Bengalis in Pakistan’s Eastern Wing had been a continually growing social and political issue in the region.",
-                      "You will be thrown into the thick of things from the off. The committee starts on following Sheikh Mujib’s famous speech calling for independence for the Bengali people. Public sentiment favoring a new country and the creation of ‘Bangladesh’ is growing. As members of the Pakistani government and military from both the Eastern and Western wings, along with foreign diplomats, local power brokers and elites, and representatives of the common people, you will engage in a struggle to either keep Pakistan together, or create a state for the Bengalis in East Pakistan. The committee will operate in the classic crisis format with regular crisis updates that will constantly demand you to keep up to pace with complex political, and military challenges. Whatever happens in the committee, you can expect to have an immensely intense experience that places the ability to change South Asian history forever in your hands. "],
-                    chair: {name: "Shakeer Ahmad", email: "bangladesh@ucbmun.org"},
-                    cd: {name: "Gustavo De Leon", email: "bangladesh@ucbmun.org"},
-                    cd_letter: [""],
-                    chair_letter: [""]
-                  },
+          # "bangladesh" => {name: "East Pakistan 1971:",
+          #           subtitle: "The Struggle for Bangladesh",
+          #           type: "Crisis",
+          #           description: ["Delegates, welcome to South Asia, but not as you know it! As a region heavily covered throughout the MUN circuit, much of South Asia’s coverage in Model UN has focused on the nations of India and Pakistan, especially the conflict between the two. However at UCBMUN this year, the East Pakistan 1971 committee promises to be an exciting and unique foray into a relatively unexplored part of South Asian history on the MUN circuit. Since the creation of Pakistan from the partition of British India in 1947, the marginalization of ethnic Bengalis in Pakistan’s Eastern Wing had been a continually growing social and political issue in the region.",
+          #             "You will be thrown into the thick of things from the off. The committee starts on following Sheikh Mujib’s famous speech calling for independence for the Bengali people. Public sentiment favoring a new country and the creation of ‘Bangladesh’ is growing. As members of the Pakistani government and military from both the Eastern and Western wings, along with foreign diplomats, local power brokers and elites, and representatives of the common people, you will engage in a struggle to either keep Pakistan together, or create a state for the Bengalis in East Pakistan. The committee will operate in the classic crisis format with regular crisis updates that will constantly demand you to keep up to pace with complex political, and military challenges. Whatever happens in the committee, you can expect to have an immensely intense experience that places the ability to change South Asian history forever in your hands. "],
+          #           chair: {name: "Shakeer Ahmad", email: "bangladesh@ucbmun.org"},
+          #           cd: {name: "Gustavo De Leon", email: "bangladesh@ucbmun.org"},
+          #           cd_letter: [""],
+          #           chair_letter: [""]
+          #         },
           "asiafin" => {name: "Paper Tigers:",
                     subtitle: "The Asian Financial Crisis of 1997",
                     type: "Crisis",
@@ -421,7 +421,7 @@ module StaticPagesHelper
                     type: "Crisis",
                     description: ["It’s 2011 and across Egypt, mass uprisings and demonstrations call for the immediate resignation of President Hosni Mubarak. The thousands of people who protested, both peacefully and violently, craved a stronger, economically sound, and just nation. This committee will feature crucial characters from the rebel groups, called together to address how to proceed after hearing news about similar occurrences in Tunisia, given the corrupt Mubarak government’s doings. I will play the role of an advisor to the rebel groups and lead the committee.",
                       "Delegates in this exciting JCC will of course get the opportunity to interact with the opposing Mubarak Government committee throughout the conference. We hope to incorporate technology and social media into our committees to not only make things exciting but also replicate the online presence of the 2011 Revolution itself. Welcome to the Land of the Gods and roots of the Arab Spring! "],
-                    chair: {name: "Alka Murthy", email: "rebels@ucbmun.org"},
+                    chair: {name: "Shakeer Ahmad", email: "rebels@ucbmun.org"},
                     cd: {name: "Shasun Salur", email: "rebels@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]
@@ -477,49 +477,49 @@ module StaticPagesHelper
         tag: "thailand",
         name: "Thailand 2014:",
         subtitle: "The Bangkok Shutdown",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "mormons" => {
         tag: "mormons",
         name: "Building Zion:",
         subtitle: "Mormon Pioneers and the Founding of Utah",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
-      "bangladesh" => {
-        tag: "bangladesh",
-        name: "East Pakistan 1971:",
-        subtitle: "The Struggle for Bangladesh",
-        container: "cc-container-1",
-        style: "background-position: 50% 50%; -webkit-background-size: cover;"
-      },
+      # "bangladesh" => {
+      #   tag: "bangladesh",
+      #   name: "East Pakistan 1971:",
+      #   subtitle: "The Struggle for Bangladesh",
+      #   container: "cc-container-1",
+      #   style: "background-position: 50% 50%; -webkit-background-size: cover;"
+      # },
       "asiafin" => {
         tag: "asiafin",
         name: "Paper Tigers:",
         subtitle: "The Asian Financial Crisis of 1997",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "hongkong" => {
         tag: "hongkong",
         name: "May Days:",
         subtitle: "The Hong Kong Riots of 1967",
-        container: "cc-container-2",
+        container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "maumau" => {
         tag: "maumau",
         name: "The Mau Mau Uprising:",
         subtitle: "The Beginning of the End of British Kenya",
-        container: "cc-container-2",
+        container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "mexico" => {
         tag: "mexico",
         name: "The Porfirrato:",
         subtitle: "Mexico's Anti-Revolution",
-        container: "cc-container-2",
+        container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "teutonic" => {
@@ -533,21 +533,21 @@ module StaticPagesHelper
         tag: "lenin",
         name: "Death of Lenin:",
         subtitle: "Authoritarian Transition & the Communist Experiment",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "unsc" => {
         tag: "unsc",
         name: "The United Nations Security Council",
         subtitle: "of the Secretary-General",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       },
       "adhoc" => {
         tag: "adhoc",
         name: "The Ad Hoc Committee",
         subtitle: "of the Secretary-General",
-        container: "cc-container-1",
+        container: "cc-container-2",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"
       }
     }

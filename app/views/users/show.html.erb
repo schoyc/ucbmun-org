@@ -1,6 +1,6 @@
 <%= render partial: "toolbar" %>
 <div class="row">
-<div class="profile-left col-md-8">
+<div class="profile-left col-md-7 cold-md-offset-1">
   <div class="user-profile-welcome">
     <h2> Welcome, </h2>
     <h2> <%= @user.university %> !</h2>
@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class="profile-right col-md-4">
+<div class="profile-right col-md-3 col-md-offset-1">
   <div class="user-profile-sidebar">
     <div class="user-profile-pic-wrapper">
       <%= image_tag "no_photo_person.png", class: "user-profile-pic" %>

@@ -1,7 +1,20 @@
-<h1> Log in </h1>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <b><center><h1 style="margin-bottom: 20px;"> Register </h1>
+    <p> Join us in San Francisco for UCBMUN XXI.</p><p>The premier West Coast Model United Nations Conference.</p></b>
+    <%= link_to "Register Now", signup_path, class: "btn btn-primary dark-blue-button", style: "width: 80%"%>
+    </center>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <br></br>
+    <strong><hr size="7" width = "100%" style="border-color: black; border-width: 2px; margin-top: 10px;"></hr></strong>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <center><h1> Log in </h1></center>
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :email %>
@@ -15,12 +28,10 @@
         <%= f.check_box :remember_me %>
         <span>Remember me on this computer</span>
         <% end %>
-
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-
+        <center>
+      <%= f.submit "Log in", class: "btn btn-primary dark-blue-button", style: "width: 80%" %>
+    </center>
     <% end %>
-
-    <p> Haven't registered yet? <%= link_to "Register now!", signup_path %></p>
 
   </div>
 </div>

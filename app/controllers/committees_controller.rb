@@ -3,30 +3,35 @@ class CommitteesController < ApplicationController
     @unesco = load_sbs["unesco"]
     @committee_name = "unesco"
     @container_type = "unesco-background-image"
+    @letters = "Chair Letter"
   end
 
   def nba
     @nba = load_sbs["nba"]
     @committee_name = "nba"
     @container_type = "nba-background-image"
+    @letters = "Chair Letter"
   end
 
   def disec
     @disec = load_sbs["disec"]
     @committee_name = "disec"
     @container_type = "disec-background-image"
+    @letters = "Chair Letter"
   end
 
   def fao
     @fao = load_sbs["fao"]
     @committee_name = "fao"
     @container_type = "fao-background-image"
+    @letters = "Chair Letter"
   end
 
   def legal
     @legal = load_sbs["legal"]
     @committee_name = "legal"
     @container_type = "legal-background-image"
+    @letters = "Chair & Legal Director Letters"
   end
 
   def unsc

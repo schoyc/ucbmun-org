@@ -68,13 +68,35 @@
       <div style="/* float: left; */">
 
       </div>
-      <div class="chair-info">
+      <div class="chair-info" style="text-align: center">
+        <div style="display: inline-block;">
+
         <!-- <a class="bg-link" href="/maumau.pdf">
           <h4><strong>Background Guide</strong></h4>
         </a> -->
+        <!-- <a class="bg-link" href=<%= "/#{@committee_name}.pdf" %>>
+          <h4 style="font-family: nixie;"><strong><%= committee[:chair][:email] %></strong></h4>
+        </a> -->
+        <a class="bg-link" href=<%= "/#{@committee_name}_letters.pdf" %>>
+          <% if @letters.nil? %>
+          <h4 style="font-family: nixie;"><strong>Chair & CD Letters</strong></h4>
+          <% else %>
+          <h4 style="font-family: nixie;"><strong><%= @letters + "    " %></strong></h4>
+          <% end %>
+        </a>
+        <a class="bg-link" style="text-decoration: none;" href=<%= "" %>>
+          <h4 style="font-family: nixie;"><strong>|</strong></h4>
+        </a>
         <a class="bg-link" href=<%="mailto:#{committee[:chair][:email]}" %>>
           <h4 style="font-family: nixie;"><strong><%= committee[:chair][:email] %></strong></h4>
         </a>
+        <a class="bg-link" style="text-decoration: none;" href=<%= "" %>>
+          <h4 style="font-family: nixie;"><strong>|</strong></h4>
+        </a>
+        <a class="bg-link" href=<%="/committees/comingsoon" %>>
+          <h4 style="font-family: nixie;"><strong>Background Guide</strong></h4>
+        </a>
+      </div>
       </div>
     </div></div>
     <div class="committee-info" style="

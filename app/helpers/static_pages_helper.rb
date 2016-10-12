@@ -261,7 +261,7 @@ module StaticPagesHelper
                     chair: {name: "Dianne Chung", email: "unesco@ucbmun.org"},
                     chair_letter: [""]
                   },
-      "fao" => {name: "FAO 2020:",
+      "fao" => {name: "The FAO 2020:",
                 subtitle: "Balancing Aid, Energy, and Security",
                 type: "Specialized Body",
                 description: ["Welcome to the FAO: the Food and Agricultural Organization committee! The head of the FAO, José Graziano da Silva, has called delegates from member countries across the world to debate two pertinent and pressing topics: food and energy security and food aid to developing countries. Delegates can expect to hear viewpoints from across the world, as all five geopolitical groups will be represented. With 800 million people hungry in the status quo and the human population expected to reach 8.7 billion by 2030, it is imperative to discuss sustainable and realistic ways to feed and fuel the planet. Not only this, it is crucial to take a look at one of the main tools utilized by organizations to help developing countries, food aid, and see its positive or negative effects.",

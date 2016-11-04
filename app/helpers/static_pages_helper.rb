@@ -272,7 +272,7 @@ module StaticPagesHelper
                   "I am excited to meet all of you in committee and I look forward to a fun and enjoyable conference. If you have any questions or concerns, feel free to contact me."],
               },
       "legal" => {name: "Trial of the Juntas:",
-                  subtitle: "Defining Justice after the Direty War",
+                  subtitle: "Defining Justice after the Dirty War",
                   type: "Specialized Body",
                   description: ["This year’s legal committee will take on the Trial of the Juntas in Argentina’s Cámara Court, in which 68 former military junta members will be tried for crimes committed during the Dirty War. The Dirty War, also known as La Guerra Sucia, was a period of state terrorism in which the junta sought to eliminate all left-wing political dissidents via kidnappings, torture, and detention camps and resulted in over 30,000 civilian disappearances. The court will hear witness and exert testimonies, review evidence, consider historical precedence and regional context, and ultimately decide not just on the culpability of these junta members but also the extent and allocation of that culpability. The Cámara Court will be placed in the interesting position of having to define superior-subordinate criminal responsibility. What is the extent to which responsibility flows from superiors from subordinates, and what is the extent to which superior responsibility excuses the actions of subordinates? How will the court allocate guilt among a hierarchical military body in a way that deters future human rights violations while also promoting stability? These probing legal questions are just a few of many issues the court will wrangle with in one of Latin America’s most famous trials."],
                   chair: {name: "Wendie Yeung", email: "legal@ucbmun.org"},
@@ -331,7 +331,7 @@ module StaticPagesHelper
                     cd_letter: [""],
                     chair_letter: [""]
                   },
-          "mexico" => {name: "The Porfirrato:",
+          "mexico" => {name: "The Porfiriato:",
                     subtitle: "Mexico's Anti-Revolution",
                     type: "Crisis",
                     description: ["It is 1910, Porfirio Diaz and his regime have been in power for 34 years and with that regime, his loyal and powerful cientificos. These men are the future of a glorious Mexico and ensure progress and prosperity for a nation that has too long been under the heel of another country. However, not everyone agrees and revolution is in the air. Northerners, distressed over labor discrepancies, are beginning to mass around Francisco Villa. Southern indigenous peasants have begun to turn to Emiliano Zapata to save them from the brutal life of the haciendas. It is up to the cientificos to ensure that Mexico survives and continues to progress, no matter the cost. Alliances must be struck with anyone, including the United States, and even Mexico’s former conquerors. Betrayal, greed, power! Any and all must be utilized if the cientificos are to remain supreme!"],
@@ -517,7 +517,7 @@ module StaticPagesHelper
       },
       "mexico" => {
         tag: "mexico",
-        name: "The Porfirrato:",
+        name: "The Porfiriato:",
         subtitle: "Mexico's Anti-Revolution",
         container: "cc-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;"

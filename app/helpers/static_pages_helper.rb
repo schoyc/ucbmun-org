@@ -35,7 +35,7 @@ module StaticPagesHelper
                   img_pos: "50% 45%",
                   email: "usg-crisis@ucbmun.org"
                 },
-    "keenu" => {name: "Keenu Malik",
+    "wendie" => {name: "Wendie Yeung",
                 title: "USG Specialized Bodies",
                 img_pos: "50% 45%",
                 email: "usg-sbga@ucbmun.org",
@@ -275,7 +275,7 @@ module StaticPagesHelper
                   subtitle: "Defining Justice after the Dirty War",
                   type: "Specialized Body",
                   description: ["This year’s legal committee will take on the Trial of the Juntas in Argentina’s Cámara Court, in which 68 former military junta members will be tried for crimes committed during the Dirty War. The Dirty War, also known as La Guerra Sucia, was a period of state terrorism in which the junta sought to eliminate all left-wing political dissidents via kidnappings, torture, and detention camps and resulted in over 30,000 civilian disappearances. The court will hear witness and exert testimonies, review evidence, consider historical precedence and regional context, and ultimately decide not just on the culpability of these junta members but also the extent and allocation of that culpability. The Cámara Court will be placed in the interesting position of having to define superior-subordinate criminal responsibility. What is the extent to which responsibility flows from superiors from subordinates, and what is the extent to which superior responsibility excuses the actions of subordinates? How will the court allocate guilt among a hierarchical military body in a way that deters future human rights violations while also promoting stability? These probing legal questions are just a few of many issues the court will wrangle with in one of Latin America’s most famous trials."],
-                  chair: {name: "Wendie Yeung", email: "legal@ucbmun.org"},
+                  chair: {name: "Dana Levine", email: "legal@ucbmun.org"},
                   cd: {name: "Shriram Apte", email: "legal@ucbmun.org"},
                   cd_letter: [""],
                   chair_letter: [""]
@@ -326,7 +326,7 @@ module StaticPagesHelper
                     subtitle: "Mormon Pioneers and the Founding of Utah",
                     type: "Crisis",
                     description: ["It was a 19th Century version of the Exodus story: following persecution, violence, and the murder of their founder Joseph Smith, the believers of the newly organized Church of Jesus Christ of Latter-Day Saints saw no choice but to flee civilization. After a trek of thousands of miles, crossing the harsh mountains and deserts of the American West, the Mormon pioneers entered the Salt Lake Valley on July 24th, 1847. Looking over the barren, dry desert, Brigham Young declared, “This is the right place” – the place that would provide the Mormons with sanctuary at last. As leaders of the church, this remote Utah territory offers delegates the opportunity to build the ideal Mormon society from the ground up. But the task will not be easy: radical factions of the church, warring Native Americans, and a meddling federal government lurk at every turn. Will Utah prove to be the Promised Land – or will the forces of the desert and religious fervor prove to deadly? "],
-                    cd: {name: "Austin Weinstein", email: "mormons@ucbmun.org"},
+                    cd: {name: "Stanislaw Banach", email: "mormons@ucbmun.org"},
                     chair: {name: "Grayson Dimick", email: "mormons@ucbmun.org"},
                     cd_letter: [""],
                     chair_letter: [""]

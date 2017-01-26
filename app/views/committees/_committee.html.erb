@@ -93,6 +93,14 @@
         <a class="bg-link" href=<%="mailto:#{committee[:chair][:email]}" %>>
           <h4 style="font-family: nixie;"><strong><%= committee[:chair][:email] %></strong></h4>
         </a>
+        <br>
+        <% if !@adhoc.nil? %>
+          <% if logged_in? %>
+            <h4><a href="https://goo.gl/forms/RGNg7vUSKuLkE62H3">Application</a></h4>
+          <% else %>
+            <h4><%= link_to "Looking for the application? Please login first.", login_path %> </h4>
+          <% end %>
+        <% end %>
         <!-- <a class="bg-link" style="text-decoration: none;" href=<%= "" %>>
           <h4 style="font-family: nixie;"><strong>|</strong></h4>
         </a>

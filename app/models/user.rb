@@ -95,7 +95,7 @@ class User < ActiveRecord::Base
 
   def adjust_balance
 
-    current_time = Time.now.inspect
+    current_time = Time.now
     early_fee_time = Time.new(2016, 12, 2)
 
     if current_time.to_i < early_fee_time.to_i

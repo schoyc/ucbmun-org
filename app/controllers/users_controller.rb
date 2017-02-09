@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @user.adjust_balance()
   end
 
   def new
@@ -66,6 +67,7 @@ class UsersController < ApplicationController
 
   def balance
     @user = User.find(params[:id])
+    @user.adjust_balance()
   end
 
   def registrationerror

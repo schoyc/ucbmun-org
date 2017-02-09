@@ -1,21 +1,31 @@
-<h1> Schedule </h1>
-<h2 class="center-header schedule-header"> Thursday, March 3 </h2>
-<%= render partial: "schedule", locals: {schedule_items: @thursday_schedule} %>
 <br></br>
-<h2 class="center-header schedule-header"> Friday, March 4 </h2>
-<%= render partial: "schedule", locals: {schedule_items: @friday_schedule} %>
 <br></br>
-<h2 class="center-header schedule-header"> Saturday, March 5 </h2>
-<%= render partial: "schedule", locals: {schedule_items: @saturday_schedule} %>
-<br></br>
-<h2 class="center-header schedule-header"> Sunday, March 6 </h2>
-<%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>
-<h1> Locations </h1>
-<h2 class="center-header schedule-header"> Conference Events </h2>
-<%= render partial: "schedule", locals: {schedule_items: @event_rooms} %>
-<h2 class="center-header schedule-header"> Specialized Bodies </h2>
-<%= render partial: "schedule", locals: {schedule_items: @sbs_rooms} %>
-<h2 class="center-header schedule-header"> Crisis Committees </h2>
-<%= render partial: "schedule", locals: {schedule_items: @crisis_rooms} %>
-<h2 class="center-header schedule-header"> Joint Crisis Committees </h2>
-<%= render partial: "schedule", locals: {schedule_items: @jcc_rooms} %>
+<br>
+<div class="info-title">
+  Schedule
+</div>
+  <div style="font-family: 'Raleway', sans-serif; padding-top: 10px;">
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="center-header schedule-header"> Thursday, March 2 </h4>
+          <%= render partial: "schedule", locals: {schedule_items: @thursday_schedule} %>
+          <br></br>
+        </div>
+        <div class="col-md-6">
+          <h4 class="center-header schedule-header"> Friday, March 3 </h4>
+          <%= render partial: "schedule", locals: {schedule_items: @friday_schedule} %>
+          <br></br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4 class="center-header schedule-header"> Saturday, March 4 </h4>
+          <%= render partial: "schedule", locals: {schedule_items: @saturday_schedule} %>
+          <br></br>
+        </div>
+        <div class="col-md-6">
+          <h4 class="center-header schedule-header"> Sunday, March 5 </h4>
+          <%= render partial: "schedule", locals: {schedule_items: @sunday_schedule} %>
+        </div>
+      </div>
+    </div>

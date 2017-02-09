@@ -118,8 +118,8 @@ class User < ActiveRecord::Base
   end
 
   def charge_list
-    current_time = Time.now.inspect
-    early_fee_time = Time.new(2015, 12, 2)
+    current_time = Time.now
+    early_fee_time = Time.new(2016, 12, 2)
     default_charge_list = []
     if current_time.to_i < early_fee_time.to_i
       default_charge_list = [ {item: "Delegation Fee--Early",

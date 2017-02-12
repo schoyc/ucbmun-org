@@ -77,19 +77,21 @@
         <!-- <a class="bg-link" href=<%= "/#{@committee_name}.pdf" %>>
           <h4 style="font-family: nixie;"><strong><%= committee[:chair][:email] %></strong></h4>
         </a> -->
-        <% if @committee_name != "teutonic" && @committee_name != "rebels" && @committee_name != "thailand"%>
-        <a class="bg-link" href=<%= "/#{@committee_name}.pdf" %>>
+          <!-- <a class="bg-link" href=<%= "/#{@committee_name}.pdf" %>>
           <% if @letters.nil? %>
           <h4 style="font-family: nixie;"><strong>Chair & CD Letters</strong></h4>
           <% else %>
           <h4 style="font-family: nixie;"><strong><%= @letters + "    " %></strong></h4>
           <% end %>
-        </a>
+        </a> -->
 
+        <a class="bg-link" href=<%="/bgs/#{@committee_name}.pdf" %>>
+          <h4 style="font-family: nixie;"><strong>Background Guide</strong></h4>
+        </a>
         <a class="bg-link" style="text-decoration: none;" href=<%= "" %>>
           <h4 style="font-family: nixie;"><strong>|</strong></h4>
         </a>
-        <% end %>
+
         <a class="bg-link" href=<%="mailto:#{committee[:chair][:email]}" %>>
           <h4 style="font-family: nixie;"><strong><%= committee[:chair][:email] %></strong></h4>
         </a>
@@ -101,12 +103,6 @@
             <h4><%= link_to "Looking for the application? Please login first.", login_path %> </h4>
           <% end %>
         <% end %>
-        <!-- <a class="bg-link" style="text-decoration: none;" href=<%= "" %>>
-          <h4 style="font-family: nixie;"><strong>|</strong></h4>
-        </a>
-        <a class="bg-link" href=<%="/committees/comingsoon" %>>
-          <h4 style="font-family: nixie;"><strong>Background Guide</strong></h4>
-        </a> -->
       </div>
       </div>
     </div></div>

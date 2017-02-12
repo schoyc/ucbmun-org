@@ -276,7 +276,7 @@ module StaticPagesHelper
                   type: "Specialized Body",
                   description: ["This year’s legal committee will take on the Trial of the Juntas in Argentina’s Cámara Court, in which 68 former military junta members will be tried for crimes committed during the Dirty War. The Dirty War, also known as La Guerra Sucia, was a period of state terrorism in which the junta sought to eliminate all left-wing political dissidents via kidnappings, torture, and detention camps and resulted in over 30,000 civilian disappearances. The court will hear witness and exert testimonies, review evidence, consider historical precedence and regional context, and ultimately decide not just on the culpability of these junta members but also the extent and allocation of that culpability. The Cámara Court will be placed in the interesting position of having to define superior-subordinate criminal responsibility. What is the extent to which responsibility flows from superiors from subordinates, and what is the extent to which superior responsibility excuses the actions of subordinates? How will the court allocate guilt among a hierarchical military body in a way that deters future human rights violations while also promoting stability? These probing legal questions are just a few of many issues the court will wrangle with in one of Latin America’s most famous trials."],
                   chair: {name: "Dana Levine", email: "legal@ucbmun.org"},
-                  cd: {name: "Shriram Apte", email: "legal@ucbmun.org"},
+                  cd: {name: "Troy Worden", email: "legal@ucbmun.org"},
                   cd_letter: [""],
                   chair_letter: [""]
                 },

@@ -47,6 +47,10 @@ Rails.application.routes.draw do
 
   get 'committees/adhoc'
 
+  get 'adhoc_application' => 'committees#adhoc_application'
+
+  get 'commitees/adhoc_application'
+
   root 'static_pages#index'
 
   get 'pdf' => 'static_pages#pdftest'
@@ -82,6 +86,7 @@ Rails.application.routes.draw do
   get 'listofregistrations' => 'users#index'
 
   get 'conferencepayment' => 'charges#new'
+  get 'sponsorship' => 'charges#sponsorship'
   # get 'users/:id/balance' => 'users#balance'
   get 'users/:id/balance' => 'users#balance', as: :balance
   get 'users/:id/delegation' => 'users#delegation', as: :delegation

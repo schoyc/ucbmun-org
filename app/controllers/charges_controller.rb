@@ -11,32 +11,34 @@ class ChargesController < ApplicationController
 
   def create
     # current_user.charges
-    @decimal_amount = current_user.get_current_balance
-    @amount = current_user.get_current_balance * 100
-    @amount = @amount.to_i
+    @decimal_amount = 250
+    @amount = 250 * 100
+    @email = params[:stripeEmail]
+    @description = "UCBMUN Sponsorship Payment"
+    if !current_user.nil?
+      @decimal_amount = current_user.get_current_balance
+      @amount = current_user.get_current_balance * 100
+      @amount = @amount.to_i
+      @email = current_user.email
+    end
+
     # Amount in cents
     customer = Stripe::Customer.create(
-      :email => "#{current_user.email}",
+      :email => @email,
       :card  => params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => @amount,
-      :description => "Conference payment for #{current_user.university}",
+      :description => @description,
       :currency    => 'usd'
     )
 
     if !charge.nil? && charge.status == 'succeeded'
-      #@curr_user.set_current_balance(-10000)
-      # current_user.set_current_balance(current_user.get_current_balance - @decimal_amount)
-      current_user.update_balance(@decimal_amount)
-      #current_user.update_attribute(:current_balance, -10000)
-      # current_user.charge_list.push({item: "Delegation Payment",
-      #                       price: @amount / 100 * -1 ,
-      #                       quantity: 1,
-      #                       date: Time.now.inspect})
-
+      if logged_in?
+        current_user.update_balance(@decimal_amount)
+      end
     end
   end
 
@@ -53,6 +55,9 @@ class ChargesController < ApplicationController
     current_user.set_balance(@amount)
   end
 
+  def sponsorship
+    @amount = 250 * 100
+  end
 
   def createmunstore
     #subtotal = @shirt.to_i * 15 + @mug.to_i * 15 + @shotglass.to_i * 7 + @folder.to_i * 5 + @candygram.to_i * 3 + @donation.to_i * 1

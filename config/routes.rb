@@ -69,6 +69,7 @@ Rails.application.routes.draw do
   get 'munstore' => 'static_pages#munstore'
   get 'paymentsuccess' => 'static_pages#paymentsuccess'
   get 'hilton' => 'attractions#hilton'
+  get 'app_privacy_policy' => 'committees#app_privacy_policy'
 
   get '/muncharge' => 'charges#muncharge'
 

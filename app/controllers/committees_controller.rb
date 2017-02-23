@@ -4,6 +4,7 @@ class CommitteesController < ApplicationController
     @committee_name = "unesco"
     @container_type = "unesco-background-image"
     @letters = "Chair Letter"
+    @updates = true
   end
 
   def nba
@@ -11,6 +12,7 @@ class CommitteesController < ApplicationController
     @committee_name = "nba"
     @container_type = "nba-background-image"
     @letters = "Chair Letter"
+    @updates = true
   end
 
   def disec
@@ -44,6 +46,7 @@ class CommitteesController < ApplicationController
     @asiafin = load_crises["asiafin"]
     @committee_name = "asiafin"
     @container_type = "asiafin-background-image"
+    @updates = true
   end
 
   def mormons
@@ -62,18 +65,21 @@ class CommitteesController < ApplicationController
     @teutonic = load_crises["teutonic"]
     @committee_name = "teutonic"
     @container_type = "teutonic-background-image"
+    @updates = true
   end
 
   def lenin
     @lenin = load_crises["lenin"]
     @committee_name = "lenin"
     @container_type = "lenin-background-image"
+    @updates = true
   end
 
   def thailand
     @thailand = load_crises["thailand"]
     @committee_name = "thailand"
     @container_type = "thailand-background-image"
+    @updates = true
   end
 
   def maumau
@@ -86,12 +92,14 @@ class CommitteesController < ApplicationController
     @government = load_jcc["government"]
     @committee_name = "government"
     @container_type = "government-background-image"
+    @updates = true
   end
 
   def rebels
     @rebels = load_jcc["rebels"]
     @committee_name = "rebels"
     @container_type = "rebels-background-image"
+    @updates = true
   end
 
   def bangladesh
@@ -110,5 +118,8 @@ class CommitteesController < ApplicationController
     @hongkong = load_crises["hongkong"]
     @committee_name = "hongkong"
     @container_type = "hongkong-background-image"
+  end
+
+  def adhoc_application
   end
 end

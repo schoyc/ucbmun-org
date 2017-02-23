@@ -254,7 +254,7 @@ module StaticPagesHelper
               chair_letter: [""]
             },
       "unesco" => {name: "UNESCO:",
-                    subtitle: "Media Pluralism and Sexual Literacy in the 21st Century",
+                    subtitle: "Media Pluralism in the 21st Century",
                     type: "Specialized Body",
                     description: ["UNESCO makes its way to UCBMUN XXI as delegates from the international community come together in the 2017 United Nations Educational, Scientific and Cultural Organization committee. The Executive Board of UNESCO is calling the commencement of the 39th session for the general conference with the gathering of member states and associate members, observers for non-member states, intergovernmental organizations, and non-governmental organizations (NGOs) in order to establish equal representation and quality discussions on the pressing topics of censorship and sexual education.",
                       "UNESCO is both striving to protect the freedom of expression, an essential characteristic of democracy, development, and human dignity, and leading the mobilization of quality sexual education in order to lead the change for female empowerment, for upholding human rights, and for improving health equity. Delegates in this committee will be prompted to address and discuss these controversial topics in hopes of sparking a deeper and meaningful insight that can extend to even outside this committee. The incorporation of guest appearances by non-governmental organizations (NGOs) will serve as opportunities for delegates that will also add to this unique MUN experience, stimulating the flow of debate and constantly changing the focus of the topics."],
@@ -443,7 +443,7 @@ module StaticPagesHelper
       "unesco" => {
         tag: "unesco",
         name: "UNESCO:",
-        subtitle: "Media Pluralism & Sexual Literacy in the 21st Century",
+        subtitle: "Media Pluralism in the 21st Century",
         container: "sb-container-1",
         style: "background-position: 50% 50%; -webkit-background-size: cover;",
       },

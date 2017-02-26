@@ -12,7 +12,7 @@ class ChargesController < ApplicationController
   def create
     # current_user.charges
     @decimal_amount = 250
-    @amount = 250 * 100
+    @amount = 500 * 100
     @email = params[:stripeEmail]
     @description = "UCBMUN Sponsorship Payment"
     if !current_user.nil?
@@ -56,7 +56,7 @@ class ChargesController < ApplicationController
   end
 
   def sponsorship
-    @amount = 250 * 100
+    @amount = 500 * 100
   end
 
   def createmunstore

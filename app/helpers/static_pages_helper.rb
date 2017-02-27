@@ -193,7 +193,7 @@ module StaticPagesHelper
       {name: "Dinner", time: "5:00pm - 6:15pm"},
       {name: "Committee Session III", time: "6:15pm - 9:15pm"},
       {name: "Committee Feedback for Head Delegates", time: "9:30pm - 10:00pm"},
-      {name: "Jazz Night", time: "10:00pm - 1:00am"}
+      {name: "Bear Fest", time: "10:00pm - 1:00am"}
     ]
 
     @saturday_schedule = [
@@ -202,7 +202,7 @@ module StaticPagesHelper
       {name: "Committee Feedback for Head Delegates", time: "1:15pm - 1:45pm"},
       {name: "Lunch", time: "1:00pm - 3:00pm"},
       {name: "Committee Session V", time: "3:00pm - 7:00pm"},
-      {name: "Delegate Soiree", time: "10:00pm - 2:00am"}
+      {name: "Bear Rave", time: "10:00pm - 2:00am"}
     ]
 
     @sunday_schedule = [

@@ -217,9 +217,9 @@ module StaticPagesHelper
     @sbs_rooms = [
         {name: "DISEC", time: "4th Floor, Pine (Th.), 3rd Floor, Grand Ballroom (F/Sa.)"},
         {name: "UNESCO", time: "4th Floor, Columbus I"},
-        {name: "NBA", time: "4th Floor, Columbus 1"},
-        {name: "FAO", time: "4th Floor, Columbus 2"},
-        {name: "Legal", time: "3rd Floor, Grand Ballroom"}
+        {name: "NBA", time: "4th Floor, Columbus II"},
+        {name: "FAO", time: "4th Floor, Columbus III"},
+        {name: "Legal", time: "1st Floor PDR (Th.), 4th Floor, Pine (F/Sa.)"}
     ]
 
     @crisis_rooms = [

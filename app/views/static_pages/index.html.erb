@@ -422,17 +422,30 @@ Sincerely, Beckett Kelly
                   </div>
                 </div>
             </div>
-            <div class="info-container" id="fee">
+            <div class="info-container" id="resources">
                 <div class="info-title">
-                  Fees
+                  Committee Rooms
                 </div>
-                <div class="fee-contents" style="font-family: 'Raleway', sans-serif; text-align: center;">
+                <div class="resources-contents" style="font-family: 'Raleway', sans-serif; padding-top: 10px;">
                   <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-9" style="padding: 10px 0;">
-                      <%= render "fees" %>
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Specialized Bodies </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @sbs_rooms} %>
+                      <br></br>
                     </div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Crisis</h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @crisis_rooms} %>
+                      <br></br>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                      <h4 class="center-header schedule-header"> Crisis </h4>
+                      <%= render partial: "schedule", locals: {schedule_items: @jcc_rooms} %>
+                    </div>
                   </div>
                 </div>
             </div>
@@ -450,14 +463,6 @@ Sincerely, Beckett Kelly
                 </div>
                 <div class="location-contents">
                   These are location assignments.
-                </div>
-            </div>
-            <div class="info-container" id="resources">
-                <div class="info-title">
-                  Resources
-                </div>
-                <div class="resources-contents">
-                  These are resources.
                 </div>
             </div> -->
           </div>

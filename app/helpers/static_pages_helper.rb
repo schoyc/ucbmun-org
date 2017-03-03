@@ -215,30 +215,30 @@ module StaticPagesHelper
     ]
 
     @sbs_rooms = [
-        {name: "World Social Forum:", time: "4th Floor, Pine"},
-        {name: "NFL Owners' Meeting:", time: "4th Floor, Columbus 3"},
-        {name: "Legal Committee:", time: "4th Floor, Columbus 2"},
-        {name: "DISEC:", time: "4th Floor, Columbus 1"},
-        {name: "General Assembly:", time: "3rd Floor, Grand Ballroom"}
+        {name: "DISEC", time: "4th Floor, Pine (Th.), 3rd Floor, Grand Ballroom (F/Sa.)"},
+        {name: "UNESCO", time: "4th Floor, Columbus I"},
+        {name: "NBA", time: "4th Floor, Columbus 1"},
+        {name: "FAO", time: "4th Floor, Columbus 2"},
+        {name: "Legal", time: "3rd Floor, Grand Ballroom"}
     ]
 
     @crisis_rooms = [
-        {name: "The Ad Hoc Committee of the Secretary-General", time: "2nd Floor, Pyramid"},
-        {name: "A Clash of Three Kingdoms:", time: "1st Floor, Valencia"},
-        {name: "Obama Unleashed or Rejected:", time: "1st Floor, Embarcadero"},
-        {name: "Conquering the Web:", time: "2nd Floor, Davis"},
-        {name: "No King but Caesar:", time: "1st Floor, Grant"},
-        {name: "Colombia:", time: "2nd Floor, Sansome"},
-        {name: "The Rolex 12:", time: "1st Floor, PDR"},
-        {name: "UN Security Council:", time: "2nd Floor, Washington"},
-        {name: "Cabinet of the Iron Lady:", time: "2nd Floor, Front"},
+        {name: "Ad Hoc Committee of the Secretary-General", time: "2nd Floor, Pyramid"},
+        {name: "Building Zion", time: "1st Floor, Grant"},
+        {name: "Thailand 2014", time: "2nd Floor, Front"},
+        {name: "The Porfiriato", time: "2nd Floor, Montgomery"},
+        {name: "The United Nations Security Council", time: "1st Floor, 750 Rest."},
+        {name: "The Teutonic Knights of 1226", time: "2nd Floor, Washington"},
 
     ]
 
     @jcc_rooms = [
-        {name: "The Government of Rhodesia", time: "2nd Floor, Mason 1"},
-        {name: "Zimbabwe African National Union:", time: "2nd Floor, Mason 2"},
-        {name: "Zimbabwe African People's Union:", time: "2nd Floor, Montgomery"}
+      {name: "The Mau Mau Uprising", time: "2nd Floor, Davis"},
+      {name: "Death of Lenin", time: "1st Floor, Valencia"},
+      {name: "The Hong Kong Riots of 1967", time: "1st Floor, Embarcadero"},
+      {name: "Asian Financial Crisis of 1997", time: "2nd Floor, Sansome"},
+        {name: "JCC: Egyptian Government", time: "2nd Floor, Mason 1"},
+        {name: "JCC: Egyptian Rebels", time: "2nd Floor, Mason 2"}
 
     ]
   end

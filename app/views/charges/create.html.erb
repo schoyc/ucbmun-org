@@ -1,5 +1,9 @@
 <h2>Thanks, you paid <strong><%= "$#{@decimal_amount}" %></strong>!</h2>
 <h6> A receipt will be emailed to you detailing your purchase through Stripe. </h6>
 <% if logged_in? %>
-<h1> <%= link_to "Return to Finances", balance_url(id: current_user.id) %> </h1>
+  <% if @munstore == "TRUE" %>
+  <h1> <%= link_to "Return to MUNStore", "/munstore" %> </h1>
+  <% else %>
+  <h1> <%= link_to "Return to Finances", balance_url(id: current_user.id) %> </h1>
+  <% end %>
 <% end %>

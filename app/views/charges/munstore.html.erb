@@ -1,0 +1,16 @@
+<h1> MUNStore Credit Card Payment </h1>
+<%= form_tag("/charges/muncharge", method: "get") do %>
+  <%= label_tag(:shirt, "UCBMUN XXI T-Shirt Qty:") %>
+  <%= text_field_tag(:shirt) %>
+  <%= label_tag(:mug, "UCBMUN XXI Bear Mug Qty:") %>
+  <%= text_field_tag(:mug) %>
+  <%= label_tag(:shotglass, "UCBMUN XXI Bear Shot Qty:") %>
+  <%= text_field_tag(:shotglass) %>
+  <%= label_tag(:folder, "UCBMUN XXI Folder Qty:") %>
+  <%= text_field_tag(:folder) %>
+  <%= label_tag(:candygram, "UCBMUN XXI Candy Gram Qty:") %>
+  <%= text_field_tag(:candygram) %>
+  <%= label_tag(:donation, "UCBMUN XXI $1 Donation Qty:") %>
+  <%= text_field_tag(:donation) %>
+  <%= submit_tag("Pay for Order") %>
+<% end %>

@@ -15,11 +15,18 @@ class ChargesController < ApplicationController
     @amount = 500 * 100
     @email = params[:stripeEmail]
     @description = "UCBMUN Sponsorship Payment"
-    if !current_user.nil?
+    @munstore = "TRUE"
+    if !current_user.nil? && current_user.email != "ucbmun.tech@gmail.com"
       @decimal_amount = current_user.get_current_balance
       @amount = current_user.get_current_balance * 100
       @amount = @amount.to_i
-      @email = current_user.email
+      @description = "Conference Payment for #{current_user.university}"
+      @munstore = "FALSE"
+    elsif current_user.email == "ucbmun.tech@gmail.com"
+      @decimal_amount = current_user.get_current_balance
+      @amount = current_user.get_current_balance * 100
+      @amount = @amount.to_i
+      @description = "UCBMUN Merchandise Payment}"
     end
 
     # Amount in cents

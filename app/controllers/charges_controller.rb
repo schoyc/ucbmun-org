@@ -24,7 +24,7 @@ class ChargesController < ApplicationController
       @munstore = "FALSE"
     elsif current_user.email == "ucbmun.tech@gmail.com"
       @decimal_amount = current_user.get_current_balance
-      @amount = current_user.get_current_balance * 100
+      @amount = current_user.get_current_balance
       @amount = @amount.to_i
       @description = "UCBMUN Merchandise Payment}"
     end

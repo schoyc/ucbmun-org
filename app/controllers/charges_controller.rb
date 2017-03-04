@@ -23,7 +23,7 @@ class ChargesController < ApplicationController
       @description = "Conference Payment for #{current_user.university}"
       @munstore = "FALSE"
     elsif current_user.email == "ucbmun.tech@gmail.com"
-      @decimal_amount = current_user.get_current_balance
+      @decimal_amount = current_user.get_current_balance / 100.0
       @amount = current_user.get_current_balance
       @amount = @amount.to_i
       @description = "UCBMUN Merchandise Payment}"
